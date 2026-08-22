@@ -30,10 +30,14 @@ const extractToTempAudioFile = (fileToTranscribe, tempOutFile) => {
 };
 
 const subFile = async (filePath, fileName, folder) => {
+  // Audio lives in public/audio/, its transcript in public/captions/ —
+  // the template resolves audio/<name>.mp3 to captions/<name>.json.
+  const outFolder = folder === "audio" ? "captions" : folder;
+  mkdirSync(path.join(process.cwd(), "public", outFolder), { recursive: true });
   const outPath = path.join(
     process.cwd(),
     "public",
-    folder,
+    outFolder,
     fileName.replace(".wav", ".json"),
   );
 
@@ -63,17 +67,24 @@ const processVideo = async (fullPath, entry, directory) => {
     !fullPath.endsWith(".mp4") &&
     !fullPath.endsWith(".webm") &&
     !fullPath.endsWith(".mkv") &&
-    !fullPath.endsWith(".mov")
+    !fullPath.endsWith(".mov") &&
+    !fullPath.endsWith(".mp3") &&
+    !fullPath.endsWith(".m4a") &&
+    !fullPath.endsWith(".wav")
   ) {
     return;
   }
 
   const isTranscribed = existsSync(
     fullPath
+      .replace(`${path.sep}audio${path.sep}`, `${path.sep}captions${path.sep}`)
       .replace(/.mp4$/, ".json")
       .replace(/.mkv$/, ".json")
       .replace(/.mov$/, ".json")
       .replace(/.webm$/, ".json")
+      .replace(/.mp3$/, ".json")
+      .replace(/.m4a$/, ".json")
+      .replace(/.wav$/, ".json")
       .replace("webcam", "subs"),
   );
   if (isTranscribed) {

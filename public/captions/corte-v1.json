@@ -1,0 +1,471 @@
+[
+  {
+    "text": "¿Te",
+    "startMs": 130,
+    "endMs": 280,
+    "timestampMs": 0,
+    "confidence": 0.895538
+  },
+  {
+    "text": " ha",
+    "startMs": 280,
+    "endMs": 420,
+    "timestampMs": 400,
+    "confidence": 0.997128
+  },
+  {
+    "text": " faltado",
+    "startMs": 420,
+    "endMs": 930,
+    "timestampMs": 660,
+    "confidence": 0.998906
+  },
+  {
+    "text": " dinero",
+    "startMs": 930,
+    "endMs": 1410,
+    "timestampMs": 1140,
+    "confidence": 0.998114
+  },
+  {
+    "text": " en",
+    "startMs": 1410,
+    "endMs": 1510,
+    "timestampMs": 1300,
+    "confidence": 0.997021
+  },
+  {
+    "text": " la",
+    "startMs": 1510,
+    "endMs": 1650,
+    "timestampMs": 1560,
+    "confidence": 0.99731
+  },
+  {
+    "text": " caja",
+    "startMs": 1650,
+    "endMs": 2070,
+    "timestampMs": 1660,
+    "confidence": 0.993064
+  },
+  {
+    "text": " y",
+    "startMs": 2070,
+    "endMs": 2110,
+    "timestampMs": 2240,
+    "confidence": 0.822295
+  },
+  {
+    "text": " nadie",
+    "startMs": 2110,
+    "endMs": 2650,
+    "timestampMs": 2540,
+    "confidence": 0.987809
+  },
+  {
+    "text": " sabe",
+    "startMs": 2650,
+    "endMs": 3090,
+    "timestampMs": 2800,
+    "confidence": 0.994824
+  },
+  {
+    "text": " por",
+    "startMs": 3090,
+    "endMs": 3190,
+    "timestampMs": 3060,
+    "confidence": 0.970821
+  },
+  {
+    "text": " qué?",
+    "startMs": 3190,
+    "endMs": 4200,
+    "timestampMs": 3400,
+    "confidence": 0.954837
+  },
+  {
+    "text": " Al",
+    "startMs": 4200,
+    "endMs": 4340,
+    "timestampMs": 4460,
+    "confidence": 0.997341
+  },
+  {
+    "text": " cerrar",
+    "startMs": 4340,
+    "endMs": 4760,
+    "timestampMs": 4680,
+    "confidence": 0.995744
+  },
+  {
+    "text": " el",
+    "startMs": 4760,
+    "endMs": 4960,
+    "timestampMs": 5040,
+    "confidence": 0.998433
+  },
+  {
+    "text": " turno,",
+    "startMs": 4960,
+    "endMs": 5440,
+    "timestampMs": 5260,
+    "confidence": 0.992865
+  },
+  {
+    "text": " Punto",
+    "startMs": 5440,
+    "endMs": 5840,
+    "timestampMs": 5740,
+    "confidence": 0.342068
+  },
+  {
+    "text": " Listo",
+    "startMs": 5840,
+    "endMs": 6280,
+    "timestampMs": 6000,
+    "confidence": 0.565692
+  },
+  {
+    "text": " te",
+    "startMs": 6280,
+    "endMs": 6460,
+    "timestampMs": 6320,
+    "confidence": 0.973836
+  },
+  {
+    "text": " dice",
+    "startMs": 6460,
+    "endMs": 6970,
+    "timestampMs": 6700,
+    "confidence": 0.993932
+  },
+  {
+    "text": " cuánto",
+    "startMs": 6970,
+    "endMs": 7300,
+    "timestampMs": 7280,
+    "confidence": 0.825614
+  },
+  {
+    "text": " debería",
+    "startMs": 7300,
+    "endMs": 7720,
+    "timestampMs": 7640,
+    "confidence": 0.982283
+  },
+  {
+    "text": " haber",
+    "startMs": 7720,
+    "endMs": 7940,
+    "timestampMs": 7980,
+    "confidence": 0.96898
+  },
+  {
+    "text": " en",
+    "startMs": 7940,
+    "endMs": 8040,
+    "timestampMs": 8240,
+    "confidence": 0.872903
+  },
+  {
+    "text": " caja.",
+    "startMs": 8040,
+    "endMs": 9900,
+    "timestampMs": 8400,
+    "confidence": 0.918237
+  },
+  {
+    "text": " Cuentas",
+    "startMs": 9900,
+    "endMs": 10420,
+    "timestampMs": 10180,
+    "confidence": 0.990317
+  },
+  {
+    "text": " el",
+    "startMs": 10420,
+    "endMs": 10570,
+    "timestampMs": 10520,
+    "confidence": 0.997238
+  },
+  {
+    "text": " efectivo",
+    "startMs": 10570,
+    "endMs": 11160,
+    "timestampMs": 10780,
+    "confidence": 0.996039
+  },
+  {
+    "text": " y",
+    "startMs": 11160,
+    "endMs": 11310,
+    "timestampMs": 11260,
+    "confidence": 0.840618
+  },
+  {
+    "text": " si",
+    "startMs": 11310,
+    "endMs": 11380,
+    "timestampMs": 11420,
+    "confidence": 0.743041
+  },
+  {
+    "text": " hay",
+    "startMs": 11380,
+    "endMs": 11600,
+    "timestampMs": 11620,
+    "confidence": 0.99811
+  },
+  {
+    "text": " diferencia,",
+    "startMs": 11600,
+    "endMs": 12490,
+    "timestampMs": 12140,
+    "confidence": 0.986837
+  },
+  {
+    "text": " te",
+    "startMs": 12490,
+    "endMs": 12590,
+    "timestampMs": 12660,
+    "confidence": 0.777585
+  },
+  {
+    "text": " dice",
+    "startMs": 12590,
+    "endMs": 12800,
+    "timestampMs": 12880,
+    "confidence": 0.997196
+  },
+  {
+    "text": " exactamente",
+    "startMs": 12800,
+    "endMs": 13700,
+    "timestampMs": 13680,
+    "confidence": 0.951352
+  },
+  {
+    "text": " dónde",
+    "startMs": 13700,
+    "endMs": 14000,
+    "timestampMs": 14080,
+    "confidence": 0.768777
+  },
+  {
+    "text": " buscar",
+    "startMs": 14000,
+    "endMs": 14820,
+    "timestampMs": 14500,
+    "confidence": 0.938772
+  },
+  {
+    "text": " porque",
+    "startMs": 14820,
+    "endMs": 15170,
+    "timestampMs": 15120,
+    "confidence": 0.238487
+  },
+  {
+    "text": " cada",
+    "startMs": 15170,
+    "endMs": 15360,
+    "timestampMs": 15460,
+    "confidence": 0.774316
+  },
+  {
+    "text": " venta",
+    "startMs": 15360,
+    "endMs": 15850,
+    "timestampMs": 15720,
+    "confidence": 0.994592
+  },
+  {
+    "text": " queda",
+    "startMs": 15850,
+    "endMs": 16280,
+    "timestampMs": 16100,
+    "confidence": 0.997877
+  },
+  {
+    "text": " registrada",
+    "startMs": 16280,
+    "endMs": 17200,
+    "timestampMs": 16540,
+    "confidence": 0.999657
+  },
+  {
+    "text": " con",
+    "startMs": 17200,
+    "endMs": 17440,
+    "timestampMs": 17000,
+    "confidence": 0.995923
+  },
+  {
+    "text": " su",
+    "startMs": 17440,
+    "endMs": 17650,
+    "timestampMs": 17200,
+    "confidence": 0.998506
+  },
+  {
+    "text": " folio.",
+    "startMs": 17650,
+    "endMs": 18440,
+    "timestampMs": 17440,
+    "confidence": 0.993581
+  },
+  {
+    "text": " Funciona",
+    "startMs": 18440,
+    "endMs": 19060,
+    "timestampMs": 18820,
+    "confidence": 0.99512
+  },
+  {
+    "text": " en",
+    "startMs": 19060,
+    "endMs": 19220,
+    "timestampMs": 19120,
+    "confidence": 0.997291
+  },
+  {
+    "text": " la",
+    "startMs": 19220,
+    "endMs": 19380,
+    "timestampMs": 19320,
+    "confidence": 0.995927
+  },
+  {
+    "text": " compu",
+    "startMs": 19380,
+    "endMs": 19850,
+    "timestampMs": 19580,
+    "confidence": 0.5507
+  },
+  {
+    "text": " o",
+    "startMs": 19850,
+    "endMs": 19860,
+    "timestampMs": 20000,
+    "confidence": 0.958965
+  },
+  {
+    "text": " el",
+    "startMs": 19860,
+    "endMs": 20010,
+    "timestampMs": 20160,
+    "confidence": 0.980273
+  },
+  {
+    "text": " celular",
+    "startMs": 20010,
+    "endMs": 20560,
+    "timestampMs": 20500,
+    "confidence": 0.997839
+  },
+  {
+    "text": " que",
+    "startMs": 20560,
+    "endMs": 20870,
+    "timestampMs": 20720,
+    "confidence": 0.997535
+  },
+  {
+    "text": " ya",
+    "startMs": 20870,
+    "endMs": 20960,
+    "timestampMs": 20940,
+    "confidence": 0.998258
+  },
+  {
+    "text": " tienes.",
+    "startMs": 20960,
+    "endMs": 21720,
+    "timestampMs": 21420,
+    "confidence": 0.997889
+  },
+  {
+    "text": " Pruébalo",
+    "startMs": 21720,
+    "endMs": 22490,
+    "timestampMs": 21980,
+    "confidence": 0.867328
+  },
+  {
+    "text": " gratis",
+    "startMs": 22490,
+    "endMs": 22930,
+    "timestampMs": 22600,
+    "confidence": 0.989496
+  },
+  {
+    "text": " 14",
+    "startMs": 22930,
+    "endMs": 23420,
+    "timestampMs": 23200,
+    "confidence": 0.888137
+  },
+  {
+    "text": " días,",
+    "startMs": 23420,
+    "endMs": 23990,
+    "timestampMs": 23720,
+    "confidence": 0.98944
+  },
+  {
+    "text": " sin",
+    "startMs": 23990,
+    "endMs": 24230,
+    "timestampMs": 24180,
+    "confidence": 0.986963
+  },
+  {
+    "text": " tarjeta.",
+    "startMs": 24230,
+    "endMs": 25120,
+    "timestampMs": 24440,
+    "confidence": 0.996563
+  },
+  {
+    "text": " El",
+    "startMs": 25120,
+    "endMs": 25280,
+    "timestampMs": 25380,
+    "confidence": 0.923079
+  },
+  {
+    "text": " link",
+    "startMs": 25280,
+    "endMs": 25640,
+    "timestampMs": 25860,
+    "confidence": 0.936237
+  },
+  {
+    "text": " está",
+    "startMs": 25640,
+    "endMs": 26010,
+    "timestampMs": 26340,
+    "confidence": 0.970328
+  },
+  {
+    "text": " en",
+    "startMs": 26010,
+    "endMs": 26210,
+    "timestampMs": 26460,
+    "confidence": 0.998273
+  },
+  {
+    "text": " la",
+    "startMs": 26210,
+    "endMs": 26320,
+    "timestampMs": 26620,
+    "confidence": 0.956956
+  },
+  {
+    "text": " bio.",
+    "startMs": 26320,
+    "endMs": 26840,
+    "timestampMs": 26820,
+    "confidence": 0.904864
+  }
+]

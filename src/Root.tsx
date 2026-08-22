@@ -1,25 +1,42 @@
 import "./index.css";
-import { Composition, staticFile } from "remotion";
+import { getAudioDurationInSeconds } from "@remotion/media-utils";
 import {
-  CaptionedVideo,
-  calculateCaptionedVideoMetadata,
-  captionedVideoSchema,
-} from "./CaptionedVideo";
+  CalculateMetadataFunction,
+  Composition,
+  Folder,
+  staticFile,
+} from "remotion";
+import { PosDemo } from "./template/pos-demo";
+import { posDemoSchema, type PosDemoProps } from "./template/schema";
+import { corteProps } from "./videos/corte.props";
 
-// Each <Composition> is an entry in the sidebar!
+const FPS = 30;
 
+// Every video is as long as its own voiceover, plus 1.5s of air for the CTA.
+const posDemoMetadata: CalculateMetadataFunction<PosDemoProps> = async ({
+  props,
+}) => {
+  const seconds = await getAudioDurationInSeconds(staticFile(props.audioFile));
+
+  return { durationInFrames: Math.ceil(seconds * FPS) + 45 };
+};
+
+// One template, many compositions: add a video by writing
+// src/videos/<name>.props.ts and registering it here.
 export const RemotionRoot: React.FC = () => {
   return (
-    <Composition
-      id="CaptionedVideo"
-      component={CaptionedVideo}
-      calculateMetadata={calculateCaptionedVideoMetadata}
-      schema={captionedVideoSchema}
-      width={1080}
-      height={1920}
-      defaultProps={{
-        src: staticFile("sample-video.mp4"),
-      }}
-    />
+    <Folder name="punto-listo">
+      <Composition
+        id="Corte"
+        component={PosDemo}
+        schema={posDemoSchema}
+        defaultProps={corteProps}
+        calculateMetadata={posDemoMetadata}
+        fps={FPS}
+        width={1080}
+        height={1920}
+        durationInFrames={840}
+      />
+    </Folder>
   );
 };
