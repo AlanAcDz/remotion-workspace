@@ -45,7 +45,9 @@ export const beatSchema = z.object({
   name: z.string(),
   from: z.number(), // seconds, straight off the cue sheet
   to: z.number(),
-  layout: z.enum(["panel", "fullframe"]).default("panel"),
+  layout: z
+    .enum(["panel", "fullframe", "mobile-upper-half"])
+    .default("panel"),
   panes: z.array(paneSchema).min(1),
   callout: calloutSchema.optional(),
 });
@@ -69,6 +71,7 @@ export const posDemoSchema = z.object({
     line2: z.string(),
     note: z.string(),
     pill: z.string(),
+    mobileClip: z.string().optional(),
     /** Absolute seconds — each line lands on the word that says it. */
     revealAt: z.object({
       line2: z.number(),

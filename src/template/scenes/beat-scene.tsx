@@ -1,6 +1,12 @@
 import { AbsoluteFill, Easing, Interactive, interpolate, useCurrentFrame, useVideoConfig } from "remotion";
 import { BeatPane } from "../components/beat-pane";
-import { DemoLayout, FullFrameLayout, PANEL } from "../components/demo-layout";
+import {
+  DemoLayout,
+  FullFrameLayout,
+  MobileUpperHalfLayout,
+  MOBILE_UPPER_HALF,
+  PANEL,
+} from "../components/demo-layout";
 import type { Beat } from "../schema";
 
 interface BeatSceneProps {
@@ -12,9 +18,22 @@ export function BeatScene({ beat }: BeatSceneProps) {
   const { fps } = useVideoConfig();
 
   const isFullFrame = beat.layout === "fullframe";
-  const Layout = isFullFrame ? FullFrameLayout : DemoLayout;
-  const width = isFullFrame ? 1080 : PANEL.width;
-  const height = isFullFrame ? 1920 : PANEL.height;
+  const isMobileUpperHalf = beat.layout === "mobile-upper-half";
+  const Layout = isFullFrame
+    ? FullFrameLayout
+    : isMobileUpperHalf
+      ? MobileUpperHalfLayout
+      : DemoLayout;
+  const width = isFullFrame
+    ? 1080
+    : isMobileUpperHalf
+      ? MOBILE_UPPER_HALF.width
+      : PANEL.width;
+  const height = isFullFrame
+    ? 1920
+    : isMobileUpperHalf
+      ? MOBILE_UPPER_HALF.height
+      : PANEL.height;
 
   return (
     <AbsoluteFill name={beat.name}>
