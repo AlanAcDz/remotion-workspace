@@ -33,14 +33,32 @@ to its box's, or `objectFit: cover` will trim the edges.
 
 ## Layouts
 
-- `panel` (default) — the split screen: UI card up top, captions in the band
-  below. Use `captionStyle: "paper"`.
+Every video is cut on the same split: the UI takes the **top two thirds** of the
+frame (1080x1280, `UI_ZONE`) and captions take the bottom third. `FRAME` and
+`UI_ZONE` in `schema.ts` are the only place that ratio is written down — the
+panel box, the caption band and the hook copy are all derived from them.
+
+- `panel` (default) — a landscape recording in a rounded card, centred in the UI
+  zone. Use `captionStyle: "paper"`.
+- `mobile-ui` — a portrait recording filling the UI zone edge to edge. Use
+  `captionStyle: "paper"`. This is the default for new videos.
 - `fullframe` — a portrait clip covering the whole 1080x1920 frame, for
   mobile-viewport recordings. Use `captionStyle: "video"` so captions get the
   white-on-dark-stroke treatment that survives over footage.
 
-Multiple `panes` in one beat give you a two-up (see the `Dispositivos` beat):
-each pane's `box` positions it inside the panel and turns it into a card.
+For `mobile-ui`, do not hand-write crop rects: call `uiWindow(source, topPx)`.
+It returns a full-width window with the UI zone's exact aspect, so the recording
+lands at 1:1 with no distortion, and `topPx` is simply the source pixel row the
+window starts at — the number you measure off a still. Sliding that one number
+up and down the phone screen is how a single take is cut into beats
+(see `videos/corte.props.ts`).
+
+Multiple `panes` in one beat give you a two-up: each pane's `box` positions it
+inside the panel and turns it into a card.
+
+`callout.left` / `callout.top` are panel pixels. For a `mobile-ui` beat that is
+`(sourceRow - windowTop) * (UI_ZONE.width / sourceWidth)` — derive it from the
+same measured rows as the crop instead of eyeballing it.
 
 ## Gotchas
 

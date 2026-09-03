@@ -6,6 +6,7 @@ import {
   useCurrentFrame,
   useVideoConfig,
 } from "remotion";
+import { CAPTION_BAND } from "../components/demo-layout";
 
 interface HookOverlayProps {
   text: string;
@@ -26,9 +27,9 @@ export function HookOverlay({ text, subline }: HookOverlayProps) {
         name="Hook headline"
         style={{
           position: "absolute",
-          left: 60,
-          top: 1010,
-          width: 960,
+          left: CAPTION_BAND.left,
+          top: CAPTION_BAND.top + 20,
+          width: CAPTION_BAND.width,
           textAlign: "center",
           fontSize: 96,
           fontWeight: 800,
@@ -64,9 +65,9 @@ export function HookOverlay({ text, subline }: HookOverlayProps) {
           name="Hook subline"
           style={{
             position: "absolute",
-            left: 60,
-            top: 1232,
-            width: 960,
+            left: CAPTION_BAND.left,
+            top: CAPTION_BAND.top + 242,
+            width: CAPTION_BAND.width,
             textAlign: "center",
             fontSize: 54,
             fontWeight: 700,

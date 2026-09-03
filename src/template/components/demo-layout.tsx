@@ -7,24 +7,28 @@ import {
   useCurrentFrame,
   useVideoConfig,
 } from "remotion";
+import { UI_ZONE } from "../schema";
 
-/** The UI panel occupies the upper safe zone; captions get the band below it. */
+/**
+ * The rounded card that holds a landscape (desktop) recording, centred in the
+ * UI zone. Its own 1032x738 aspect is what every desktop crop rect is tuned
+ * against, so the box is moved but never reshaped.
+ */
 export const PANEL = {
   left: 24,
-  top: 210,
+  top: Math.round((UI_ZONE.height - 738) / 2),
   width: 1032,
   height: 738,
+  radius: 32,
 } as const;
 
-/** Edge-to-edge mobile UI crop for the upper half of a 1080x1920 frame. */
-export const MOBILE_UPPER_HALF = {
-  width: 1080,
-  height: 960,
-} as const;
-
-/** Lower third of the safe zone — 52%–72% of frame height. */
+/**
+ * Captions sit just under the UI rather than floating in the middle of the
+ * bottom third, which keeps them clear of the platform chrome that overlays the
+ * last ~200px of a Reel.
+ */
 export const CAPTION_BAND = {
-  top: 990,
+  top: UI_ZONE.height + 30,
   height: 400,
   width: 960,
   left: 60,
@@ -50,11 +54,11 @@ export function DemoLayout({ name, children }: DemoLayoutProps) {
         name="Panel"
         style={{
           position: "absolute",
-          left: 24,
-          top: 210,
-          width: 1032,
-          height: 738,
-          borderRadius: 32,
+          left: PANEL.left,
+          top: PANEL.top,
+          width: PANEL.width,
+          height: PANEL.height,
+          borderRadius: PANEL.radius,
           overflow: "hidden",
           backgroundColor: "#FFFFFF",
           border: "2px solid rgba(34, 30, 24, 0.10)",
@@ -112,21 +116,21 @@ export function FullFrameLayout({ name, children }: DemoLayoutProps) {
   );
 }
 
-/** Full-width mobile UI framing with the lower half reserved for captions. */
-export function MobileUpperHalfLayout({ name, children }: DemoLayoutProps) {
+/** Full-width mobile UI framing filling the UI zone, captions below it. */
+export function MobileUiLayout({ name, children }: DemoLayoutProps) {
   const frame = useCurrentFrame();
   const { durationInFrames } = useVideoConfig();
 
   return (
     <AbsoluteFill name={name} style={{ overflow: "hidden" }}>
       <Interactive.Div
-        name="Mobile UI upper half"
+        name="Mobile UI"
         style={{
           position: "absolute",
           left: 0,
           top: 0,
-          width: MOBILE_UPPER_HALF.width,
-          height: MOBILE_UPPER_HALF.height,
+          width: UI_ZONE.width,
+          height: UI_ZONE.height,
           overflow: "hidden",
           borderBottomLeftRadius: 36,
           borderBottomRightRadius: 36,

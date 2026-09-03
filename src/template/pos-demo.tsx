@@ -1,6 +1,7 @@
 import { Audio } from "@remotion/media";
 import { AbsoluteFill, Sequence, staticFile, useVideoConfig } from "remotion";
 import { CaptionTrack } from "./components/caption-track";
+import { MusicBed } from "./components/music-bed";
 import "./fonts";
 import { captionsFileFor, type PosDemoProps } from "./schema";
 import { BeatScene } from "./scenes/beat-scene";
@@ -15,6 +16,7 @@ export function PosDemo({
   audioFile,
   hook,
   captionStyle,
+  music,
   beats,
   cta,
 }: PosDemoProps) {
@@ -26,6 +28,8 @@ export function PosDemo({
   return (
     <AbsoluteFill name="PosDemo" style={{ backgroundColor: "#F7F3EB" }}>
       <Audio name="Locución" src={staticFile(audioFile)} />
+
+      {music ? <MusicBed music={music} ctaFrom={ctaFrom} /> : null}
 
       {beats.map((beat) => (
         <Sequence

@@ -9,7 +9,6 @@ import {
 import { PosDemo } from "./template/pos-demo";
 import { posDemoSchema, type PosDemoProps } from "./template/schema";
 import { corteProps } from "./videos/corte.props";
-import { corteMobileProps } from "./videos/corte-mobile.props";
 
 const FPS = 30;
 
@@ -32,17 +31,6 @@ export const RemotionRoot: React.FC = () => {
         component={PosDemo}
         schema={posDemoSchema}
         defaultProps={corteProps}
-        calculateMetadata={posDemoMetadata}
-        fps={FPS}
-        width={1080}
-        height={1920}
-        durationInFrames={840}
-      />
-      <Composition
-        id="CorteMobile"
-        component={PosDemo}
-        schema={posDemoSchema}
-        defaultProps={corteMobileProps}
         calculateMetadata={posDemoMetadata}
         fps={FPS}
         width={1080}

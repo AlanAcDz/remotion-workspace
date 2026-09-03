@@ -39,8 +39,9 @@ npx remotion upgrade
 
 ## Captioning
 
-Replace the `sample-video.mp4` with your video file.
-Caption all the videos in you `public` by running the following command:
+Drop the voiceover in `public/audio/<name>.mp3`; its transcript is written to
+`public/captions/<name>.json`, which is where the template looks for it.
+Caption everything in `public` by running the following command:
 
 ```console
 node sub.mjs

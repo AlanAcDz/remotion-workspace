@@ -9,11 +9,9 @@ import {
   useVideoConfig,
 } from "remotion";
 import { BeatPane } from "../components/beat-pane";
-import {
-  MobileUpperHalfLayout,
-  MOBILE_UPPER_HALF,
-} from "../components/demo-layout";
-import type { Pane, PosDemoProps } from "../schema";
+import { SfxCues } from "../components/sfx-cues";
+import { MobileUiLayout } from "../components/demo-layout";
+import { UI_ZONE, type Pane, type PosDemoProps } from "../schema";
 
 interface CtaSceneProps {
   cta: PosDemoProps["cta"];
@@ -23,13 +21,14 @@ export function CtaScene({ cta }: CtaSceneProps) {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const hasMobileClip = Boolean(cta.mobileClip);
+  // No crop rect: the clip is centre-cropped to cover the UI zone, which works
+  // for any recording aspect without the caller measuring one.
   const mobilePane: Pane | null = cta.mobileClip
     ? {
         clip: cta.mobileClip,
         still: false,
         trimBefore: 0,
         playbackRate: 1,
-        frame: { x: 0, y: 0, width: 1, height: 0.41 },
         zoomStart: 0.5,
       }
     : null;
@@ -42,14 +41,16 @@ export function CtaScene({ cta }: CtaSceneProps) {
 
   return (
     <AbsoluteFill name="CTA" style={{ fontFamily: "Archivo" }}>
+      <SfxCues cues={cta.sfx} />
+
       {mobilePane ? (
-        <MobileUpperHalfLayout name="CTA mobile clip">
+        <MobileUiLayout name="CTA mobile clip">
           <BeatPane
             pane={mobilePane}
-            containerWidth={MOBILE_UPPER_HALF.width}
-            containerHeight={MOBILE_UPPER_HALF.height}
+            containerWidth={UI_ZONE.width}
+            containerHeight={UI_ZONE.height}
           />
-        </MobileUpperHalfLayout>
+        </MobileUiLayout>
       ) : null}
 
       <Img
@@ -57,9 +58,9 @@ export function CtaScene({ cta }: CtaSceneProps) {
         src={staticFile(cta.logo)}
         style={{
           position: "absolute",
-          left: hasMobileClip ? 360 : 300,
-          top: hasMobileClip ? 1000 : 520,
-          width: hasMobileClip ? 360 : 480,
+          left: hasMobileClip ? 390 : 300,
+          top: hasMobileClip ? 1300 : 520,
+          width: hasMobileClip ? 300 : 480,
           maxWidth: "none",
           opacity: interpolate(frame, [0, 12], [0, 1], {
             extrapolateLeft: "clamp",
@@ -74,10 +75,10 @@ export function CtaScene({ cta }: CtaSceneProps) {
         style={{
           position: "absolute",
           left: 72,
-          top: hasMobileClip ? 1160 : 700,
+          top: hasMobileClip ? 1390 : 700,
           width: 936,
           textAlign: "center",
-          fontSize: hasMobileClip ? 80 : 92,
+          fontSize: hasMobileClip ? 72 : 92,
           fontWeight: 700,
           lineHeight: 1.0,
           letterSpacing: "-0.03em",
@@ -102,10 +103,10 @@ export function CtaScene({ cta }: CtaSceneProps) {
         style={{
           position: "absolute",
           left: 72,
-          top: hasMobileClip ? 1250 : 806,
+          top: hasMobileClip ? 1472 : 806,
           width: 936,
           textAlign: "center",
-          fontSize: hasMobileClip ? 124 : 148,
+          fontSize: hasMobileClip ? 108 : 148,
           fontWeight: 800,
           lineHeight: 1.0,
           letterSpacing: "-0.045em",
@@ -135,10 +136,10 @@ export function CtaScene({ cta }: CtaSceneProps) {
         style={{
           position: "absolute",
           left: 72,
-          top: hasMobileClip ? 1405 : 980,
+          top: hasMobileClip ? 1606 : 980,
           width: 936,
           textAlign: "center",
-          fontSize: hasMobileClip ? 48 : 56,
+          fontSize: hasMobileClip ? 44 : 56,
           fontWeight: 700,
           letterSpacing: "-0.01em",
           color: "#6B6357",
@@ -157,7 +158,7 @@ export function CtaScene({ cta }: CtaSceneProps) {
         style={{
           position: "absolute",
           left: 240,
-          top: hasMobileClip ? 1530 : 1110,
+          top: hasMobileClip ? 1690 : 1110,
           width: 600,
           textAlign: "center",
           padding: "28px 0",

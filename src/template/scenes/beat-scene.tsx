@@ -1,13 +1,13 @@
 import { AbsoluteFill, Easing, Interactive, interpolate, useCurrentFrame, useVideoConfig } from "remotion";
 import { BeatPane } from "../components/beat-pane";
+import { SfxCues } from "../components/sfx-cues";
 import {
   DemoLayout,
   FullFrameLayout,
-  MobileUpperHalfLayout,
-  MOBILE_UPPER_HALF,
+  MobileUiLayout,
   PANEL,
 } from "../components/demo-layout";
-import type { Beat } from "../schema";
+import { FRAME, UI_ZONE, type Beat } from "../schema";
 
 interface BeatSceneProps {
   beat: Beat;
@@ -18,25 +18,27 @@ export function BeatScene({ beat }: BeatSceneProps) {
   const { fps } = useVideoConfig();
 
   const isFullFrame = beat.layout === "fullframe";
-  const isMobileUpperHalf = beat.layout === "mobile-upper-half";
+  const isMobileUi = beat.layout === "mobile-ui";
   const Layout = isFullFrame
     ? FullFrameLayout
-    : isMobileUpperHalf
-      ? MobileUpperHalfLayout
+    : isMobileUi
+      ? MobileUiLayout
       : DemoLayout;
   const width = isFullFrame
-    ? 1080
-    : isMobileUpperHalf
-      ? MOBILE_UPPER_HALF.width
+    ? FRAME.width
+    : isMobileUi
+      ? UI_ZONE.width
       : PANEL.width;
   const height = isFullFrame
-    ? 1920
-    : isMobileUpperHalf
-      ? MOBILE_UPPER_HALF.height
+    ? FRAME.height
+    : isMobileUi
+      ? UI_ZONE.height
       : PANEL.height;
 
   return (
     <AbsoluteFill name={beat.name}>
+      <SfxCues cues={beat.sfx} />
+
       <Layout name={`${beat.name} panel`}>
         {beat.panes.map((pane, index) => (
           <BeatPane
