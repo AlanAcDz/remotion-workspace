@@ -7,21 +7,32 @@ Studio's props panel.
 ## Adding a video
 
 1. **Script** → one idea, hook pays off, readable on mute.
-2. **Voiceover** → record, put the take in `public/audio/<name>.mp3`.
-3. **Transcribe** → `node sub.mjs public/audio/<name>.mp3`
-   Writes `public/captions/<name>.json`. Skim it: Whisper fumbles brand names
-   (it capitalised "Compu" in video 01). Fix the `text`, never the timestamps.
-4. **Cue sheet** → read the beat boundaries straight out of that JSON rather
+2. **Voiceover + captions** → generate both from the approved script with the
+   pinned Punto Listo voice:
+
+   ```console
+   pnpm punto-listo:voice --slug <name> --script <path-to-script.txt>
+   ```
+
+   The command makes one ElevenLabs request and writes
+   `public/audio/<name>.mp3` plus `public/captions/<name>.json`. Run it first
+   with `--dry-run` to validate the inputs without consuming credits. It
+   refuses to overwrite an existing take unless `--force` is explicit.
+   `ELEVENLABS_API_KEY` must be set in the gitignored `.env` file. For a
+   manually recorded voiceover, `node sub.mjs public/audio/<name>.mp3` remains
+   available as the local Whisper fallback.
+
+3. **Cue sheet** → read the beat boundaries straight out of that JSON rather
    than guessing. Guessed timings put video 01's `folio` beat 3.5s late.
-5. **Clips** → drop recordings in `public/videos/<project>/`.
-6. **Props** → write `src/videos/<name>.props.ts`, register a `<Composition>`
+4. **Clips** → drop recordings in `public/videos/<project>/`.
+5. **Props** → write `src/videos/<name>.props.ts`, register a `<Composition>`
    in `src/Root.tsx`, render.
 
 ## Framing clips
 
 `pane.frame` is a crop rectangle in **fractions of the clip's own frame**, so
 the same numbers work for a 1280x720 desktop master and an 860x1864 phone
-recording. The pane scales that region up to fill its box — crop *into* the UI
+recording. The pane scales that region up to fill its box — crop _into_ the UI
 at 1.3x–1.8x rather than shrinking a whole screenshot into the panel.
 
 To convert a pixel rectangle: `x = left / clipWidth`, `width = w / clipWidth`,

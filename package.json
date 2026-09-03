@@ -34,8 +34,10 @@
     "dev": "remotion studio",
     "build": "remotion bundle",
     "upgrade": "remotion upgrade",
-    "lint": "eslint src && tsc",
-    "create-subtitles": "node sub.mjs"
+    "lint": "eslint src scripts/punto-listo && tsc",
+    "create-subtitles": "node sub.mjs",
+    "punto-listo:voice": "node --env-file-if-exists=.env scripts/punto-listo/generate-voice.mjs",
+    "test:punto-listo": "node --test scripts/punto-listo/*.test.mjs"
   },
   "sideEffects": [
     "*.css"

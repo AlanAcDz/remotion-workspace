@@ -41,7 +41,21 @@ npx remotion upgrade
 
 Drop the voiceover in `public/audio/<name>.mp3`; its transcript is written to
 `public/captions/<name>.json`, which is where the template looks for it.
-Caption everything in `public` by running the following command:
+
+For Punto Listo, generate the approved ElevenLabs voice and timestamped
+captions together from a Spanish script:
+
+```console
+pnpm punto-listo:voice --slug <name> --script <path-to-script.txt>
+```
+
+Copy `.env.example` to `.env` and set `ELEVENLABS_API_KEY`. The voice, model,
+output format, and generation settings are pinned in
+`scripts/punto-listo/voice-config.mjs`. Use `--dry-run` to validate without an
+API call and `--force` only when intentionally replacing an existing take.
+
+For manually recorded voiceovers, caption everything in `public` by running
+the following command:
 
 ```console
 node sub.mjs
