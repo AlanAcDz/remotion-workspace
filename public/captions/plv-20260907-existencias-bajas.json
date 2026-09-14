@@ -1,0 +1,590 @@
+[
+  {
+    "text": "¿Te",
+    "startMs": 35,
+    "endMs": 163,
+    "timestampMs": 35,
+    "confidence": null
+  },
+  {
+    "text": " enteras",
+    "startMs": 163,
+    "endMs": 580,
+    "timestampMs": 163,
+    "confidence": null
+  },
+  {
+    "text": " de",
+    "startMs": 580,
+    "endMs": 697,
+    "timestampMs": 580,
+    "confidence": null
+  },
+  {
+    "text": " que",
+    "startMs": 697,
+    "endMs": 848,
+    "timestampMs": 697,
+    "confidence": null
+  },
+  {
+    "text": " se",
+    "startMs": 848,
+    "endMs": 940,
+    "timestampMs": 848,
+    "confidence": null
+  },
+  {
+    "text": " acabó",
+    "startMs": 940,
+    "endMs": 1289,
+    "timestampMs": 940,
+    "confidence": null
+  },
+  {
+    "text": " el",
+    "startMs": 1289,
+    "endMs": 1405,
+    "timestampMs": 1289,
+    "confidence": null
+  },
+  {
+    "text": " producto",
+    "startMs": 1405,
+    "endMs": 1881,
+    "timestampMs": 1405,
+    "confidence": null
+  },
+  {
+    "text": " cuando",
+    "startMs": 1881,
+    "endMs": 2171,
+    "timestampMs": 1881,
+    "confidence": null
+  },
+  {
+    "text": " el",
+    "startMs": 2171,
+    "endMs": 2287,
+    "timestampMs": 2171,
+    "confidence": null
+  },
+  {
+    "text": " cliente",
+    "startMs": 2287,
+    "endMs": 2717,
+    "timestampMs": 2287,
+    "confidence": null
+  },
+  {
+    "text": " ya",
+    "startMs": 2717,
+    "endMs": 2879,
+    "timestampMs": 2717,
+    "confidence": null
+  },
+  {
+    "text": " lo",
+    "startMs": 2879,
+    "endMs": 3007,
+    "timestampMs": 2879,
+    "confidence": null
+  },
+  {
+    "text": " pidió?",
+    "startMs": 3007,
+    "endMs": 4737,
+    "timestampMs": 3007,
+    "confidence": null
+  },
+  {
+    "text": " En",
+    "startMs": 4737,
+    "endMs": 4934,
+    "timestampMs": 4737,
+    "confidence": null
+  },
+  {
+    "text": " Punto",
+    "startMs": 4934,
+    "endMs": 5306,
+    "timestampMs": 4934,
+    "confidence": null
+  },
+  {
+    "text": " Listo",
+    "startMs": 5306,
+    "endMs": 5747,
+    "timestampMs": 5306,
+    "confidence": null
+  },
+  {
+    "text": " a",
+    "startMs": 5747,
+    "endMs": 5921,
+    "timestampMs": 5747,
+    "confidence": null
+  },
+  {
+    "text": " cada",
+    "startMs": 5921,
+    "endMs": 6246,
+    "timestampMs": 5921,
+    "confidence": null
+  },
+  {
+    "text": " producto",
+    "startMs": 6246,
+    "endMs": 6792,
+    "timestampMs": 6246,
+    "confidence": null
+  },
+  {
+    "text": " le",
+    "startMs": 6792,
+    "endMs": 6943,
+    "timestampMs": 6792,
+    "confidence": null
+  },
+  {
+    "text": " pones",
+    "startMs": 6943,
+    "endMs": 7303,
+    "timestampMs": 6943,
+    "confidence": null
+  },
+  {
+    "text": " un",
+    "startMs": 7303,
+    "endMs": 7407,
+    "timestampMs": 7303,
+    "confidence": null
+  },
+  {
+    "text": " mínimo:",
+    "startMs": 7407,
+    "endMs": 8626,
+    "timestampMs": 7407,
+    "confidence": null
+  },
+  {
+    "text": " la",
+    "startMs": 8626,
+    "endMs": 8777,
+    "timestampMs": 8626,
+    "confidence": null
+  },
+  {
+    "text": " cantidad",
+    "startMs": 8777,
+    "endMs": 9323,
+    "timestampMs": 8777,
+    "confidence": null
+  },
+  {
+    "text": " con",
+    "startMs": 9323,
+    "endMs": 9485,
+    "timestampMs": 9323,
+    "confidence": null
+  },
+  {
+    "text": " la",
+    "startMs": 9485,
+    "endMs": 9613,
+    "timestampMs": 9485,
+    "confidence": null
+  },
+  {
+    "text": " que",
+    "startMs": 9613,
+    "endMs": 9764,
+    "timestampMs": 9613,
+    "confidence": null
+  },
+  {
+    "text": " ya",
+    "startMs": 9764,
+    "endMs": 9950,
+    "timestampMs": 9764,
+    "confidence": null
+  },
+  {
+    "text": " deberías",
+    "startMs": 9950,
+    "endMs": 10391,
+    "timestampMs": 9950,
+    "confidence": null
+  },
+  {
+    "text": " estar",
+    "startMs": 10391,
+    "endMs": 10635,
+    "timestampMs": 10391,
+    "confidence": null
+  },
+  {
+    "text": " pidiendo.",
+    "startMs": 10635,
+    "endMs": 11749,
+    "timestampMs": 10635,
+    "confidence": null
+  },
+  {
+    "text": " Y",
+    "startMs": 11749,
+    "endMs": 11923,
+    "timestampMs": 11749,
+    "confidence": null
+  },
+  {
+    "text": " en",
+    "startMs": 11923,
+    "endMs": 12051,
+    "timestampMs": 11923,
+    "confidence": null
+  },
+  {
+    "text": " Existencias",
+    "startMs": 12051,
+    "endMs": 12934,
+    "timestampMs": 12051,
+    "confidence": null
+  },
+  {
+    "text": " filtras",
+    "startMs": 12934,
+    "endMs": 13410,
+    "timestampMs": 12934,
+    "confidence": null
+  },
+  {
+    "text": " bajos",
+    "startMs": 13410,
+    "endMs": 14036,
+    "timestampMs": 13410,
+    "confidence": null
+  },
+  {
+    "text": " o",
+    "startMs": 14036,
+    "endMs": 14199,
+    "timestampMs": 14036,
+    "confidence": null
+  },
+  {
+    "text": " negativos:",
+    "startMs": 14199,
+    "endMs": 15499,
+    "timestampMs": 14199,
+    "confidence": null
+  },
+  {
+    "text": " esa",
+    "startMs": 15499,
+    "endMs": 15778,
+    "timestampMs": 15499,
+    "confidence": null
+  },
+  {
+    "text": " es",
+    "startMs": 15778,
+    "endMs": 15894,
+    "timestampMs": 15778,
+    "confidence": null
+  },
+  {
+    "text": " tu",
+    "startMs": 15894,
+    "endMs": 16033,
+    "timestampMs": 15894,
+    "confidence": null
+  },
+  {
+    "text": " lista",
+    "startMs": 16033,
+    "endMs": 16428,
+    "timestampMs": 16033,
+    "confidence": null
+  },
+  {
+    "text": " para",
+    "startMs": 16428,
+    "endMs": 16660,
+    "timestampMs": 16428,
+    "confidence": null
+  },
+  {
+    "text": " el",
+    "startMs": 16660,
+    "endMs": 16776,
+    "timestampMs": 16660,
+    "confidence": null
+  },
+  {
+    "text": " proveedor.",
+    "startMs": 16776,
+    "endMs": 17740,
+    "timestampMs": 16776,
+    "confidence": null
+  },
+  {
+    "text": " ¿Sale",
+    "startMs": 17740,
+    "endMs": 18193,
+    "timestampMs": 17740,
+    "confidence": null
+  },
+  {
+    "text": " en",
+    "startMs": 18193,
+    "endMs": 18262,
+    "timestampMs": 18193,
+    "confidence": null
+  },
+  {
+    "text": " negativo?",
+    "startMs": 18262,
+    "endMs": 19539,
+    "timestampMs": 18262,
+    "confidence": null
+  },
+  {
+    "text": " No",
+    "startMs": 19539,
+    "endMs": 19760,
+    "timestampMs": 19539,
+    "confidence": null
+  },
+  {
+    "text": " te",
+    "startMs": 19760,
+    "endMs": 19888,
+    "timestampMs": 19760,
+    "confidence": null
+  },
+  {
+    "text": " frena",
+    "startMs": 19888,
+    "endMs": 20178,
+    "timestampMs": 19888,
+    "confidence": null
+  },
+  {
+    "text": " la",
+    "startMs": 20178,
+    "endMs": 20294,
+    "timestampMs": 20178,
+    "confidence": null
+  },
+  {
+    "text": " venta.",
+    "startMs": 20294,
+    "endMs": 21211,
+    "timestampMs": 20294,
+    "confidence": null
+  },
+  {
+    "text": " Es",
+    "startMs": 21211,
+    "endMs": 21443,
+    "timestampMs": 21211,
+    "confidence": null
+  },
+  {
+    "text": " la",
+    "startMs": 21443,
+    "endMs": 21583,
+    "timestampMs": 21443,
+    "confidence": null
+  },
+  {
+    "text": " señal",
+    "startMs": 21583,
+    "endMs": 22001,
+    "timestampMs": 21583,
+    "confidence": null
+  },
+  {
+    "text": " de",
+    "startMs": 22001,
+    "endMs": 22128,
+    "timestampMs": 22001,
+    "confidence": null
+  },
+  {
+    "text": " que",
+    "startMs": 22128,
+    "endMs": 22279,
+    "timestampMs": 22128,
+    "confidence": null
+  },
+  {
+    "text": " toca",
+    "startMs": 22279,
+    "endMs": 22639,
+    "timestampMs": 22279,
+    "confidence": null
+  },
+  {
+    "text": " recontar.",
+    "startMs": 22639,
+    "endMs": 23963,
+    "timestampMs": 22639,
+    "confidence": null
+  },
+  {
+    "text": " Las",
+    "startMs": 23963,
+    "endMs": 24241,
+    "timestampMs": 23963,
+    "confidence": null
+  },
+  {
+    "text": " mismas",
+    "startMs": 24241,
+    "endMs": 24613,
+    "timestampMs": 24241,
+    "confidence": null
+  },
+  {
+    "text": " señales",
+    "startMs": 24613,
+    "endMs": 25124,
+    "timestampMs": 24613,
+    "confidence": null
+  },
+  {
+    "text": " te",
+    "startMs": 25124,
+    "endMs": 25217,
+    "timestampMs": 25124,
+    "confidence": null
+  },
+  {
+    "text": " esperan",
+    "startMs": 25217,
+    "endMs": 25611,
+    "timestampMs": 25217,
+    "confidence": null
+  },
+  {
+    "text": " en",
+    "startMs": 25611,
+    "endMs": 25727,
+    "timestampMs": 25611,
+    "confidence": null
+  },
+  {
+    "text": " Estadísticas,",
+    "startMs": 25727,
+    "endMs": 26946,
+    "timestampMs": 25727,
+    "confidence": null
+  },
+  {
+    "text": " desde",
+    "startMs": 26946,
+    "endMs": 27260,
+    "timestampMs": 26946,
+    "confidence": null
+  },
+  {
+    "text": " el",
+    "startMs": 27260,
+    "endMs": 27376,
+    "timestampMs": 27260,
+    "confidence": null
+  },
+  {
+    "text": " celular,",
+    "startMs": 27376,
+    "endMs": 28305,
+    "timestampMs": 27376,
+    "confidence": null
+  },
+  {
+    "text": " antes",
+    "startMs": 28305,
+    "endMs": 28711,
+    "timestampMs": 28305,
+    "confidence": null
+  },
+  {
+    "text": " de",
+    "startMs": 28711,
+    "endMs": 28816,
+    "timestampMs": 28711,
+    "confidence": null
+  },
+  {
+    "text": " que",
+    "startMs": 28816,
+    "endMs": 28932,
+    "timestampMs": 28816,
+    "confidence": null
+  },
+  {
+    "text": " llegue",
+    "startMs": 28932,
+    "endMs": 29303,
+    "timestampMs": 28932,
+    "confidence": null
+  },
+  {
+    "text": " el",
+    "startMs": 29303,
+    "endMs": 29512,
+    "timestampMs": 29303,
+    "confidence": null
+  },
+  {
+    "text": " proveedor.",
+    "startMs": 29512,
+    "endMs": 30743,
+    "timestampMs": 29512,
+    "confidence": null
+  },
+  {
+    "text": " Pruébalo",
+    "startMs": 30743,
+    "endMs": 31289,
+    "timestampMs": 30743,
+    "confidence": null
+  },
+  {
+    "text": " gratis",
+    "startMs": 31289,
+    "endMs": 31718,
+    "timestampMs": 31289,
+    "confidence": null
+  },
+  {
+    "text": " 14",
+    "startMs": 31718,
+    "endMs": 32275,
+    "timestampMs": 31718,
+    "confidence": null
+  },
+  {
+    "text": " días,",
+    "startMs": 32275,
+    "endMs": 32868,
+    "timestampMs": 32275,
+    "confidence": null
+  },
+  {
+    "text": " sin",
+    "startMs": 32868,
+    "endMs": 33193,
+    "timestampMs": 32868,
+    "confidence": null
+  },
+  {
+    "text": " tarjeta.",
+    "startMs": 33193,
+    "endMs": 33901,
+    "timestampMs": 33193,
+    "confidence": null
+  }
+]

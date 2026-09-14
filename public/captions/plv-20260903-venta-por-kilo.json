@@ -1,0 +1,387 @@
+[
+  {
+    "text": "¿Vendes",
+    "startMs": 35,
+    "endMs": 441,
+    "timestampMs": 35,
+    "confidence": null
+  },
+  {
+    "text": " jitomate,",
+    "startMs": 441,
+    "endMs": 1382,
+    "timestampMs": 441,
+    "confidence": null
+  },
+  {
+    "text": " queso",
+    "startMs": 1382,
+    "endMs": 1962,
+    "timestampMs": 1382,
+    "confidence": null
+  },
+  {
+    "text": " o",
+    "startMs": 1962,
+    "endMs": 2113,
+    "timestampMs": 1962,
+    "confidence": null
+  },
+  {
+    "text": " frijol",
+    "startMs": 2113,
+    "endMs": 2566,
+    "timestampMs": 2113,
+    "confidence": null
+  },
+  {
+    "text": " por",
+    "startMs": 2566,
+    "endMs": 2740,
+    "timestampMs": 2566,
+    "confidence": null
+  },
+  {
+    "text": " kilo?",
+    "startMs": 2740,
+    "endMs": 3831,
+    "timestampMs": 2740,
+    "confidence": null
+  },
+  {
+    "text": " Esto",
+    "startMs": 3831,
+    "endMs": 4180,
+    "timestampMs": 3831,
+    "confidence": null
+  },
+  {
+    "text": " te",
+    "startMs": 4180,
+    "endMs": 4284,
+    "timestampMs": 4180,
+    "confidence": null
+  },
+  {
+    "text": " interesa.",
+    "startMs": 4284,
+    "endMs": 5341,
+    "timestampMs": 4284,
+    "confidence": null
+  },
+  {
+    "text": " Agregas",
+    "startMs": 5341,
+    "endMs": 5898,
+    "timestampMs": 5341,
+    "confidence": null
+  },
+  {
+    "text": " el",
+    "startMs": 5898,
+    "endMs": 6002,
+    "timestampMs": 5898,
+    "confidence": null
+  },
+  {
+    "text": " producto",
+    "startMs": 6002,
+    "endMs": 6827,
+    "timestampMs": 6002,
+    "confidence": null
+  },
+  {
+    "text": " y",
+    "startMs": 6827,
+    "endMs": 7036,
+    "timestampMs": 6827,
+    "confidence": null
+  },
+  {
+    "text": " capturas",
+    "startMs": 7036,
+    "endMs": 7639,
+    "timestampMs": 7036,
+    "confidence": null
+  },
+  {
+    "text": " cero",
+    "startMs": 7639,
+    "endMs": 8046,
+    "timestampMs": 7639,
+    "confidence": null
+  },
+  {
+    "text": " punto",
+    "startMs": 8046,
+    "endMs": 8429,
+    "timestampMs": 8046,
+    "confidence": null
+  },
+  {
+    "text": " trescientos",
+    "startMs": 8429,
+    "endMs": 8963,
+    "timestampMs": 8429,
+    "confidence": null
+  },
+  {
+    "text": " cincuenta",
+    "startMs": 8963,
+    "endMs": 9416,
+    "timestampMs": 8963,
+    "confidence": null
+  },
+  {
+    "text": " kilos.",
+    "startMs": 9416,
+    "endMs": 10670,
+    "timestampMs": 9416,
+    "confidence": null
+  },
+  {
+    "text": " Punto",
+    "startMs": 10670,
+    "endMs": 11122,
+    "timestampMs": 10670,
+    "confidence": null
+  },
+  {
+    "text": " Listo",
+    "startMs": 11122,
+    "endMs": 11529,
+    "timestampMs": 11122,
+    "confidence": null
+  },
+  {
+    "text": " calcula",
+    "startMs": 11529,
+    "endMs": 11958,
+    "timestampMs": 11529,
+    "confidence": null
+  },
+  {
+    "text": " el",
+    "startMs": 11958,
+    "endMs": 12074,
+    "timestampMs": 11958,
+    "confidence": null
+  },
+  {
+    "text": " importe",
+    "startMs": 12074,
+    "endMs": 12585,
+    "timestampMs": 12074,
+    "confidence": null
+  },
+  {
+    "text": " usando",
+    "startMs": 12585,
+    "endMs": 12968,
+    "timestampMs": 12585,
+    "confidence": null
+  },
+  {
+    "text": " el",
+    "startMs": 12968,
+    "endMs": 13084,
+    "timestampMs": 12968,
+    "confidence": null
+  },
+  {
+    "text": " precio",
+    "startMs": 13084,
+    "endMs": 13433,
+    "timestampMs": 13084,
+    "confidence": null
+  },
+  {
+    "text": " por",
+    "startMs": 13433,
+    "endMs": 13618,
+    "timestampMs": 13433,
+    "confidence": null
+  },
+  {
+    "text": " kilo.",
+    "startMs": 13618,
+    "endMs": 14872,
+    "timestampMs": 13618,
+    "confidence": null
+  },
+  {
+    "text": " En",
+    "startMs": 14872,
+    "endMs": 15058,
+    "timestampMs": 14872,
+    "confidence": null
+  },
+  {
+    "text": " la",
+    "startMs": 15058,
+    "endMs": 15186,
+    "timestampMs": 15058,
+    "confidence": null
+  },
+  {
+    "text": " misma",
+    "startMs": 15186,
+    "endMs": 15511,
+    "timestampMs": 15186,
+    "confidence": null
+  },
+  {
+    "text": " venta",
+    "startMs": 15511,
+    "endMs": 15906,
+    "timestampMs": 15511,
+    "confidence": null
+  },
+  {
+    "text": " mezclas",
+    "startMs": 15906,
+    "endMs": 16358,
+    "timestampMs": 15906,
+    "confidence": null
+  },
+  {
+    "text": " productos",
+    "startMs": 16358,
+    "endMs": 16905,
+    "timestampMs": 16358,
+    "confidence": null
+  },
+  {
+    "text": " por",
+    "startMs": 16905,
+    "endMs": 17090,
+    "timestampMs": 16905,
+    "confidence": null
+  },
+  {
+    "text": " pieza,",
+    "startMs": 17090,
+    "endMs": 17833,
+    "timestampMs": 17090,
+    "confidence": null
+  },
+  {
+    "text": " kilo",
+    "startMs": 17833,
+    "endMs": 18286,
+    "timestampMs": 17833,
+    "confidence": null
+  },
+  {
+    "text": " o",
+    "startMs": 18286,
+    "endMs": 18402,
+    "timestampMs": 18286,
+    "confidence": null
+  },
+  {
+    "text": " litro.",
+    "startMs": 18402,
+    "endMs": 19459,
+    "timestampMs": 18402,
+    "confidence": null
+  },
+  {
+    "text": " Al",
+    "startMs": 19459,
+    "endMs": 19691,
+    "timestampMs": 19459,
+    "confidence": null
+  },
+  {
+    "text": " cobrar,",
+    "startMs": 19691,
+    "endMs": 20237,
+    "timestampMs": 19691,
+    "confidence": null
+  },
+  {
+    "text": " el",
+    "startMs": 20237,
+    "endMs": 20446,
+    "timestampMs": 20237,
+    "confidence": null
+  },
+  {
+    "text": " inventario",
+    "startMs": 20446,
+    "endMs": 21084,
+    "timestampMs": 20446,
+    "confidence": null
+  },
+  {
+    "text": " descuenta",
+    "startMs": 21084,
+    "endMs": 21676,
+    "timestampMs": 21084,
+    "confidence": null
+  },
+  {
+    "text": " la",
+    "startMs": 21676,
+    "endMs": 21804,
+    "timestampMs": 21676,
+    "confidence": null
+  },
+  {
+    "text": " cantidad",
+    "startMs": 21804,
+    "endMs": 22326,
+    "timestampMs": 21804,
+    "confidence": null
+  },
+  {
+    "text": " fraccionaria.",
+    "startMs": 22326,
+    "endMs": 23592,
+    "timestampMs": 22326,
+    "confidence": null
+  },
+  {
+    "text": " Pruébalo",
+    "startMs": 23592,
+    "endMs": 24114,
+    "timestampMs": 23592,
+    "confidence": null
+  },
+  {
+    "text": " gratis",
+    "startMs": 24114,
+    "endMs": 24556,
+    "timestampMs": 24114,
+    "confidence": null
+  },
+  {
+    "text": " 14",
+    "startMs": 24556,
+    "endMs": 25090,
+    "timestampMs": 24556,
+    "confidence": null
+  },
+  {
+    "text": " días,",
+    "startMs": 25090,
+    "endMs": 25566,
+    "timestampMs": 25090,
+    "confidence": null
+  },
+  {
+    "text": " sin",
+    "startMs": 25566,
+    "endMs": 25833,
+    "timestampMs": 25566,
+    "confidence": null
+  },
+  {
+    "text": " tarjeta.",
+    "startMs": 25833,
+    "endMs": 26402,
+    "timestampMs": 25833,
+    "confidence": null
+  }
+]

@@ -1,0 +1,569 @@
+[
+  {
+    "text": "¿Sabes",
+    "startMs": 35,
+    "endMs": 453,
+    "timestampMs": 35,
+    "confidence": null
+  },
+  {
+    "text": " cuánto",
+    "startMs": 453,
+    "endMs": 824,
+    "timestampMs": 453,
+    "confidence": null
+  },
+  {
+    "text": " descuento",
+    "startMs": 824,
+    "endMs": 1393,
+    "timestampMs": 824,
+    "confidence": null
+  },
+  {
+    "text": " se",
+    "startMs": 1393,
+    "endMs": 1521,
+    "timestampMs": 1393,
+    "confidence": null
+  },
+  {
+    "text": " da",
+    "startMs": 1521,
+    "endMs": 1625,
+    "timestampMs": 1521,
+    "confidence": null
+  },
+  {
+    "text": " en",
+    "startMs": 1625,
+    "endMs": 1741,
+    "timestampMs": 1625,
+    "confidence": null
+  },
+  {
+    "text": " tu",
+    "startMs": 1741,
+    "endMs": 1892,
+    "timestampMs": 1741,
+    "confidence": null
+  },
+  {
+    "text": " caja",
+    "startMs": 1892,
+    "endMs": 2310,
+    "timestampMs": 1892,
+    "confidence": null
+  },
+  {
+    "text": " cuando",
+    "startMs": 2310,
+    "endMs": 2694,
+    "timestampMs": 2310,
+    "confidence": null
+  },
+  {
+    "text": " tú",
+    "startMs": 2694,
+    "endMs": 2879,
+    "timestampMs": 2694,
+    "confidence": null
+  },
+  {
+    "text": " no",
+    "startMs": 2879,
+    "endMs": 2995,
+    "timestampMs": 2879,
+    "confidence": null
+  },
+  {
+    "text": " estás?",
+    "startMs": 2995,
+    "endMs": 4133,
+    "timestampMs": 2995,
+    "confidence": null
+  },
+  {
+    "text": " En",
+    "startMs": 4133,
+    "endMs": 4354,
+    "timestampMs": 4133,
+    "confidence": null
+  },
+  {
+    "text": " Punto",
+    "startMs": 4354,
+    "endMs": 4772,
+    "timestampMs": 4354,
+    "confidence": null
+  },
+  {
+    "text": " Listo",
+    "startMs": 4772,
+    "endMs": 5224,
+    "timestampMs": 4772,
+    "confidence": null
+  },
+  {
+    "text": " el",
+    "startMs": 5224,
+    "endMs": 5410,
+    "timestampMs": 5224,
+    "confidence": null
+  },
+  {
+    "text": " cajero",
+    "startMs": 5410,
+    "endMs": 5933,
+    "timestampMs": 5410,
+    "confidence": null
+  },
+  {
+    "text": " sí",
+    "startMs": 5933,
+    "endMs": 6246,
+    "timestampMs": 5933,
+    "confidence": null
+  },
+  {
+    "text": " puede",
+    "startMs": 6246,
+    "endMs": 6536,
+    "timestampMs": 6246,
+    "confidence": null
+  },
+  {
+    "text": " dar",
+    "startMs": 6536,
+    "endMs": 6722,
+    "timestampMs": 6536,
+    "confidence": null
+  },
+  {
+    "text": " un",
+    "startMs": 6722,
+    "endMs": 6815,
+    "timestampMs": 6722,
+    "confidence": null
+  },
+  {
+    "text": " descuento,",
+    "startMs": 6815,
+    "endMs": 7895,
+    "timestampMs": 6815,
+    "confidence": null
+  },
+  {
+    "text": " ahí",
+    "startMs": 7895,
+    "endMs": 8197,
+    "timestampMs": 7895,
+    "confidence": null
+  },
+  {
+    "text": " mismo",
+    "startMs": 8197,
+    "endMs": 8487,
+    "timestampMs": 8197,
+    "confidence": null
+  },
+  {
+    "text": " en",
+    "startMs": 8487,
+    "endMs": 8568,
+    "timestampMs": 8487,
+    "confidence": null
+  },
+  {
+    "text": " la",
+    "startMs": 8568,
+    "endMs": 8684,
+    "timestampMs": 8568,
+    "confidence": null
+  },
+  {
+    "text": " venta.",
+    "startMs": 8684,
+    "endMs": 9532,
+    "timestampMs": 8684,
+    "confidence": null
+  },
+  {
+    "text": " Pero",
+    "startMs": 9532,
+    "endMs": 9868,
+    "timestampMs": 9532,
+    "confidence": null
+  },
+  {
+    "text": " cada",
+    "startMs": 9868,
+    "endMs": 10205,
+    "timestampMs": 9868,
+    "confidence": null
+  },
+  {
+    "text": " descuento",
+    "startMs": 10205,
+    "endMs": 10820,
+    "timestampMs": 10205,
+    "confidence": null
+  },
+  {
+    "text": " queda",
+    "startMs": 10820,
+    "endMs": 11064,
+    "timestampMs": 10820,
+    "confidence": null
+  },
+  {
+    "text": " en",
+    "startMs": 11064,
+    "endMs": 11180,
+    "timestampMs": 11064,
+    "confidence": null
+  },
+  {
+    "text": " el",
+    "startMs": 11180,
+    "endMs": 11320,
+    "timestampMs": 11180,
+    "confidence": null
+  },
+  {
+    "text": " ticket,",
+    "startMs": 11320,
+    "endMs": 12202,
+    "timestampMs": 11320,
+    "confidence": null
+  },
+  {
+    "text": " con",
+    "startMs": 12202,
+    "endMs": 12399,
+    "timestampMs": 12202,
+    "confidence": null
+  },
+  {
+    "text": " su",
+    "startMs": 12399,
+    "endMs": 12562,
+    "timestampMs": 12399,
+    "confidence": null
+  },
+  {
+    "text": " folio",
+    "startMs": 12562,
+    "endMs": 13108,
+    "timestampMs": 12562,
+    "confidence": null
+  },
+  {
+    "text": " y",
+    "startMs": 13108,
+    "endMs": 13259,
+    "timestampMs": 13108,
+    "confidence": null
+  },
+  {
+    "text": " el",
+    "startMs": 13259,
+    "endMs": 13433,
+    "timestampMs": 13259,
+    "confidence": null
+  },
+  {
+    "text": " nombre",
+    "startMs": 13433,
+    "endMs": 13758,
+    "timestampMs": 13433,
+    "confidence": null
+  },
+  {
+    "text": " de",
+    "startMs": 13758,
+    "endMs": 13909,
+    "timestampMs": 13758,
+    "confidence": null
+  },
+  {
+    "text": " quien",
+    "startMs": 13909,
+    "endMs": 14083,
+    "timestampMs": 13909,
+    "confidence": null
+  },
+  {
+    "text": " lo",
+    "startMs": 14083,
+    "endMs": 14211,
+    "timestampMs": 14083,
+    "confidence": null
+  },
+  {
+    "text": " dio.",
+    "startMs": 14211,
+    "endMs": 15325,
+    "timestampMs": 14211,
+    "confidence": null
+  },
+  {
+    "text": " Y",
+    "startMs": 15325,
+    "endMs": 15499,
+    "timestampMs": 15325,
+    "confidence": null
+  },
+  {
+    "text": " en",
+    "startMs": 15499,
+    "endMs": 15627,
+    "timestampMs": 15499,
+    "confidence": null
+  },
+  {
+    "text": " Estadísticas",
+    "startMs": 15627,
+    "endMs": 16474,
+    "timestampMs": 15627,
+    "confidence": null
+  },
+  {
+    "text": " ves",
+    "startMs": 16474,
+    "endMs": 16764,
+    "timestampMs": 16474,
+    "confidence": null
+  },
+  {
+    "text": " el",
+    "startMs": 16764,
+    "endMs": 16950,
+    "timestampMs": 16764,
+    "confidence": null
+  },
+  {
+    "text": " total",
+    "startMs": 16950,
+    "endMs": 17403,
+    "timestampMs": 16950,
+    "confidence": null
+  },
+  {
+    "text": " de",
+    "startMs": 17403,
+    "endMs": 17519,
+    "timestampMs": 17403,
+    "confidence": null
+  },
+  {
+    "text": " descuentos",
+    "startMs": 17519,
+    "endMs": 18146,
+    "timestampMs": 17519,
+    "confidence": null
+  },
+  {
+    "text": " por",
+    "startMs": 18146,
+    "endMs": 18355,
+    "timestampMs": 18146,
+    "confidence": null
+  },
+  {
+    "text": " cajero,",
+    "startMs": 18355,
+    "endMs": 19388,
+    "timestampMs": 18355,
+    "confidence": null
+  },
+  {
+    "text": " del",
+    "startMs": 19388,
+    "endMs": 19632,
+    "timestampMs": 19388,
+    "confidence": null
+  },
+  {
+    "text": " día",
+    "startMs": 19632,
+    "endMs": 20073,
+    "timestampMs": 19632,
+    "confidence": null
+  },
+  {
+    "text": " o",
+    "startMs": 20073,
+    "endMs": 20224,
+    "timestampMs": 20073,
+    "confidence": null
+  },
+  {
+    "text": " del",
+    "startMs": 20224,
+    "endMs": 20433,
+    "timestampMs": 20224,
+    "confidence": null
+  },
+  {
+    "text": " mes.",
+    "startMs": 20433,
+    "endMs": 21199,
+    "timestampMs": 20433,
+    "confidence": null
+  },
+  {
+    "text": " No",
+    "startMs": 21199,
+    "endMs": 21443,
+    "timestampMs": 21199,
+    "confidence": null
+  },
+  {
+    "text": " es",
+    "startMs": 21443,
+    "endMs": 21571,
+    "timestampMs": 21443,
+    "confidence": null
+  },
+  {
+    "text": " para",
+    "startMs": 21571,
+    "endMs": 21815,
+    "timestampMs": 21571,
+    "confidence": null
+  },
+  {
+    "text": " regañar",
+    "startMs": 21815,
+    "endMs": 22337,
+    "timestampMs": 21815,
+    "confidence": null
+  },
+  {
+    "text": " a",
+    "startMs": 22337,
+    "endMs": 22418,
+    "timestampMs": 22337,
+    "confidence": null
+  },
+  {
+    "text": " nadie.",
+    "startMs": 22418,
+    "endMs": 23289,
+    "timestampMs": 22418,
+    "confidence": null
+  },
+  {
+    "text": " Es",
+    "startMs": 23289,
+    "endMs": 23521,
+    "timestampMs": 23289,
+    "confidence": null
+  },
+  {
+    "text": " para",
+    "startMs": 23521,
+    "endMs": 23730,
+    "timestampMs": 23521,
+    "confidence": null
+  },
+  {
+    "text": " que",
+    "startMs": 23730,
+    "endMs": 23847,
+    "timestampMs": 23730,
+    "confidence": null
+  },
+  {
+    "text": " los",
+    "startMs": 23847,
+    "endMs": 24009,
+    "timestampMs": 23847,
+    "confidence": null
+  },
+  {
+    "text": " descuentos",
+    "startMs": 24009,
+    "endMs": 24555,
+    "timestampMs": 24009,
+    "confidence": null
+  },
+  {
+    "text": " se",
+    "startMs": 24555,
+    "endMs": 24694,
+    "timestampMs": 24555,
+    "confidence": null
+  },
+  {
+    "text": " permitan...",
+    "startMs": 24694,
+    "endMs": 25762,
+    "timestampMs": 24694,
+    "confidence": null
+  },
+  {
+    "text": " y",
+    "startMs": 25762,
+    "endMs": 25936,
+    "timestampMs": 25762,
+    "confidence": null
+  },
+  {
+    "text": " se",
+    "startMs": 25936,
+    "endMs": 26099,
+    "timestampMs": 25936,
+    "confidence": null
+  },
+  {
+    "text": " vean.",
+    "startMs": 26099,
+    "endMs": 26888,
+    "timestampMs": 26099,
+    "confidence": null
+  },
+  {
+    "text": " Pruébalo",
+    "startMs": 26888,
+    "endMs": 27399,
+    "timestampMs": 26888,
+    "confidence": null
+  },
+  {
+    "text": " gratis",
+    "startMs": 27399,
+    "endMs": 27864,
+    "timestampMs": 27399,
+    "confidence": null
+  },
+  {
+    "text": " 14",
+    "startMs": 27864,
+    "endMs": 28398,
+    "timestampMs": 27864,
+    "confidence": null
+  },
+  {
+    "text": " días,",
+    "startMs": 28398,
+    "endMs": 29036,
+    "timestampMs": 28398,
+    "confidence": null
+  },
+  {
+    "text": " sin",
+    "startMs": 29036,
+    "endMs": 29361,
+    "timestampMs": 29036,
+    "confidence": null
+  },
+  {
+    "text": " tarjeta.",
+    "startMs": 29361,
+    "endMs": 29977,
+    "timestampMs": 29361,
+    "confidence": null
+  }
+]

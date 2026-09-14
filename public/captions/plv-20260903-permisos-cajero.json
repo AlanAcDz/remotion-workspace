@@ -1,0 +1,415 @@
+[
+  {
+    "text": "¿Tu",
+    "startMs": 35,
+    "endMs": 209,
+    "timestampMs": 35,
+    "confidence": null
+  },
+  {
+    "text": " cajero",
+    "startMs": 209,
+    "endMs": 673,
+    "timestampMs": 209,
+    "confidence": null
+  },
+  {
+    "text": " ve",
+    "startMs": 673,
+    "endMs": 871,
+    "timestampMs": 673,
+    "confidence": null
+  },
+  {
+    "text": " cuánto",
+    "startMs": 871,
+    "endMs": 1219,
+    "timestampMs": 871,
+    "confidence": null
+  },
+  {
+    "text": " le",
+    "startMs": 1219,
+    "endMs": 1335,
+    "timestampMs": 1219,
+    "confidence": null
+  },
+  {
+    "text": " ganas",
+    "startMs": 1335,
+    "endMs": 1660,
+    "timestampMs": 1335,
+    "confidence": null
+  },
+  {
+    "text": " a",
+    "startMs": 1660,
+    "endMs": 1753,
+    "timestampMs": 1660,
+    "confidence": null
+  },
+  {
+    "text": " cada",
+    "startMs": 1753,
+    "endMs": 2067,
+    "timestampMs": 1753,
+    "confidence": null
+  },
+  {
+    "text": " producto?",
+    "startMs": 2067,
+    "endMs": 3146,
+    "timestampMs": 2067,
+    "confidence": null
+  },
+  {
+    "text": " En",
+    "startMs": 3146,
+    "endMs": 3332,
+    "timestampMs": 3146,
+    "confidence": null
+  },
+  {
+    "text": " Punto",
+    "startMs": 3332,
+    "endMs": 3680,
+    "timestampMs": 3332,
+    "confidence": null
+  },
+  {
+    "text": " Listo,",
+    "startMs": 3680,
+    "endMs": 4110,
+    "timestampMs": 3680,
+    "confidence": null
+  },
+  {
+    "text": " el",
+    "startMs": 4110,
+    "endMs": 4307,
+    "timestampMs": 4110,
+    "confidence": null
+  },
+  {
+    "text": " cajero",
+    "startMs": 4307,
+    "endMs": 4818,
+    "timestampMs": 4307,
+    "confidence": null
+  },
+  {
+    "text": " entra",
+    "startMs": 4818,
+    "endMs": 5155,
+    "timestampMs": 4818,
+    "confidence": null
+  },
+  {
+    "text": " a",
+    "startMs": 5155,
+    "endMs": 5224,
+    "timestampMs": 5155,
+    "confidence": null
+  },
+  {
+    "text": " venta",
+    "startMs": 5224,
+    "endMs": 5677,
+    "timestampMs": 5224,
+    "confidence": null
+  },
+  {
+    "text": " y",
+    "startMs": 5677,
+    "endMs": 5875,
+    "timestampMs": 5677,
+    "confidence": null
+  },
+  {
+    "text": " maneja",
+    "startMs": 5875,
+    "endMs": 6281,
+    "timestampMs": 5875,
+    "confidence": null
+  },
+  {
+    "text": " su",
+    "startMs": 6281,
+    "endMs": 6432,
+    "timestampMs": 6281,
+    "confidence": null
+  },
+  {
+    "text": " propio",
+    "startMs": 6432,
+    "endMs": 6769,
+    "timestampMs": 6432,
+    "confidence": null
+  },
+  {
+    "text": " corte.",
+    "startMs": 6769,
+    "endMs": 8081,
+    "timestampMs": 6769,
+    "confidence": null
+  },
+  {
+    "text": " Costos,",
+    "startMs": 8081,
+    "endMs": 8916,
+    "timestampMs": 8081,
+    "confidence": null
+  },
+  {
+    "text": " estadísticas,",
+    "startMs": 8916,
+    "endMs": 10182,
+    "timestampMs": 8916,
+    "confidence": null
+  },
+  {
+    "text": " catálogo",
+    "startMs": 10182,
+    "endMs": 11180,
+    "timestampMs": 10182,
+    "confidence": null
+  },
+  {
+    "text": " y",
+    "startMs": 11180,
+    "endMs": 11343,
+    "timestampMs": 11180,
+    "confidence": null
+  },
+  {
+    "text": " equipo",
+    "startMs": 11343,
+    "endMs": 12028,
+    "timestampMs": 11343,
+    "confidence": null
+  },
+  {
+    "text": " quedan",
+    "startMs": 12028,
+    "endMs": 12411,
+    "timestampMs": 12028,
+    "confidence": null
+  },
+  {
+    "text": " fuera",
+    "startMs": 12411,
+    "endMs": 12713,
+    "timestampMs": 12411,
+    "confidence": null
+  },
+  {
+    "text": " de",
+    "startMs": 12713,
+    "endMs": 12817,
+    "timestampMs": 12713,
+    "confidence": null
+  },
+  {
+    "text": " su",
+    "startMs": 12817,
+    "endMs": 12922,
+    "timestampMs": 12817,
+    "confidence": null
+  },
+  {
+    "text": " acceso.",
+    "startMs": 12922,
+    "endMs": 13978,
+    "timestampMs": 12922,
+    "confidence": null
+  },
+  {
+    "text": " Con",
+    "startMs": 13978,
+    "endMs": 14234,
+    "timestampMs": 13978,
+    "confidence": null
+  },
+  {
+    "text": " acceso",
+    "startMs": 14234,
+    "endMs": 14663,
+    "timestampMs": 14234,
+    "confidence": null
+  },
+  {
+    "text": " de",
+    "startMs": 14663,
+    "endMs": 14768,
+    "timestampMs": 14663,
+    "confidence": null
+  },
+  {
+    "text": " dueño,",
+    "startMs": 14768,
+    "endMs": 15406,
+    "timestampMs": 14768,
+    "confidence": null
+  },
+  {
+    "text": " tú",
+    "startMs": 15406,
+    "endMs": 15627,
+    "timestampMs": 15406,
+    "confidence": null
+  },
+  {
+    "text": " revisas",
+    "startMs": 15627,
+    "endMs": 16091,
+    "timestampMs": 15627,
+    "confidence": null
+  },
+  {
+    "text": " ventas,",
+    "startMs": 16091,
+    "endMs": 16858,
+    "timestampMs": 16091,
+    "confidence": null
+  },
+  {
+    "text": " estadísticas",
+    "startMs": 16858,
+    "endMs": 17868,
+    "timestampMs": 16858,
+    "confidence": null
+  },
+  {
+    "text": " y",
+    "startMs": 17868,
+    "endMs": 18054,
+    "timestampMs": 17868,
+    "confidence": null
+  },
+  {
+    "text": " cortes.",
+    "startMs": 18054,
+    "endMs": 19180,
+    "timestampMs": 18054,
+    "confidence": null
+  },
+  {
+    "text": " Cada",
+    "startMs": 19180,
+    "endMs": 19517,
+    "timestampMs": 19180,
+    "confidence": null
+  },
+  {
+    "text": " persona",
+    "startMs": 19517,
+    "endMs": 20074,
+    "timestampMs": 19517,
+    "confidence": null
+  },
+  {
+    "text": " entra",
+    "startMs": 20074,
+    "endMs": 20457,
+    "timestampMs": 20074,
+    "confidence": null
+  },
+  {
+    "text": " con",
+    "startMs": 20457,
+    "endMs": 20620,
+    "timestampMs": 20457,
+    "confidence": null
+  },
+  {
+    "text": " su",
+    "startMs": 20620,
+    "endMs": 20747,
+    "timestampMs": 20620,
+    "confidence": null
+  },
+  {
+    "text": " propia",
+    "startMs": 20747,
+    "endMs": 21072,
+    "timestampMs": 20747,
+    "confidence": null
+  },
+  {
+    "text": " cuenta,",
+    "startMs": 21072,
+    "endMs": 21897,
+    "timestampMs": 21072,
+    "confidence": null
+  },
+  {
+    "text": " sin",
+    "startMs": 21897,
+    "endMs": 22222,
+    "timestampMs": 21897,
+    "confidence": null
+  },
+  {
+    "text": " compartir",
+    "startMs": 22222,
+    "endMs": 22779,
+    "timestampMs": 22222,
+    "confidence": null
+  },
+  {
+    "text": " tu",
+    "startMs": 22779,
+    "endMs": 22907,
+    "timestampMs": 22779,
+    "confidence": null
+  },
+  {
+    "text": " contraseña.",
+    "startMs": 22907,
+    "endMs": 24010,
+    "timestampMs": 22907,
+    "confidence": null
+  },
+  {
+    "text": " Pruébalo",
+    "startMs": 24010,
+    "endMs": 24520,
+    "timestampMs": 24010,
+    "confidence": null
+  },
+  {
+    "text": " gratis",
+    "startMs": 24520,
+    "endMs": 24938,
+    "timestampMs": 24520,
+    "confidence": null
+  },
+  {
+    "text": " 14",
+    "startMs": 24938,
+    "endMs": 25507,
+    "timestampMs": 24938,
+    "confidence": null
+  },
+  {
+    "text": " días,",
+    "startMs": 25507,
+    "endMs": 26041,
+    "timestampMs": 25507,
+    "confidence": null
+  },
+  {
+    "text": " sin",
+    "startMs": 26041,
+    "endMs": 26401,
+    "timestampMs": 26041,
+    "confidence": null
+  },
+  {
+    "text": " tarjeta.",
+    "startMs": 26401,
+    "endMs": 26982,
+    "timestampMs": 26401,
+    "confidence": null
+  }
+]

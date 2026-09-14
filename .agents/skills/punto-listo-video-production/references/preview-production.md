@@ -1,27 +1,27 @@
 # Preview production
 
-Run this phase only after the parent skill has confirmed `Aprobado para grabar` and `Claims revisados`.
+Run this phase only after the parent skill has confirmed the gates in its phase table — `Clips listos` (or a resumed `En edición`) with `Claims revisados` checked for a new edit, or an explicitly requested re-edit — and has set `Estado` to `En edición`.
+
+The same reference covers re-edits. On a re-edit, scope the work to what the user asked to change and reuse every artifact that is still correct; the steps below still describe how each artifact is produced and verified.
 
 ## 1. Establish local inputs
 
 1. Inspect the repository, current worktree, existing Punto Listo template, package scripts, and any artifacts for this `Video ID` before editing.
 2. Read the existing [`remotion-best-practices`](../../remotion-best-practices/SKILL.md) router and follow the relevant creation, markup, multimedia, caption, and render branches before changing Remotion code.
-3. Resolve the seeded demo URL from the Notion page, repository configuration, or an already running local service. Do not guess a URL or substitute a production environment. If the seeded demo cannot be found or reached, stop without changing Notion.
-4. Confirm that every numbered capture instruction is executable in the seeded data. Report a mismatch instead of inventing missing data or actions.
+3. Read the record's `Notas de edición` and `Revisión de claims` as constraints, not background. A withdrawn or qualified claim tells you what the edit must not show; an editing note often dictates what the first second has to be.
 
-## 2. Record the UI clips
+## 2. Ingest and verify the clips
 
-Use `agent-browser` for deterministic local browser recording.
+The record reached `Clips listos` because the capture step already produced the clips. This phase reads them; it does not record them.
 
-1. Load its operating instructions with `agent-browser skills get core` before browser commands.
-2. Create an isolated browser session named for the video slug and choose the viewport required by the capture plan and vertical template.
-3. Create `public/videos/punto-listo/<video-slug>/` without deleting or replacing existing media.
-4. Reset the demo to its known seeded state before each independent capture when the plan depends on starting state.
-5. Use snapshots and semantic element references to perform only the listed interactions. Record one ordered clip per numbered step unless the plan explicitly requires a continuous take.
-6. Stop each recording immediately after its intended action and save it with a zero-padded descriptive filename.
-7. Probe every clip for readable video, dimensions, frame rate, and duration. Inspect representative frames to confirm the correct screen, action, cursor or touch state, and absence of accidental overlays or sensitive data.
+1. Locate the clips for this `Video ID`. They usually arrive as `.webm` files under the Punto Listo repo's `artifacts/clips/`, named for the video they belong to. If nothing there matches, ask where they are instead of guessing.
+2. Create `public/videos/punto-listo/<video-slug>/` without deleting or replacing existing media, and transcode each clip into it as H.264 mp4 with ordered, zero-padded, descriptive names such as `01-cobro-rapido.mp4`. Leave the source files untouched: the repo copy is a derivative, not a move.
+3. Probe every clip for readable video, dimensions, frame rate, and duration. Clips belonging to one video should share a geometry — a mismatch means crop windows will not carry across them.
+4. Inspect frames across the full length of every clip, not only its opening. A labelled contact sheet at 1 fps is the cheapest way to read a take: confirm the expected screens, the actions the plan calls for, and the absence of accidental overlays or sensitive data.
+5. Record the source landmarks while you have them on screen — the second each action happens, and the source pixel rows each UI region occupies. Every beat's `trimBefore` and crop window is derived from those two numbers, so measure once and write them into the props module's header comment.
+6. Check each numbered capture instruction against what the clips actually show. Report a mismatch instead of inventing missing data, and carry every unresolved mismatch into the Notion handoff so the human review gate sees it.
 
-If browser automation is unavailable or the flow cannot be reproduced reliably, stop before voice generation and Notion writes.
+If a clip is missing or unusable, stop and report it. Recording the flow belongs to the `UI por grabar` step, not to this skill. Re-record a single clip only when the user explicitly asks: use `agent-browser` against the seeded demo (load `agent-browser skills get core` first, and resolve the demo URL from Notion or repository configuration rather than guessing it or substituting production), matching the existing clips' viewport and geometry exactly.
 
 ## 3. Generate the standard voiceover
 
@@ -75,9 +75,10 @@ After successful verification:
 
 1. Update `Ruta de clips` and the `## Producción de video` page section according to the parent skill's Notion write contract.
 2. Upload or link the preview only when the connector and file size support it; always record the repo-relative preview path.
-3. Set `Estado` to `Render para revisión`.
-4. Refetch and verify the Notion record.
-5. Stop. Tell the user where the preview is and that final rendering requires Alan to review it and check `Video aprobado` in Notion.
+3. Record every mismatch found in step 2.6 in that section, marked clearly enough that Alan sees it before he checks `Video aprobado`. A preview that contradicts its own narration must say so in writing.
+4. Move `Estado` from `En edición` to `Render para revisión`.
+5. Refetch and verify the Notion record: paths, attachment or URL, `Estado`, and that `Claims revisados` and `Video aprobado` are untouched.
+6. Stop. Tell the user where the preview is and that final rendering requires Alan to review it and check `Video aprobado` in Notion.
 
 Do not set `Video aprobado`, render the final file, or begin distribution in this phase.
 

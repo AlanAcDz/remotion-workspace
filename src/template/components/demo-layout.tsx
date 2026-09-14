@@ -28,7 +28,7 @@ export const PANEL = {
  * last ~200px of a Reel.
  */
 export const CAPTION_BAND = {
-  top: UI_ZONE.height + 30,
+  top: UI_ZONE.height + 72,
   height: 400,
   width: 960,
   left: 60,
