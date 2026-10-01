@@ -37,6 +37,8 @@ export const CAPTION_BAND = {
 interface DemoLayoutProps {
   name: string;
   children: ReactNode;
+  /** false skips the entrance dissolve so the opening beat shows on frame 0. */
+  fadeIn?: boolean;
 }
 
 /**
@@ -44,7 +46,7 @@ interface DemoLayoutProps {
  * Cross-dissolves on enter and exit so beats never hard-cut — each beat's
  * <Sequence> is padded so neighbours overlap.
  */
-export function DemoLayout({ name, children }: DemoLayoutProps) {
+export function DemoLayout({ name, children, fadeIn = true }: DemoLayoutProps) {
   const frame = useCurrentFrame();
   const { durationInFrames } = useVideoConfig();
 
@@ -66,7 +68,7 @@ export function DemoLayout({ name, children }: DemoLayoutProps) {
           opacity: interpolate(
             frame,
             [0, 10, durationInFrames - 10, durationInFrames],
-            [0, 1, 1, 0],
+            [fadeIn ? 0 : 1, 1, 1, 0],
             {
               extrapolateLeft: "clamp",
               extrapolateRight: "clamp",
@@ -86,7 +88,11 @@ export function DemoLayout({ name, children }: DemoLayoutProps) {
 }
 
 /** Full-bleed variant for portrait clips recorded at a mobile viewport. */
-export function FullFrameLayout({ name, children }: DemoLayoutProps) {
+export function FullFrameLayout({
+  name,
+  children,
+  fadeIn = true,
+}: DemoLayoutProps) {
   const frame = useCurrentFrame();
   const { durationInFrames } = useVideoConfig();
 
@@ -98,7 +104,7 @@ export function FullFrameLayout({ name, children }: DemoLayoutProps) {
         opacity: interpolate(
           frame,
           [0, 10, durationInFrames - 10, durationInFrames],
-          [0, 1, 1, 0],
+          [fadeIn ? 0 : 1, 1, 1, 0],
           {
             extrapolateLeft: "clamp",
             extrapolateRight: "clamp",
@@ -117,7 +123,11 @@ export function FullFrameLayout({ name, children }: DemoLayoutProps) {
 }
 
 /** Full-width mobile UI framing filling the UI zone, captions below it. */
-export function MobileUiLayout({ name, children }: DemoLayoutProps) {
+export function MobileUiLayout({
+  name,
+  children,
+  fadeIn = true,
+}: DemoLayoutProps) {
   const frame = useCurrentFrame();
   const { durationInFrames } = useVideoConfig();
 
@@ -139,7 +149,7 @@ export function MobileUiLayout({ name, children }: DemoLayoutProps) {
           opacity: interpolate(
             frame,
             [0, 10, durationInFrames - 10, durationInFrames],
-            [0, 1, 1, 0],
+            [fadeIn ? 0 : 1, 1, 1, 0],
             {
               extrapolateLeft: "clamp",
               extrapolateRight: "clamp",

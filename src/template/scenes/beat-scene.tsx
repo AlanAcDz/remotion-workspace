@@ -11,9 +11,10 @@ import { FRAME, UI_ZONE, type Beat } from "../schema";
 
 interface BeatSceneProps {
   beat: Beat;
+  fadeIn?: boolean;
 }
 
-export function BeatScene({ beat }: BeatSceneProps) {
+export function BeatScene({ beat, fadeIn = true }: BeatSceneProps) {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
 
@@ -39,7 +40,7 @@ export function BeatScene({ beat }: BeatSceneProps) {
     <AbsoluteFill name={beat.name}>
       <SfxCues cues={beat.sfx} />
 
-      <Layout name={`${beat.name} panel`}>
+      <Layout name={`${beat.name} panel`} fadeIn={fadeIn}>
         {beat.panes.map((pane, index) => (
           <BeatPane
             key={`${pane.clip}-${index}`}

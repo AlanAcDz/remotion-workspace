@@ -31,7 +31,7 @@ export function PosDemo({
 
       {music ? <MusicBed music={music} ctaFrom={ctaFrom} /> : null}
 
-      {beats.map((beat) => (
+      {beats.map((beat, index) => (
         <Sequence
           key={beat.name}
           name={beat.name}
@@ -40,12 +40,18 @@ export function PosDemo({
             Math.round((beat.to - beat.from) * fps) + CROSSFADE
           }
         >
-          <BeatScene beat={beat} />
+          {/* With the hook's fade-in off, the opening frame doubles as the
+              thumbnail, so the first beat is on screen from frame 0 too. */}
+          <BeatScene beat={beat} fadeIn={hook.fadeIn || index > 0} />
         </Sequence>
       ))}
 
       <Sequence name="Hook copy" durationInFrames={hookUntil + CROSSFADE}>
-        <HookOverlay text={hook.text} subline={hook.subline} />
+        <HookOverlay
+          text={hook.text}
+          subline={hook.subline}
+          fadeIn={hook.fadeIn}
+        />
       </Sequence>
 
       <Sequence

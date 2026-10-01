@@ -11,13 +11,14 @@ import { CAPTION_BAND } from "../components/demo-layout";
 interface HookOverlayProps {
   text: string;
   subline?: string;
+  fadeIn: boolean;
 }
 
 /**
  * During the hook the big copy *is* the caption, so the word-by-word track
  * stays off until this fades out.
  */
-export function HookOverlay({ text, subline }: HookOverlayProps) {
+export function HookOverlay({ text, subline, fadeIn }: HookOverlayProps) {
   const frame = useCurrentFrame();
   const { durationInFrames } = useVideoConfig();
 
@@ -51,7 +52,7 @@ export function HookOverlay({ text, subline }: HookOverlayProps) {
             opacity: interpolate(
               frame,
               [0, 10, durationInFrames - 8, durationInFrames],
-              [0, 1, 1, 0],
+              [fadeIn ? 0 : 1, 1, 1, 0],
               {
                 extrapolateLeft: "clamp",
                 extrapolateRight: "clamp",
@@ -62,11 +63,13 @@ export function HookOverlay({ text, subline }: HookOverlayProps) {
                 ],
               },
             ),
-            translate: interpolate(frame, [0, 14], ["0px 24px", "0px 0px"], {
-              extrapolateLeft: "clamp",
-              extrapolateRight: "clamp",
-              easing: Easing.bezier(0.16, 1, 0.3, 1),
-            }),
+            translate: fadeIn
+              ? interpolate(frame, [0, 14], ["0px 24px", "0px 0px"], {
+                  extrapolateLeft: "clamp",
+                  extrapolateRight: "clamp",
+                  easing: Easing.bezier(0.16, 1, 0.3, 1),
+                })
+              : "0px 0px",
           }}
         >
           {text}

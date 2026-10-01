@@ -102,6 +102,8 @@ export const posDemoSchema = z.object({
     text: z.string(),
     subline: z.string().optional(),
     until: z.number(), // seconds
+    /** false shows the headline fully from frame 0, which is also the thumbnail. */
+    fadeIn: z.boolean().default(true),
   }),
   /** Ink on paper for panel videos, white-on-video for full-bleed ones. */
   captionStyle: z.enum(["paper", "video"]).default("paper"),

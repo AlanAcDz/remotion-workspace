@@ -69,4 +69,34 @@ ffmpeg -hide_banner -loglevel error -y \
   "$TMP/soft-hit.wav"
 encode "$TMP/soft-hit.wav" soft-hit.mp3
 
+# Thermal printer feeding a line — the "El Ticket" signature. A stepper motor is
+# a train of tiny clicks, so this is a 190 Hz pulse train (the step rate) over a
+# band of paper hiss, gated to one short feed. Bandpassed to 700 Hz-5 kHz: that
+# is where a real printer's buzz sits, and it survives phone speakers.
+ffmpeg -hide_banner -loglevel error -y \
+  -f lavfi -i "aevalsrc=exprs='0.8*lt(mod(t*190,1),0.18)*(1-0.35*lt(mod(t*23,1),0.5))':d=0.3:s=48000" \
+  -f lavfi -i "anoisesrc=d=0.3:c=white:r=48000:a=0.25:seed=5" \
+  -filter_complex "\
+[1:a]highpass=f=2500,lowpass=f=7000[hiss]; \
+[0:a][hiss]amix=inputs=2:normalize=0,highpass=f=700,lowpass=f=5000,\
+volume='min(t/0.01,1)*min((0.3-t)/0.04,1)':eval=frame" \
+  "$TMP/printer.wav"
+encode "$TMP/printer.wav" printer.mp3
+
+# Paper tear — a burst of crackle: bright noise chopped by two beating
+# envelopes so it rips in uneven fibres rather than hissing evenly.
+ffmpeg -hide_banner -loglevel error -y \
+  -f lavfi -i "anoisesrc=d=0.42:c=white:r=48000:a=0.9:seed=21" \
+  -af "highpass=f=1200,lowpass=f=8000,\
+volume='min(t/0.008,1)*exp(-4.5*t)*(0.35+0.65*abs(sin(2*PI*41*t)*sin(2*PI*67*t+1)))':eval=frame,\
+afade=t=out:st=0.34:d=0.08" \
+  "$TMP/tear.wav"
+encode "$TMP/tear.wav" tear.mp3
+
+# Counter tick — one mechanical digit flipping on the printer's display.
+ffmpeg -hide_banner -loglevel error -y \
+  -f lavfi -i "aevalsrc=exprs='min(t/0.001,1)*(0.7*sin(2*PI*2600*t)+0.3*sin(2*PI*5200*t))*exp(-140*t)':d=0.05:s=48000" \
+  "$TMP/tick.wav"
+encode "$TMP/tick.wav" tick.mp3
+
 ls -l "$OUT"
