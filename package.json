@@ -40,6 +40,7 @@
     "test:punto-listo": "node --test scripts/punto-listo/*.test.mjs"
   },
   "sideEffects": [
-    "*.css"
+    "*.css",
+    "./src/template/fonts.ts"
   ]
 }
