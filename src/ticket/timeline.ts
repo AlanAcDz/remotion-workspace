@@ -12,6 +12,8 @@ import type { TicketStoryProps } from "./schema";
  */
 export interface TicketTimeline {
   beat: number; // frames per beat
+  /** Where the cold open hands over to the printing, when there is one. */
+  coldOpenEnd: number | null;
   lossLines: number[];
   subtotal: number | null;
   multipliers: number[];
@@ -102,6 +104,7 @@ export function buildTimeline(
 
   return {
     beat,
+    coldOpenEnd: props.coldOpen ? sec(props.coldOpen.until) : null,
     lossLines,
     subtotal: subtotal === null ? null : at(subtotal),
     multipliers: timing ? timing.multipliers.map(sec) : gridMultipliers.map(at),

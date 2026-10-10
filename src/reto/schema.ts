@@ -25,6 +25,11 @@ export const retoSchema = z.object({
   question: z.object({
     facts: z.array(z.string()).min(1).max(3),
     ask: z.string(),
+    /**
+     * Multiple choice: lettered A, B, C… under the card, so the comment the
+     * countdown asks for is one letter instead of a typed amount.
+     */
+    options: z.array(z.string()).min(2).max(3).optional(),
   }),
 
   /**
@@ -61,8 +66,16 @@ export const retoSchema = z.object({
     at: z.number(),
     text: z.string(), // "Cambio: $92.70"
     subline: z.string(),
+    /** Index into `question.options` of the right one, marked at `at`. */
+    correct: z.number().int().min(0).optional(),
     ring: cardRectSchema,
   }),
+
+  /**
+   * Replaces the subline before the CTA, when the voice asks for the follow:
+   * "Sigue la cuenta para el próximo reto". `at` is on the final timeline.
+   */
+  follow: z.object({ text: z.string(), at: z.number() }).optional(),
 
   /** Same end card as PosDemo; every time here is on the final timeline. */
   cta: posDemoSchema.shape.cta,

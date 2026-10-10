@@ -1,0 +1,331 @@
+[
+  {
+    "text": "Un",
+    "startMs": 35,
+    "endMs": 209,
+    "timestampMs": 35,
+    "confidence": null
+  },
+  {
+    "text": " Peñafiel",
+    "startMs": 209,
+    "endMs": 789,
+    "timestampMs": 209,
+    "confidence": null
+  },
+  {
+    "text": " de",
+    "startMs": 789,
+    "endMs": 906,
+    "timestampMs": 789,
+    "confidence": null
+  },
+  {
+    "text": " dieciocho",
+    "startMs": 906,
+    "endMs": 1916,
+    "timestampMs": 906,
+    "confidence": null
+  },
+  {
+    "text": " y",
+    "startMs": 1916,
+    "endMs": 2067,
+    "timestampMs": 1916,
+    "confidence": null
+  },
+  {
+    "text": " unas",
+    "startMs": 2067,
+    "endMs": 2357,
+    "timestampMs": 2067,
+    "confidence": null
+  },
+  {
+    "text": " conchas",
+    "startMs": 2357,
+    "endMs": 2740,
+    "timestampMs": 2357,
+    "confidence": null
+  },
+  {
+    "text": " de",
+    "startMs": 2740,
+    "endMs": 2844,
+    "timestampMs": 2740,
+    "confidence": null
+  },
+  {
+    "text": " veinte.",
+    "startMs": 2844,
+    "endMs": 3785,
+    "timestampMs": 2844,
+    "confidence": null
+  },
+  {
+    "text": " Te",
+    "startMs": 3785,
+    "endMs": 3971,
+    "timestampMs": 3785,
+    "confidence": null
+  },
+  {
+    "text": " pagan",
+    "startMs": 3971,
+    "endMs": 4331,
+    "timestampMs": 3971,
+    "confidence": null
+  },
+  {
+    "text": " con",
+    "startMs": 4331,
+    "endMs": 4528,
+    "timestampMs": 4331,
+    "confidence": null
+  },
+  {
+    "text": " un",
+    "startMs": 4528,
+    "endMs": 4621,
+    "timestampMs": 4528,
+    "confidence": null
+  },
+  {
+    "text": " billete",
+    "startMs": 4621,
+    "endMs": 5027,
+    "timestampMs": 4621,
+    "confidence": null
+  },
+  {
+    "text": " de",
+    "startMs": 5027,
+    "endMs": 5143,
+    "timestampMs": 5027,
+    "confidence": null
+  },
+  {
+    "text": " cien.",
+    "startMs": 5143,
+    "endMs": 6107,
+    "timestampMs": 5143,
+    "confidence": null
+  },
+  {
+    "text": " ¿Cuánto",
+    "startMs": 6107,
+    "endMs": 6594,
+    "timestampMs": 6107,
+    "confidence": null
+  },
+  {
+    "text": " das",
+    "startMs": 6594,
+    "endMs": 6757,
+    "timestampMs": 6594,
+    "confidence": null
+  },
+  {
+    "text": " de",
+    "startMs": 6757,
+    "endMs": 6873,
+    "timestampMs": 6757,
+    "confidence": null
+  },
+  {
+    "text": " cambio?",
+    "startMs": 6873,
+    "endMs": 8127,
+    "timestampMs": 6873,
+    "confidence": null
+  },
+  {
+    "text": " Sesenta",
+    "startMs": 8127,
+    "endMs": 8626,
+    "timestampMs": 8127,
+    "confidence": null
+  },
+  {
+    "text": " y",
+    "startMs": 8626,
+    "endMs": 8684,
+    "timestampMs": 8626,
+    "confidence": null
+  },
+  {
+    "text": " dos",
+    "startMs": 8684,
+    "endMs": 8905,
+    "timestampMs": 8684,
+    "confidence": null
+  },
+  {
+    "text": " pesos:",
+    "startMs": 8905,
+    "endMs": 9903,
+    "timestampMs": 8905,
+    "confidence": null
+  },
+  {
+    "text": " la",
+    "startMs": 9903,
+    "endMs": 10089,
+    "timestampMs": 9903,
+    "confidence": null
+  },
+  {
+    "text": " B.",
+    "startMs": 10089,
+    "endMs": 10855,
+    "timestampMs": 10089,
+    "confidence": null
+  },
+  {
+    "text": " Punto",
+    "startMs": 10855,
+    "endMs": 11297,
+    "timestampMs": 10855,
+    "confidence": null
+  },
+  {
+    "text": " Listo",
+    "startMs": 11297,
+    "endMs": 11773,
+    "timestampMs": 11297,
+    "confidence": null
+  },
+  {
+    "text": " te",
+    "startMs": 11773,
+    "endMs": 11947,
+    "timestampMs": 11773,
+    "confidence": null
+  },
+  {
+    "text": " lo",
+    "startMs": 11947,
+    "endMs": 12098,
+    "timestampMs": 11947,
+    "confidence": null
+  },
+  {
+    "text": " calcula",
+    "startMs": 12098,
+    "endMs": 12608,
+    "timestampMs": 12098,
+    "confidence": null
+  },
+  {
+    "text": " solo,",
+    "startMs": 12608,
+    "endMs": 13270,
+    "timestampMs": 12608,
+    "confidence": null
+  },
+  {
+    "text": " sin",
+    "startMs": 13270,
+    "endMs": 13630,
+    "timestampMs": 13270,
+    "confidence": null
+  },
+  {
+    "text": " calculadora.",
+    "startMs": 13630,
+    "endMs": 15221,
+    "timestampMs": 13630,
+    "confidence": null
+  },
+  {
+    "text": " Sigue",
+    "startMs": 15221,
+    "endMs": 15592,
+    "timestampMs": 15221,
+    "confidence": null
+  },
+  {
+    "text": " la",
+    "startMs": 15592,
+    "endMs": 15732,
+    "timestampMs": 15592,
+    "confidence": null
+  },
+  {
+    "text": " cuenta",
+    "startMs": 15732,
+    "endMs": 16149,
+    "timestampMs": 15732,
+    "confidence": null
+  },
+  {
+    "text": " para",
+    "startMs": 16149,
+    "endMs": 16370,
+    "timestampMs": 16149,
+    "confidence": null
+  },
+  {
+    "text": " el",
+    "startMs": 16370,
+    "endMs": 16486,
+    "timestampMs": 16370,
+    "confidence": null
+  },
+  {
+    "text": " próximo",
+    "startMs": 16486,
+    "endMs": 16974,
+    "timestampMs": 16486,
+    "confidence": null
+  },
+  {
+    "text": " reto.",
+    "startMs": 16974,
+    "endMs": 17856,
+    "timestampMs": 16974,
+    "confidence": null
+  },
+  {
+    "text": " Pruébalo",
+    "startMs": 17856,
+    "endMs": 18355,
+    "timestampMs": 17856,
+    "confidence": null
+  },
+  {
+    "text": " gratis",
+    "startMs": 18355,
+    "endMs": 18808,
+    "timestampMs": 18355,
+    "confidence": null
+  },
+  {
+    "text": " 14",
+    "startMs": 18808,
+    "endMs": 19319,
+    "timestampMs": 18808,
+    "confidence": null
+  },
+  {
+    "text": " días,",
+    "startMs": 19319,
+    "endMs": 19853,
+    "timestampMs": 19319,
+    "confidence": null
+  },
+  {
+    "text": " sin",
+    "startMs": 19853,
+    "endMs": 20178,
+    "timestampMs": 19853,
+    "confidence": null
+  },
+  {
+    "text": " tarjeta.",
+    "startMs": 20178,
+    "endMs": 20863,
+    "timestampMs": 20178,
+    "confidence": null
+  }
+]

@@ -56,3 +56,14 @@ ffmpeg -i out/.../preview.mp4 -af ebur128=peak=true -f null - 2>&1 | tail -12
 - `fix` is optional: without it the pivot goes straight to the proof.
 - `timing` pins the story beats to the narration's words, in seconds read off
   the caption JSON; the receipt lines stay on the beat grid.
+
+## Total first and two-moment proofs
+
+`ticket-merma.props.ts` adds two opt-in props:
+
+- `coldOpen` holds the final total on the display under its own headline for
+  `until` seconds, then the display rewinds and the receipt prints. Set
+  `loss.lineStart` past `until` so the first line waits for it.
+- `proof.cut` cuts the proof card to a second moment of the same recording
+  (the action, then where it lands). Its crop must keep the first crop's size;
+  its highlight's `at` counts from the cut.

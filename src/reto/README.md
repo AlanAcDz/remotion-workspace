@@ -25,3 +25,14 @@ screen within a second) and 03b's quiz.
    question and the answer (`ffmpeg -af silencedetect` finds it).
 3. Measure crops, masks and the ring in source pixels; `toCard()` converts.
 4. CTA times are the voice's word times plus `pause.for`.
+
+## Lettered options
+
+`reto-cambio-opciones.props.ts` asks for one letter instead of an amount:
+
+- `question.options` (two or three) sit under the card and stay above the
+  countdown's dimming; `answer.correct` is the index filled on the reveal.
+  Set `pause.prompt` to "Comenta A, B o C" and keep the crop short enough that
+  the options and subline clear the platform UI.
+- `follow` swaps the subline for a follow ask ("Sigue la cuenta para el
+  próximo reto") when the voice says it, before the CTA.

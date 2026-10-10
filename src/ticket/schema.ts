@@ -14,6 +14,15 @@ export const TICKET_SFX = {
  */
 const headlineSchema = z.string();
 
+/** Card-pixel rectangle on the proof card, ringed `at` seconds in. */
+const highlightSchema = z.object({
+  left: z.number(),
+  top: z.number(),
+  width: z.number(),
+  height: z.number(),
+  at: z.number(),
+});
+
 const lossLineSchema = z.object({
   label: z.string().max(22), // 36px mono on the paper fits 22 chars + amount
   amount: z.number().positive(),
@@ -80,6 +89,18 @@ export const ticketStorySchema = z.object({
     displayDay: z.string(),
   }),
 
+  /**
+   * Opens on the answer: for `until` seconds the display already reads the
+   * final total under this headline, then the receipt prints how it got
+   * there. Set `loss.lineStart` past `until` so the lines wait for it.
+   */
+  coldOpen: z
+    .object({
+      headline: headlineSchema,
+      until: z.number(),
+    })
+    .optional(),
+
   /** The brand reveal between the two receipts. */
   pivot: z.object({
     kicker: z.string(),
@@ -108,13 +129,20 @@ export const ticketStorySchema = z.object({
       trimBefore: z.number(),
       frame: rectSchema,
       /** Card-pixel rectangle ringed once the value appears. */
-      highlight: z.object({
-        left: z.number(),
-        top: z.number(),
-        width: z.number(),
-        height: z.number(),
-        at: z.number(), // seconds into the proof beat
-      }),
+      highlight: highlightSchema,
+      /**
+       * A second moment of the same recording, cut to mid-beat — the action,
+       * then where it lands. Its crop must keep the first one's size, since
+       * the card's shape comes from `frame`.
+       */
+      cut: z
+        .object({
+          at: z.number(), // seconds into the proof beat
+          trimBefore: z.number(),
+          frame: rectSchema,
+          highlight: highlightSchema, // its `at` counts from the cut
+        })
+        .optional(),
     })
     .optional(),
 

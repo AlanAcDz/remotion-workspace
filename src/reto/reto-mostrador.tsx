@@ -4,6 +4,7 @@ import {
   Easing,
   Interactive,
   interpolate,
+  interpolateColors,
   Sequence,
   staticFile,
   useCurrentFrame,
@@ -22,6 +23,9 @@ const TOMATO = "#DE5134";
 const PAPER = "#F7F4EF";
 
 const CARD_TOP = 600;
+const OPTIONS_GAP = 34;
+const OPTIONS_HEIGHT = 112;
+const LETTERS = ["A", "B", "C"];
 const EASE_OUT = Easing.bezier(0.16, 1, 0.3, 1);
 
 /**
@@ -101,6 +105,15 @@ export function RetoMostrador(props: RetoProps) {
         >
           <Countdown prompt={pause.prompt} beat={beat} />
         </Sequence>
+        {/* Above the countdown's dimming: the choices are what it asks for. */}
+        {props.question.options ? (
+          <Options
+            options={props.question.options}
+            correct={answer.correct}
+            top={CARD_TOP + cardSize(props.card).height + OPTIONS_GAP}
+            answerAt={answerAt}
+          />
+        ) : null}
       </Sequence>
 
       <Sequence name="CTA" from={ctaFrom}>
@@ -216,7 +229,9 @@ interface RetoCardProps extends RetoProps {
 /** The real UI: a still with the giveaway numbers masked, then the recording. */
 function RetoCard({
   card,
+  question,
   answer,
+  follow,
   revealFrom,
   answerAt,
   ctaFrom,
@@ -226,6 +241,11 @@ function RetoCard({
   const { width, height } = cardSize(card);
 
   const isRevealed = frame >= revealFrom;
+  const sublineTop =
+    CARD_TOP +
+    height +
+    OPTIONS_GAP +
+    (question.options ? OPTIONS_HEIGHT + OPTIONS_GAP : 0);
   const holdFrom = revealFrom + Math.round(card.holdAt * fps);
   const ring = interpolate(frame, [answerAt, answerAt + 10], [0, 1], {
     extrapolateLeft: "clamp",
@@ -237,6 +257,15 @@ function RetoCard({
     extrapolateRight: "clamp",
     easing: EASE_OUT,
   });
+  const followAt = follow ? Math.round(follow.at * fps) : null;
+  const swap =
+    followAt === null
+      ? 0
+      : interpolate(frame, [followAt, followAt + 8], [0, 1], {
+          extrapolateLeft: "clamp",
+          extrapolateRight: "clamp",
+          easing: EASE_OUT,
+        });
 
   // Frame 0 doubles as the thumbnail, so nothing fades in; the still pushes in
   // slowly instead, so the opening is never a frozen frame.
@@ -348,7 +377,7 @@ function RetoCard({
         style={{
           position: "absolute",
           left: 60,
-          top: CARD_TOP + height + 34,
+          top: sublineTop,
           width: 960,
           textAlign: "center",
           fontFamily: "Archivo",
@@ -356,12 +385,32 @@ function RetoCard({
           fontWeight: 700,
           letterSpacing: "-0.02em",
           color: INK,
-          opacity: subline,
-          translate: `0px ${(1 - subline) * 16}px`,
+          opacity: subline * (1 - swap),
+          translate: `0px ${(1 - subline) * 16 - swap * 16}px`,
         }}
       >
         {answer.subline}
       </div>
+      {follow ? (
+        <div
+          style={{
+            position: "absolute",
+            left: 60,
+            top: sublineTop,
+            width: 960,
+            textAlign: "center",
+            fontFamily: "Archivo",
+            fontSize: 50,
+            fontWeight: 800,
+            letterSpacing: "-0.02em",
+            color: TOMATO,
+            opacity: swap,
+            translate: `0px ${(1 - swap) * 16}px`,
+          }}
+        >
+          {follow.text}
+        </div>
+      ) : null}
     </>
   );
 }
@@ -444,5 +493,89 @@ function Countdown({ prompt, beat }: CountdownProps) {
         </div>
       </div>
     </AbsoluteFill>
+  );
+}
+
+interface OptionsProps {
+  options: string[];
+  correct: number | undefined;
+  top: number;
+  answerAt: number;
+}
+
+/** The lettered choices; on the answer, the right one fills and the rest dim. */
+function Options({ options, correct, top, answerAt }: OptionsProps) {
+  const frame = useCurrentFrame();
+  const mark = interpolate(frame, [answerAt, answerAt + 8], [0, 1], {
+    extrapolateLeft: "clamp",
+    extrapolateRight: "clamp",
+    easing: EASE_OUT,
+  });
+
+  return (
+    <Interactive.Div
+      name="Opciones"
+      style={{
+        position: "absolute",
+        left: 60,
+        top,
+        width: 960,
+        height: OPTIONS_HEIGHT,
+        display: "flex",
+        gap: 24,
+        fontFamily: "Archivo",
+      }}
+    >
+      {options.map((option, index) => {
+        const isCorrect = index === correct;
+        return (
+          <div
+            key={option}
+            style={{
+              flex: 1,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: 16,
+              borderRadius: 28,
+              border: `4px solid ${isCorrect && mark > 0 ? TOMATO : INK}`,
+              backgroundColor: isCorrect
+                ? interpolateColors(mark, [0, 1], ["#FFFFFF", TOMATO])
+                : "#FFFFFF",
+              color: isCorrect && mark > 0.5 ? "#FFFFFF" : INK,
+              opacity: isCorrect ? 1 : 1 - mark * 0.65,
+              scale: String(isCorrect ? 1 + mark * 0.06 : 1),
+              boxShadow: "0 16px 36px rgba(34, 30, 24, 0.14)",
+            }}
+          >
+            <span
+              style={{
+                width: 64,
+                height: 64,
+                borderRadius: 999,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                backgroundColor: isCorrect && mark > 0.5 ? "#FFFFFF" : INK,
+                color: isCorrect && mark > 0.5 ? TOMATO : PAPER,
+                fontSize: 38,
+                fontWeight: 800,
+              }}
+            >
+              {LETTERS[index]}
+            </span>
+            <span
+              style={{
+                fontSize: 52,
+                fontWeight: 800,
+                letterSpacing: "-0.03em",
+              }}
+            >
+              {option}
+            </span>
+          </div>
+        );
+      })}
+    </Interactive.Div>
   );
 }

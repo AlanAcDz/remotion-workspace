@@ -268,9 +268,24 @@ export function TicketStory(props: TicketStoryProps) {
         }}
       />
 
-      <Sequence name="Titular día" durationInFrames={t.multipliers[0]}>
-        <Headline text={loss.headline} animateIn={false} />
-      </Sequence>
+      {props.coldOpen && t.coldOpenEnd !== null ? (
+        <>
+          <Sequence name="Titular gancho" durationInFrames={t.coldOpenEnd}>
+            <Headline text={props.coldOpen.headline} animateIn={false} />
+          </Sequence>
+          <Sequence
+            name="Titular día"
+            from={t.coldOpenEnd}
+            durationInFrames={t.multipliers[0] - t.coldOpenEnd}
+          >
+            <Headline text={loss.headline} />
+          </Sequence>
+        </>
+      ) : (
+        <Sequence name="Titular día" durationInFrames={t.multipliers[0]}>
+          <Headline text={loss.headline} animateIn={false} />
+        </Sequence>
+      )}
       <Sequence
         name="Titular mes"
         from={t.multipliers[0]}
@@ -358,6 +373,14 @@ function displayAt(
   chain: number[],
 ): DisplayState {
   const { loss, fix, cta } = props;
+
+  if (t.coldOpenEnd !== null && frame < t.coldOpenEnd) {
+    return {
+      label: loss.multipliers[loss.multipliers.length - 1].display,
+      value: formatMoney(chain[chain.length - 1]),
+      color: COLORS.tomato,
+    };
+  }
 
   if (frame < t.multipliers[0]) {
     const running = loss.lines.reduce(
@@ -470,6 +493,14 @@ function soundCues(
     { sound: SFX.ding, at: s(t.ctaRows[3] + 2), volume: 0.3 },
   ];
 
+  if (t.coldOpenEnd !== null) {
+    // The total lands on frame 0, then the display rewinds to zero.
+    cues.push(
+      { sound: SFX.softHit, at: 0, volume: 0.22 },
+      { sound: SFX.whoosh, at: s(t.coldOpenEnd - 4), volume: 0.4 },
+    );
+  }
+
   if (t.fix) {
     cues.push(
       printer(t.fix.header),
@@ -494,6 +525,17 @@ function soundCues(
         volume: 0.55,
       },
     );
+    const { cut } = props.proof;
+    if (cut) {
+      cues.push(
+        { sound: SFX.whoosh, at: s(t.proof) + cut.at, volume: 0.3 },
+        {
+          sound: SFX.pop,
+          at: s(t.proof) + cut.at + cut.highlight.at,
+          volume: 0.4,
+        },
+      );
+    }
   }
 
   return cues;

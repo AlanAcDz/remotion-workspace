@@ -16,6 +16,8 @@ import { retoSchema, type RetoProps } from "./reto/schema";
 import { retoCambioProps } from "./videos/reto-cambio.props";
 import { retoCompraProps } from "./videos/reto-compra.props";
 import { retoKiloProps } from "./videos/reto-kilo.props";
+import { retoCambioOpcionesProps } from "./videos/reto-cambio-opciones.props";
+import { retoMasVendidosProps } from "./videos/reto-mas-vendidos.props";
 import { catalogoBaseProps } from "./videos/catalogo-base.props";
 import { catalogoBaseRehookProps } from "./videos/catalogo-base-rehook.props";
 import { cobroRapidoProps } from "./videos/cobro-rapido.props";
@@ -28,12 +30,16 @@ import { devolucionesAutorizadasProps } from "./videos/devoluciones-autorizadas.
 import { diferenciasInventarioProps } from "./videos/diferencias-inventario.props";
 import { diferenciasInventarioRehookProps } from "./videos/diferencias-inventario-rehook.props";
 import { existenciasBajasProps } from "./videos/existencias-bajas.props";
+import { existenciasBajasRehookProps } from "./videos/existencias-bajas-rehook.props";
+import { comprasProveedorRehookProps } from "./videos/compras-proveedor-rehook.props";
 import { permisosCajeroProps } from "./videos/permisos-cajero.props";
 import { permisosCajeroRehookProps } from "./videos/permisos-cajero-rehook.props";
 import { ventaPorKiloProps } from "./videos/venta-por-kilo.props";
 import { ventaPorKiloRehookProps } from "./videos/venta-por-kilo-rehook.props";
 import { ticketTiendaProps } from "./videos/ticket-tienda.props";
 import { ticketKiloProps } from "./videos/ticket-kilo.props";
+import { ticketMermaProps } from "./videos/ticket-merma.props";
+import { ticketDescuentosProps } from "./videos/ticket-descuentos.props";
 
 const FPS = 30;
 
@@ -166,10 +172,30 @@ export const RemotionRoot: React.FC = () => {
         id="PermisosCajeroRehook"
         defaultProps={permisosCajeroRehookProps}
       />
+      <Composition
+        {...shared}
+        id="ExistenciasBajasRehook"
+        defaultProps={existenciasBajasRehookProps}
+      />
+      <Composition
+        {...shared}
+        id="ComprasProveedorRehook"
+        defaultProps={comprasProveedorRehookProps}
+      />
       <Folder name="reto">
         <Composition {...reto} id="RetoCambio" defaultProps={retoCambioProps} />
         <Composition {...reto} id="RetoKilo" defaultProps={retoKiloProps} />
         <Composition {...reto} id="RetoCompra" defaultProps={retoCompraProps} />
+        <Composition
+          {...reto}
+          id="RetoCambioOpciones"
+          defaultProps={retoCambioOpcionesProps}
+        />
+        <Composition
+          {...reto}
+          id="RetoMasVendidos"
+          defaultProps={retoMasVendidosProps}
+        />
       </Folder>
       <Folder name="ticket">
         <Composition
@@ -193,6 +219,28 @@ export const RemotionRoot: React.FC = () => {
           height={1920}
           durationInFrames={714}
           defaultProps={ticketKiloProps}
+        />
+        <Composition
+          id="TicketMerma"
+          component={TicketStory}
+          schema={ticketStorySchema}
+          calculateMetadata={ticketStoryMetadata}
+          fps={FPS}
+          width={1080}
+          height={1920}
+          durationInFrames={858}
+          defaultProps={ticketMermaProps}
+        />
+        <Composition
+          id="TicketDescuentos"
+          component={TicketStory}
+          schema={ticketStorySchema}
+          calculateMetadata={ticketStoryMetadata}
+          fps={FPS}
+          width={1080}
+          height={1920}
+          durationInFrames={726}
+          defaultProps={ticketDescuentosProps}
         />
       </Folder>
     </Folder>

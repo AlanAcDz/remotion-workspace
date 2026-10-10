@@ -3,6 +3,7 @@ import {
   Easing,
   interpolate,
   Interactive,
+  Sequence,
   useCurrentFrame,
   useVideoConfig,
 } from "remotion";
@@ -48,21 +49,26 @@ export function ProofCard({ proof }: ProofCardProps) {
     },
   );
 
-  const ringAt = Math.round(proof.highlight.at * fps);
+  const cutAt = proof.cut ? Math.round(proof.cut.at * fps) : null;
+  const isCut = cutAt !== null && frame >= cutAt;
+
+  // Each moment rings its own value; after a cut, the ring is the cut's.
+  const highlight = isCut && proof.cut ? proof.cut.highlight : proof.highlight;
+  const ringAt = Math.round(highlight.at * fps) + (isCut ? (cutAt ?? 0) : 0);
   const ring = interpolate(frame, [ringAt, ringAt + 8], [0, 1], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
     easing: Easing.out(Easing.back(1.8)),
   });
 
-  const pane: Pane = {
+  const pane = (trimBefore: number, crop: Pane["frame"]): Pane => ({
     clip: proof.clip,
     still: false,
-    trimBefore: proof.trimBefore,
+    trimBefore,
     playbackRate: 1,
-    frame: proof.frame,
+    frame: crop,
     zoomStart: 0,
-  };
+  });
 
   return (
     <AbsoluteFill name="Prueba">
@@ -88,18 +94,29 @@ export function ProofCard({ proof }: ProofCardProps) {
           rotate: `${(1 - enter) * 4}deg`,
         }}
       >
-        <BeatPane
-          pane={pane}
-          containerWidth={CARD_WIDTH}
-          containerHeight={cardHeight}
-        />
+        <Sequence durationInFrames={cutAt ?? undefined}>
+          <BeatPane
+            pane={pane(proof.trimBefore, proof.frame)}
+            containerWidth={CARD_WIDTH}
+            containerHeight={cardHeight}
+          />
+        </Sequence>
+        {proof.cut && cutAt !== null ? (
+          <Sequence from={cutAt}>
+            <BeatPane
+              pane={pane(proof.cut.trimBefore, proof.cut.frame)}
+              containerWidth={CARD_WIDTH}
+              containerHeight={cardHeight}
+            />
+          </Sequence>
+        ) : null}
         <div
           style={{
             position: "absolute",
-            left: proof.highlight.left,
-            top: proof.highlight.top,
-            width: proof.highlight.width,
-            height: proof.highlight.height,
+            left: highlight.left,
+            top: highlight.top,
+            width: highlight.width,
+            height: highlight.height,
             borderRadius: 24,
             border: `7px solid ${COLORS.tomato}`,
             boxShadow: `0 0 0 9999px rgba(31, 26, 23, ${ring * 0.18})`,
