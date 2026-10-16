@@ -176,7 +176,7 @@ function QuestionBlock({
           key={fact}
           style={{
             fontSize: 70,
-            fontWeight: 800,
+            fontWeight: 700,
             lineHeight: 1.12,
             letterSpacing: "-0.03em",
           }}
@@ -191,7 +191,7 @@ function QuestionBlock({
             inset: 0,
             paddingTop: 10,
             fontSize: 76,
-            fontWeight: 800,
+            fontWeight: 700,
             letterSpacing: "-0.035em",
             color: TOMATO,
             opacity: 1 - swap,
@@ -206,7 +206,7 @@ function QuestionBlock({
             inset: 0,
             paddingTop: 10,
             fontSize: 84,
-            fontWeight: 800,
+            fontWeight: 700,
             letterSpacing: "-0.035em",
             color: TOMATO,
             opacity: swap,
@@ -351,7 +351,7 @@ function RetoCard({
                   alignItems: "center",
                   justifyContent: "center",
                   fontFamily: "Archivo",
-                  fontWeight: 800,
+                  fontWeight: 700,
                   fontSize: Math.min(mask.height * 0.75, 64),
                 }}
               >
@@ -401,7 +401,7 @@ function RetoCard({
             textAlign: "center",
             fontFamily: "Archivo",
             fontSize: 50,
-            fontWeight: 800,
+            fontWeight: 700,
             letterSpacing: "-0.02em",
             color: TOMATO,
             opacity: swap,
@@ -470,7 +470,7 @@ function Countdown({ prompt, beat }: CountdownProps) {
             alignItems: "center",
             justifyContent: "center",
             fontSize: 210,
-            fontWeight: 800,
+            fontWeight: 700,
             letterSpacing: "-0.04em",
             boxShadow: "0 30px 70px rgba(222, 81, 52, 0.45)",
             scale: String(interpolate(pop, [0, 1], [0.6, 1])),
@@ -559,7 +559,7 @@ function Options({ options, correct, top, answerAt }: OptionsProps) {
                 backgroundColor: isCorrect && mark > 0.5 ? "#FFFFFF" : INK,
                 color: isCorrect && mark > 0.5 ? TOMATO : PAPER,
                 fontSize: 38,
-                fontWeight: 800,
+                fontWeight: 700,
               }}
             >
               {LETTERS[index]}
@@ -567,7 +567,7 @@ function Options({ options, correct, top, answerAt }: OptionsProps) {
             <span
               style={{
                 fontSize: 52,
-                fontWeight: 800,
+                fontWeight: 700,
                 letterSpacing: "-0.03em",
               }}
             >

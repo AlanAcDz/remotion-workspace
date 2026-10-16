@@ -30,7 +30,7 @@ export function Headline({ text, animateIn = true }: HeadlineProps) {
         textAlign: "center",
         fontFamily: SANS,
         fontSize: 88,
-        fontWeight: 800,
+        fontWeight: 700,
         lineHeight: 1.04,
         letterSpacing: "-0.035em",
         color: COLORS.shopFloor,

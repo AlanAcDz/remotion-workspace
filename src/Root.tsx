@@ -18,6 +18,9 @@ import { retoCompraProps } from "./videos/reto-compra.props";
 import { retoKiloProps } from "./videos/reto-kilo.props";
 import { retoCambioOpcionesProps } from "./videos/reto-cambio-opciones.props";
 import { retoMasVendidosProps } from "./videos/reto-mas-vendidos.props";
+import { RetoTicket } from "./reto/reto-ticket";
+import { retoTicketSchema, type RetoTicketProps } from "./reto/ticket-schema";
+import { retoErrorCambioProps } from "./videos/reto-error-cambio.props";
 import { catalogoBaseProps } from "./videos/catalogo-base.props";
 import { catalogoBaseRehookProps } from "./videos/catalogo-base-rehook.props";
 import { cobroRapidoProps } from "./videos/cobro-rapido.props";
@@ -40,6 +43,15 @@ import { ticketTiendaProps } from "./videos/ticket-tienda.props";
 import { ticketKiloProps } from "./videos/ticket-kilo.props";
 import { ticketMermaProps } from "./videos/ticket-merma.props";
 import { ticketDescuentosProps } from "./videos/ticket-descuentos.props";
+import { ticketPrecioProps } from "./videos/ticket-precio.props";
+import { ChatStory } from "./chat/chat-story";
+import { chatStorySchema, type ChatStoryProps } from "./chat/schema";
+import { chatFaltanteProps } from "./videos/chat-faltante.props";
+import { chatYoguresProps } from "./videos/chat-yogures.props";
+import { PhotoStory } from "./photo/photo-story";
+import { photoStorySchema, type PhotoStoryProps } from "./photo/schema";
+import { cocaLoopProps } from "./videos/coca-loop.props";
+import { libretaKiloProps } from "./videos/libreta-kilo.props";
 
 const FPS = 30;
 
@@ -80,6 +92,41 @@ const retoMetadata: CalculateMetadataFunction<RetoProps> = async ({
     durationInFrames: Math.ceil((seconds + props.pause.for) * FPS) + 30,
   };
 };
+
+// "El Chat" has no voiceover either: it ends where its props say.
+const chatStoryMetadata: CalculateMetadataFunction<ChatStoryProps> = ({
+  props,
+}) => ({ durationInFrames: Math.round(props.end * FPS) });
+
+const chat = {
+  component: ChatStory,
+  schema: chatStorySchema,
+  calculateMetadata: chatStoryMetadata,
+  fps: FPS,
+  width: 1080,
+  height: 1920,
+  durationInFrames: 510,
+} as const;
+
+// "La Libreta" and the loops end where their props say, past the voice.
+const photoStoryMetadata: CalculateMetadataFunction<PhotoStoryProps> = ({
+  props,
+}) => ({ durationInFrames: Math.round(props.end * FPS) });
+
+const photo = {
+  component: PhotoStory,
+  schema: photoStorySchema,
+  calculateMetadata: photoStoryMetadata,
+  fps: FPS,
+  width: 1080,
+  height: 1920,
+  durationInFrames: 621,
+} as const;
+
+// The receipt reto ends where its timing says, past the voice.
+const retoTicketMetadata: CalculateMetadataFunction<RetoTicketProps> = ({
+  props,
+}) => ({ durationInFrames: Math.round(props.timing.end * FPS) });
 
 const reto = {
   component: RetoMostrador,
@@ -196,6 +243,17 @@ export const RemotionRoot: React.FC = () => {
           id="RetoMasVendidos"
           defaultProps={retoMasVendidosProps}
         />
+        <Composition
+          id="RetoErrorCambio"
+          component={RetoTicket}
+          schema={retoTicketSchema}
+          calculateMetadata={retoTicketMetadata}
+          fps={FPS}
+          width={1080}
+          height={1920}
+          durationInFrames={642}
+          defaultProps={retoErrorCambioProps}
+        />
       </Folder>
       <Folder name="ticket">
         <Composition
@@ -242,6 +300,37 @@ export const RemotionRoot: React.FC = () => {
           durationInFrames={726}
           defaultProps={ticketDescuentosProps}
         />
+        <Composition
+          id="TicketPrecio"
+          component={TicketStory}
+          schema={ticketStorySchema}
+          calculateMetadata={ticketStoryMetadata}
+          fps={FPS}
+          width={1080}
+          height={1920}
+          durationInFrames={882}
+          defaultProps={ticketPrecioProps}
+        />
+      </Folder>
+      <Folder name="chat">
+        <Composition
+          {...chat}
+          id="ChatFaltante"
+          defaultProps={chatFaltanteProps}
+        />
+        <Composition
+          {...chat}
+          id="ChatYogures"
+          defaultProps={chatYoguresProps}
+        />
+      </Folder>
+      <Folder name="photo">
+        <Composition
+          {...photo}
+          id="LibretaKilo"
+          defaultProps={libretaKiloProps}
+        />
+        <Composition {...photo} id="CocaLoop" defaultProps={cocaLoopProps} />
       </Folder>
     </Folder>
   );

@@ -36,3 +36,15 @@ screen within a second) and 03b's quiz.
   the options and subline clear the platform UI.
 - `follow` swaps the subline for a follow ask ("Sigue la cuenta para el
   próximo reto") when the voice says it, before the CTA.
+
+## On a receipt (RetoTicket)
+
+`reto-error-cambio.props.ts` plays the reto on El Ticket's printer instead of
+a UI still: the receipt is printed on frame 0 with one wrong line, the voice
+asks "¿Lo ves?", and during the countdown a marker walks the paper while the
+display counts 3 · 2 · 1. Then the wrong line is ringed and struck, the display
+shows the overpay and the right amount, a recording proves it, and the closing
+receipt prints. The last headline asks for a share, not a comment.
+
+All `timing` values are on the final timeline (after the countdown); `pause.at`
+is on the voice take's own clock.

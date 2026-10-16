@@ -160,42 +160,7 @@ export function TicketStory(props: TicketStoryProps) {
         ]
       : [];
 
-  const ctaAt = (index: number) => t.ctaRows[index] - t.cta;
-  const ctaRows: ReceiptRow[] = [
-    printRow("logo", 150, ctaAt(0), <Logo src={cta.logo} />),
-    printRow(
-      "notes",
-      ROW.line * cta.lines.length,
-      ctaAt(1),
-      <div style={{ width: "100%" }}>
-        {cta.lines.map((line) => (
-          <div
-            key={line}
-            style={{ height: ROW.line, display: "flex", alignItems: "center" }}
-          >
-            <Centered text={line} size={36} weight={600} />
-          </div>
-        ))}
-      </div>,
-    ),
-    printRow(
-      "barcode",
-      170,
-      ctaAt(2),
-      <div style={{ width: "100%" }}>
-        <Rule />
-        <div style={{ height: 24 }} />
-        <Barcode seed={cta.pill} />
-      </div>,
-    ),
-    printRow("pill", 120, ctaAt(3), <Pill text={cta.pill} />),
-    printRow(
-      "thanks",
-      70,
-      ctaAt(4),
-      <Centered text="¡GRACIAS POR SU PREFERENCIA!" size={28} weight={500} />,
-    ),
-  ];
+  const ctaRows = ctaReceiptRows(cta, (index) => t.ctaRows[index] - t.cta);
 
   // The pivot card holds until whatever answers the leak takes the frame.
   const pivotEnd = t.fix?.header ?? t.proof ?? t.cta;
@@ -333,6 +298,51 @@ export function TicketStory(props: TicketStoryProps) {
       </Sequence>
     </AbsoluteFill>
   );
+}
+
+/**
+ * The closing receipt: logo, the offer's notes, a barcode, the pill and the
+ * thanks, each fed out at `at(index)` frames into its Sequence.
+ */
+export function ctaReceiptRows(
+  cta: TicketStoryProps["cta"],
+  at: (index: number) => number,
+): ReceiptRow[] {
+  return [
+    printRow("logo", 150, at(0), <Logo src={cta.logo} />),
+    printRow(
+      "notes",
+      ROW.line * cta.lines.length,
+      at(1),
+      <div style={{ width: "100%" }}>
+        {cta.lines.map((line) => (
+          <div
+            key={line}
+            style={{ height: ROW.line, display: "flex", alignItems: "center" }}
+          >
+            <Centered text={line} size={36} weight={600} />
+          </div>
+        ))}
+      </div>,
+    ),
+    printRow(
+      "barcode",
+      170,
+      at(2),
+      <div style={{ width: "100%" }}>
+        <Rule />
+        <div style={{ height: 24 }} />
+        <Barcode seed={cta.pill} />
+      </div>,
+    ),
+    printRow("pill", 120, at(3), <Pill text={cta.pill} />),
+    printRow(
+      "thanks",
+      70,
+      at(4),
+      <Centered text="¡GRACIAS POR SU PREFERENCIA!" size={28} weight={500} />,
+    ),
+  ];
 }
 
 function printRow(

@@ -38,7 +38,7 @@ export interface Theme {
 export const THEMES = {
   "punto-listo": {
     fontFamily: "Archivo",
-    weights: { display: 800, emphasis: 700 },
+    weights: { display: 700, emphasis: 700 },
     colors: {
       background: "#F7F3EB",
       ink: "#221E18",
