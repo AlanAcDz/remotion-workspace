@@ -1,4 +1,11 @@
-import { AbsoluteFill, Easing, Interactive, interpolate, useCurrentFrame, useVideoConfig } from "remotion";
+import {
+  AbsoluteFill,
+  Easing,
+  Interactive,
+  interpolate,
+  useCurrentFrame,
+  useVideoConfig,
+} from "remotion";
 import { BeatPane } from "../components/beat-pane";
 import { SfxCues } from "../components/sfx-cues";
 import {
@@ -8,6 +15,7 @@ import {
   PANEL,
 } from "../components/demo-layout";
 import { FRAME, UI_ZONE, type Beat } from "../schema";
+import { useTheme, withAlpha } from "../theme";
 
 interface BeatSceneProps {
   beat: Beat;
@@ -17,6 +25,7 @@ interface BeatSceneProps {
 export function BeatScene({ beat, fadeIn = true }: BeatSceneProps) {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
+  const { fontFamily, weights, colors } = useTheme();
 
   const isFullFrame = beat.layout === "fullframe";
   const isMobileUi = beat.layout === "mobile-ui";
@@ -61,13 +70,13 @@ export function BeatScene({ beat, fadeIn = true }: BeatSceneProps) {
               alignItems: "center",
               padding: "22px 34px",
               borderRadius: 999,
-              backgroundColor: "#221E18",
-              color: "#FBF9F6",
-              fontFamily: "Archivo",
+              backgroundColor: colors.callout,
+              color: colors.onCallout,
+              fontFamily,
               fontSize: 46,
-              fontWeight: 700,
+              fontWeight: weights.emphasis,
               letterSpacing: "-0.01em",
-              boxShadow: "0 18px 40px rgba(34, 30, 24, 0.32)",
+              boxShadow: `0 18px 40px ${withAlpha(colors.ink, 0.32)}`,
               transformOrigin: "20% 0%",
               rotate: "-2deg",
               scale: interpolate(

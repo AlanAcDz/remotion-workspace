@@ -9,6 +9,7 @@ import {
   useVideoConfig,
 } from "remotion";
 import type { Pane, Rect } from "../schema";
+import { useTheme, withAlpha } from "../theme";
 
 const WHOLE_CLIP: Rect = { x: 0, y: 0, width: 1, height: 1 };
 
@@ -33,6 +34,7 @@ export function BeatPane({
 }: BeatPaneProps) {
   const frame = useCurrentFrame();
   const { fps, durationInFrames } = useVideoConfig();
+  const { colors } = useTheme();
 
   const box = pane.box ?? {
     left: 0,
@@ -88,9 +90,11 @@ export function BeatPane({
         height: box.height,
         borderRadius: box.radius,
         overflow: "hidden",
-        backgroundColor: isCard ? "#FFFFFF" : "transparent",
-        border: isCard ? "2px solid rgba(34, 30, 24, 0.10)" : "none",
-        boxShadow: isCard ? "0 24px 48px rgba(34, 30, 24, 0.16)" : "none",
+        backgroundColor: isCard ? colors.surface : "transparent",
+        border: isCard ? `2px solid ${withAlpha(colors.ink, 0.1)}` : "none",
+        boxShadow: isCard
+          ? `0 24px 48px ${withAlpha(colors.ink, 0.16)}`
+          : "none",
       }}
     >
       {pane.still ? (

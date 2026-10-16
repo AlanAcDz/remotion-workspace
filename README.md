@@ -54,6 +54,13 @@ output format, and generation settings are pinned in
 `scripts/punto-listo/voice-config.mjs`. Use `--dry-run` to validate without an
 API call and `--force` only when intentionally replacing an existing take.
 
+For Arya, the same command pins the approved English narrator in
+`scripts/arya/voice-config.mjs`:
+
+```console
+pnpm arya:voice --slug <name> --script <path-to-script.txt>
+```
+
 For manually recorded voiceovers, caption everything in `public` by running
 the following command:
 

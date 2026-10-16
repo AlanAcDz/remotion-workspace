@@ -2,7 +2,8 @@ import assert from "node:assert/strict";
 import { Buffer } from "node:buffer";
 import test from "node:test";
 import { alignmentToCaptions } from "./alignment-to-captions.mjs";
-import { generateSpeech } from "./generate-voice.mjs";
+import { aryaVoiceConfig } from "../arya/voice-config.mjs";
+import { generateSpeech, VOICE_CONFIGS } from "./generate-voice.mjs";
 import { puntoListoVoiceConfig } from "./voice-config.mjs";
 
 function createAlignment(text, { usesDurations = false } = {}) {
@@ -128,4 +129,38 @@ test("generates audio and captions in one request with the pinned preset", async
       confidence: null,
     },
   ]);
+});
+
+test("uses the voice preset of the requested brand", async () => {
+  let requestedEndpoint;
+  let requestBody;
+  const fetchImplementation = async (endpoint, options) => {
+    requestedEndpoint = endpoint.toString();
+    requestBody = JSON.parse(options.body);
+
+    return {
+      ok: true,
+      headers: { get: () => null },
+      json: async () => ({
+        audio_base64: Buffer.from("audio").toString("base64"),
+        alignment: createAlignment("Did I give it?"),
+      }),
+    };
+  };
+
+  const result = await generateSpeech("Did I give it?", "test-key", {
+    fetchImplementation,
+    voiceConfig: VOICE_CONFIGS.arya,
+  });
+
+  assert.equal(
+    requestedEndpoint,
+    `https://api.elevenlabs.io/v1/text-to-speech/${aryaVoiceConfig.voiceId}/with-timestamps?output_format=${aryaVoiceConfig.outputFormat}`,
+  );
+  assert.equal(requestBody.model_id, aryaVoiceConfig.modelId);
+  assert.deepEqual(requestBody.voice_settings, aryaVoiceConfig.voiceSettings);
+  assert.deepEqual(
+    result.captions.map(({ text }) => text),
+    ["Did", " I", " give", " it?"],
+  );
 });

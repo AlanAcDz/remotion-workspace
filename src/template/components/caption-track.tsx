@@ -19,6 +19,7 @@ import {
   watchStaticFile,
 } from "remotion";
 import type { PosDemoProps } from "../schema";
+import { useTheme, withAlpha } from "../theme";
 import { CAPTION_BAND } from "./demo-layout";
 
 // ~1–4 words per page: the TikTok look, driven entirely by timestamps.
@@ -45,10 +46,11 @@ function CaptionPage({
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const timeInMs = (frame / fps) * 1000 + offsetMs;
+  const { fontFamily, weights, colors } = useTheme();
 
   const fitted = fitText({
-    fontFamily: "Archivo",
-    fontWeight: "800",
+    fontFamily,
+    fontWeight: String(weights.display),
     text: page.text,
     withinWidth: CAPTION_BAND.width,
   });
@@ -68,15 +70,17 @@ function CaptionPage({
         style={{
           width: CAPTION_BAND.width,
           textAlign: "center",
-          fontFamily: "Archivo",
-          fontWeight: 800,
+          fontFamily,
+          fontWeight: weights.display,
           fontSize: Math.min(104, fitted.fontSize),
           lineHeight: 1.06,
           letterSpacing: "-0.03em",
-          color: onVideo ? "#FFFFFF" : "#221E18",
-          WebkitTextStroke: onVideo ? "14px #221E18" : undefined,
+          color: onVideo ? "#FFFFFF" : colors.ink,
+          WebkitTextStroke: onVideo ? `14px ${colors.ink}` : undefined,
           paintOrder: "stroke",
-          textShadow: onVideo ? undefined : "0 2px 0 rgba(247, 243, 235, 0.9)",
+          textShadow: onVideo
+            ? undefined
+            : `0 2px 0 ${withAlpha(colors.background, 0.9)}`,
           scale: interpolate(frame, [0, 5], [0.86, 1], {
             extrapolateLeft: "clamp",
             extrapolateRight: "clamp",
@@ -101,7 +105,11 @@ function CaptionPage({
               style={{
                 display: "inline",
                 whiteSpace: "pre",
-                color: isActive ? "#DE5134" : onVideo ? "#FFFFFF" : "#221E18",
+                color: isActive
+                  ? colors.accent
+                  : onVideo
+                    ? "#FFFFFF"
+                    : colors.ink,
               }}
             >
               {token.text}

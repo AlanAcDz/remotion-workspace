@@ -7,12 +7,14 @@ import { captionsFileFor, type PosDemoProps } from "./schema";
 import { BeatScene } from "./scenes/beat-scene";
 import { CtaScene } from "./scenes/cta-scene";
 import { HookOverlay } from "./scenes/hook-overlay";
+import { THEMES, ThemeContext } from "./theme";
 
 // Beats overlap by this many frames so one dissolves into the next
 // instead of hard-cutting.
 const CROSSFADE = 8;
 
 export function PosDemo({
+  theme,
   audioFile,
   hook,
   captionStyle,
@@ -24,52 +26,58 @@ export function PosDemo({
 
   const ctaFrom = Math.round(cta.from * fps);
   const hookUntil = Math.round(hook.until * fps);
+  const palette = THEMES[theme];
 
   return (
-    <AbsoluteFill name="PosDemo" style={{ backgroundColor: "#F7F3EB" }}>
-      <Audio name="Locución" src={staticFile(audioFile)} />
-
-      {music ? <MusicBed music={music} ctaFrom={ctaFrom} /> : null}
-
-      {beats.map((beat, index) => (
-        <Sequence
-          key={beat.name}
-          name={beat.name}
-          from={Math.round(beat.from * fps)}
-          durationInFrames={
-            Math.round((beat.to - beat.from) * fps) + CROSSFADE
-          }
-        >
-          {/* With the hook's fade-in off, the opening frame doubles as the
-              thumbnail, so the first beat is on screen from frame 0 too. */}
-          <BeatScene beat={beat} fadeIn={hook.fadeIn || index > 0} />
-        </Sequence>
-      ))}
-
-      <Sequence name="Hook copy" durationInFrames={hookUntil + CROSSFADE}>
-        <HookOverlay
-          text={hook.text}
-          subline={hook.subline}
-          fadeIn={hook.fadeIn}
-        />
-      </Sequence>
-
-      <Sequence
-        name="CTA"
-        from={ctaFrom}
-        durationInFrames={durationInFrames - ctaFrom}
+    <ThemeContext.Provider value={palette}>
+      <AbsoluteFill
+        name="PosDemo"
+        style={{ backgroundColor: palette.colors.background }}
       >
-        <CtaScene cta={cta} />
-      </Sequence>
+        <Audio name="Locución" src={staticFile(audioFile)} />
 
-      {/* One continuous track: the hook copy covers the opening, the CTA
+        {music ? <MusicBed music={music} ctaFrom={ctaFrom} /> : null}
+
+        {beats.map((beat, index) => (
+          <Sequence
+            key={beat.name}
+            name={beat.name}
+            from={Math.round(beat.from * fps)}
+            durationInFrames={
+              Math.round((beat.to - beat.from) * fps) + CROSSFADE
+            }
+          >
+            {/* With the hook's fade-in off, the opening frame doubles as the
+              thumbnail, so the first beat is on screen from frame 0 too. */}
+            <BeatScene beat={beat} fadeIn={hook.fadeIn || index > 0} />
+          </Sequence>
+        ))}
+
+        <Sequence name="Hook copy" durationInFrames={hookUntil + CROSSFADE}>
+          <HookOverlay
+            text={hook.text}
+            subline={hook.subline}
+            fadeIn={hook.fadeIn}
+          />
+        </Sequence>
+
+        <Sequence
+          name="CTA"
+          from={ctaFrom}
+          durationInFrames={durationInFrames - ctaFrom}
+        >
+          <CtaScene cta={cta} />
+        </Sequence>
+
+        {/* One continuous track: the hook copy covers the opening, the CTA
           carries its own words, captions fill everything in between. */}
-      <CaptionTrack
-        captionsFile={captionsFileFor(audioFile)}
-        visibleFrom={hookUntil}
-        visibleUntil={ctaFrom}
-        style={captionStyle}
-      />
-    </AbsoluteFill>
+        <CaptionTrack
+          captionsFile={captionsFileFor(audioFile)}
+          visibleFrom={hookUntil}
+          visibleUntil={ctaFrom}
+          style={captionStyle}
+        />
+      </AbsoluteFill>
+    </ThemeContext.Provider>
   );
 }

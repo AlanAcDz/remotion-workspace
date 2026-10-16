@@ -7,6 +7,7 @@ import {
   useVideoConfig,
 } from "remotion";
 import { CAPTION_BAND } from "../components/demo-layout";
+import { useTheme } from "../theme";
 
 interface HookOverlayProps {
   text: string;
@@ -21,9 +22,10 @@ interface HookOverlayProps {
 export function HookOverlay({ text, subline, fadeIn }: HookOverlayProps) {
   const frame = useCurrentFrame();
   const { durationInFrames } = useVideoConfig();
+  const { fontFamily, weights, colors } = useTheme();
 
   return (
-    <AbsoluteFill name="Hook copy" style={{ fontFamily: "Archivo" }}>
+    <AbsoluteFill name="Hook copy" style={{ fontFamily }}>
       {/* Headline and subline stack in flow so the gap between them stays the
           same whether the headline wraps to one line or three. */}
       <Interactive.Div
@@ -45,10 +47,10 @@ export function HookOverlay({ text, subline, fadeIn }: HookOverlayProps) {
           style={{
             width: "100%",
             fontSize: 96,
-            fontWeight: 800,
+            fontWeight: weights.display,
             lineHeight: 1.04,
             letterSpacing: "-0.035em",
-            color: "#221E18",
+            color: colors.ink,
             opacity: interpolate(
               frame,
               [0, 10, durationInFrames - 8, durationInFrames],
@@ -81,10 +83,10 @@ export function HookOverlay({ text, subline, fadeIn }: HookOverlayProps) {
             style={{
               width: "100%",
               fontSize: 54,
-              fontWeight: 700,
+              fontWeight: weights.emphasis,
               lineHeight: 1.16,
               letterSpacing: "-0.02em",
-              color: "#DE5134",
+              color: colors.accent,
               opacity: interpolate(
                 frame,
                 [22, 34, durationInFrames - 8, durationInFrames],

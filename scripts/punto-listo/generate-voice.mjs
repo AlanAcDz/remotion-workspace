@@ -14,22 +14,30 @@ import path from "node:path";
 import process from "node:process";
 import { pathToFileURL } from "node:url";
 import { alignmentToCaptions } from "./alignment-to-captions.mjs";
+import { aryaVoiceConfig } from "../arya/voice-config.mjs";
 import { puntoListoVoiceConfig } from "./voice-config.mjs";
 
 const API_BASE_URL = "https://api.elevenlabs.io/v1";
 const REQUEST_TIMEOUT_MS = 120_000;
 
+// Each brand pins exactly one voice preset; pick it with --brand.
+export const VOICE_CONFIGS = Object.freeze({
+  "punto-listo": puntoListoVoiceConfig,
+  arya: aryaVoiceConfig,
+});
+
 function printUsage() {
   console.log(`
-Genera la locución y los subtítulos de un video de Punto Listo.
+Genera la locución y los subtítulos de un video con la voz fija de la marca.
 
 Uso:
   pnpm punto-listo:voice --slug <nombre> --script <archivo.txt> [--force]
-  pnpm punto-listo:voice --slug <nombre> --script <archivo.txt> --dry-run
+  pnpm arya:voice --slug <nombre> --script <archivo.txt> --dry-run
 
 Opciones:
+  --brand      punto-listo (predeterminada) o arya
   --slug       Nombre en minúsculas y guiones, por ejemplo: inventario-rapido
-  --script     Ruta al guion en español
+  --script     Ruta al guion, en el idioma de la marca
   --force      Reemplaza archivos de audio y subtítulos existentes
   --dry-run    Valida y muestra el costo estimado sin llamar a ElevenLabs
   --help       Muestra esta ayuda
@@ -37,7 +45,12 @@ Opciones:
 }
 
 function parseArguments(argv) {
-  const options = { dryRun: false, force: false, help: false };
+  const options = {
+    brand: "punto-listo",
+    dryRun: false,
+    force: false,
+    help: false,
+  };
 
   for (let index = 0; index < argv.length; index += 1) {
     const argument = argv[index];
@@ -57,7 +70,11 @@ function parseArguments(argv) {
       continue;
     }
 
-    if (argument === "--slug" || argument === "--script") {
+    if (
+      argument === "--slug" ||
+      argument === "--script" ||
+      argument === "--brand"
+    ) {
       const value = argv[index + 1];
 
       if (!value || value.startsWith("--")) {
@@ -143,10 +160,9 @@ async function parseApiError(response) {
 export async function generateSpeech(
   text,
   apiKey,
-  { fetchImplementation = fetch } = {},
+  { fetchImplementation = fetch, voiceConfig = puntoListoVoiceConfig } = {},
 ) {
-  const { voiceId, modelId, outputFormat, voiceSettings } =
-    puntoListoVoiceConfig;
+  const { voiceId, modelId, outputFormat, voiceSettings } = voiceConfig;
   const endpoint = new URL(
     `${API_BASE_URL}/text-to-speech/${encodeURIComponent(voiceId)}/with-timestamps`,
   );
@@ -242,6 +258,14 @@ async function main() {
     throw new Error("--script es obligatorio.");
   }
 
+  const voiceConfig = VOICE_CONFIGS[options.brand];
+
+  if (!voiceConfig) {
+    throw new Error(
+      `--brand debe ser una de: ${Object.keys(VOICE_CONFIGS).join(", ")}.`,
+    );
+  }
+
   const text = await readScript(options.script);
   const audioPath = path.join(
     process.cwd(),
@@ -257,8 +281,9 @@ async function main() {
   );
   await assertOutputsAreAvailable([audioPath, captionsPath], options.force);
 
-  console.log(`Voz: ${puntoListoVoiceConfig.voiceName}`);
-  console.log(`Modelo: ${puntoListoVoiceConfig.modelId}`);
+  console.log(`Marca: ${options.brand}`);
+  console.log(`Voz: ${voiceConfig.voiceName}`);
+  console.log(`Modelo: ${voiceConfig.modelId}`);
   console.log(`Caracteres del guion: ${Array.from(text).length}`);
   console.log(`Audio: ${path.relative(process.cwd(), audioPath)}`);
   console.log(`Subtítulos: ${path.relative(process.cwd(), captionsPath)}`);
@@ -275,7 +300,7 @@ async function main() {
   }
 
   console.log("Generando una sola toma con audio y tiempos…");
-  const result = await generateSpeech(text, apiKey);
+  const result = await generateSpeech(text, apiKey, { voiceConfig });
   await writeOutputs({
     ...result,
     audioPath,

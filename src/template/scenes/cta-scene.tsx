@@ -11,7 +11,8 @@ import {
 import { BeatPane } from "../components/beat-pane";
 import { SfxCues } from "../components/sfx-cues";
 import { MobileUiLayout } from "../components/demo-layout";
-import { UI_ZONE, type Pane, type PosDemoProps } from "../schema";
+import { FRAME, UI_ZONE, type Pane, type PosDemoProps } from "../schema";
+import { useTheme, withAlpha } from "../theme";
 
 interface CtaSceneProps {
   cta: PosDemoProps["cta"];
@@ -20,7 +21,9 @@ interface CtaSceneProps {
 export function CtaScene({ cta }: CtaSceneProps) {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
+  const { fontFamily, weights, colors, ctaLogo } = useTheme();
   const hasMobileClip = Boolean(cta.mobileClip);
+  const logoBox = hasMobileClip ? ctaLogo.compact : ctaLogo.full;
   // No crop rect: the clip is centre-cropped to cover the UI zone, which works
   // for any recording aspect without the caller measuring one.
   const mobilePane: Pane | null = cta.mobileClip
@@ -40,7 +43,7 @@ export function CtaScene({ cta }: CtaSceneProps) {
   const pillAt = Math.round((cta.revealAt.pill - cta.from) * fps);
 
   return (
-    <AbsoluteFill name="CTA" style={{ fontFamily: "Archivo" }}>
+    <AbsoluteFill name="CTA" style={{ fontFamily }}>
       <SfxCues cues={cta.sfx} />
 
       {mobilePane ? (
@@ -58,9 +61,9 @@ export function CtaScene({ cta }: CtaSceneProps) {
         src={staticFile(cta.logo)}
         style={{
           position: "absolute",
-          left: hasMobileClip ? 390 : 300,
-          top: hasMobileClip ? 1300 : 520,
-          width: hasMobileClip ? 300 : 480,
+          left: (FRAME.width - logoBox.width) / 2,
+          top: logoBox.top,
+          width: logoBox.width,
           maxWidth: "none",
           opacity: interpolate(frame, [0, 12], [0, 1], {
             extrapolateLeft: "clamp",
@@ -79,10 +82,10 @@ export function CtaScene({ cta }: CtaSceneProps) {
           width: 936,
           textAlign: "center",
           fontSize: hasMobileClip ? 72 : 92,
-          fontWeight: 700,
+          fontWeight: weights.emphasis,
           lineHeight: 1.0,
           letterSpacing: "-0.03em",
-          color: "#221E18",
+          color: colors.ink,
           opacity: interpolate(frame, [6, 20], [0, 1], {
             extrapolateLeft: "clamp",
             extrapolateRight: "clamp",
@@ -107,10 +110,10 @@ export function CtaScene({ cta }: CtaSceneProps) {
           width: 936,
           textAlign: "center",
           fontSize: hasMobileClip ? 108 : 148,
-          fontWeight: 800,
+          fontWeight: weights.display,
           lineHeight: 1.0,
           letterSpacing: "-0.045em",
-          color: "#DE5134",
+          color: colors.accent,
           opacity: interpolate(frame, [line2At, line2At + 14], [0, 1], {
             extrapolateLeft: "clamp",
             extrapolateRight: "clamp",
@@ -140,9 +143,9 @@ export function CtaScene({ cta }: CtaSceneProps) {
           width: 936,
           textAlign: "center",
           fontSize: hasMobileClip ? 44 : 56,
-          fontWeight: 700,
+          fontWeight: weights.emphasis,
           letterSpacing: "-0.01em",
-          color: "#6B6357",
+          color: colors.muted,
           opacity: interpolate(frame, [noteAt, noteAt + 14], [0, 1], {
             extrapolateLeft: "clamp",
             extrapolateRight: "clamp",
@@ -163,12 +166,12 @@ export function CtaScene({ cta }: CtaSceneProps) {
           textAlign: "center",
           padding: "28px 0",
           borderRadius: 999,
-          backgroundColor: "#DE5134",
-          color: "#FFFFFF",
+          backgroundColor: colors.pill,
+          color: colors.onPill,
           fontSize: 52,
-          fontWeight: 700,
+          fontWeight: weights.emphasis,
           letterSpacing: "-0.01em",
-          boxShadow: "0 20px 44px rgba(222, 81, 52, 0.32)",
+          boxShadow: `0 20px 44px ${withAlpha(colors.pill, 0.32)}`,
           opacity: interpolate(frame, [pillAt, pillAt + 14], [0, 1], {
             extrapolateLeft: "clamp",
             extrapolateRight: "clamp",

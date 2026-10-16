@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { THEME_NAMES } from "./theme";
 
 /**
  * Every video is cut on the same split: the UI takes the top two thirds of the
@@ -85,9 +86,7 @@ export const beatSchema = z.object({
   name: z.string(),
   from: z.number(), // seconds, straight off the cue sheet
   to: z.number(),
-  layout: z
-    .enum(["panel", "fullframe", "mobile-ui"])
-    .default("panel"),
+  layout: z.enum(["panel", "fullframe", "mobile-ui"]).default("panel"),
   panes: z.array(paneSchema).min(1),
   callout: calloutSchema.optional(),
   /** Seconds are relative to `from`, so retiming a beat retimes its sounds. */
@@ -95,6 +94,8 @@ export const beatSchema = z.object({
 });
 
 export const posDemoSchema = z.object({
+  /** Brand type and colour; layout and motion are shared by every brand. */
+  theme: z.enum(THEME_NAMES).default("punto-listo"),
   /** "audio/corte-v1.mp3" — its transcript is read from "captions/corte-v1.json". */
   audioFile: z.string(),
   /** Big copy over the first beat. Captions take over at `until`. */

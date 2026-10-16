@@ -28,6 +28,17 @@ Studio's props panel.
 5. **Props** → write `src/videos/<name>.props.ts`, register a `<Composition>`
    in `src/Root.tsx`, render.
 
+## Brands
+
+`theme` picks the brand: `"punto-listo"` (default, Archivo) or `"arya"`
+(Poppins, teal on cream). It swaps type, colour and the CTA logo box only;
+layout, timing, motion, music ducking and caption behaviour stay shared. Both
+palettes live in `theme.ts`, and components read them with `useTheme()` instead
+of hard-coding colours. Arya's CTA logo is `videos/arya/logo.png`.
+
+For Arya, generate the voice with `pnpm arya:voice` instead of
+`pnpm punto-listo:voice`; the flags are the same.
+
 ## Framing clips
 
 `pane.frame` is a crop rectangle in **fractions of the clip's own frame**, so
@@ -72,6 +83,10 @@ inside the panel and turns it into a card.
 same measured rows as the crop instead of eyeballing it.
 
 ## Gotchas
+
+- A pane without `frame` is stretched to its box, not cropped. Any still or clip
+  whose aspect differs from the box (photos especially) needs a `frame`, e.g.
+  `uiWindow(source, topPx)` for a `mobile-ui` beat.
 
 - Tailwind preflight caps `img`/`video` at `max-width: 100%`, which silently
   shrinks framed clips. `BeatPane` sets `maxWidth: "none"`; anything new that

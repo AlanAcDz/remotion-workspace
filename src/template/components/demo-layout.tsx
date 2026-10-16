@@ -8,6 +8,7 @@ import {
   useVideoConfig,
 } from "remotion";
 import { UI_ZONE } from "../schema";
+import { useTheme, withAlpha } from "../theme";
 
 /**
  * The rounded card that holds a landscape (desktop) recording, centred in the
@@ -49,6 +50,7 @@ interface DemoLayoutProps {
 export function DemoLayout({ name, children, fadeIn = true }: DemoLayoutProps) {
   const frame = useCurrentFrame();
   const { durationInFrames } = useVideoConfig();
+  const { colors } = useTheme();
 
   return (
     <AbsoluteFill name={name}>
@@ -62,9 +64,9 @@ export function DemoLayout({ name, children, fadeIn = true }: DemoLayoutProps) {
           height: PANEL.height,
           borderRadius: PANEL.radius,
           overflow: "hidden",
-          backgroundColor: "#FFFFFF",
-          border: "2px solid rgba(34, 30, 24, 0.10)",
-          boxShadow: "0 40px 80px rgba(34, 30, 24, 0.18)",
+          backgroundColor: colors.surface,
+          border: `2px solid ${withAlpha(colors.ink, 0.1)}`,
+          boxShadow: `0 40px 80px ${withAlpha(colors.ink, 0.18)}`,
           opacity: interpolate(
             frame,
             [0, 10, durationInFrames - 10, durationInFrames],
@@ -130,6 +132,7 @@ export function MobileUiLayout({
 }: DemoLayoutProps) {
   const frame = useCurrentFrame();
   const { durationInFrames } = useVideoConfig();
+  const { colors } = useTheme();
 
   return (
     <AbsoluteFill name={name} style={{ overflow: "hidden" }}>
@@ -144,8 +147,8 @@ export function MobileUiLayout({
           overflow: "hidden",
           borderBottomLeftRadius: 36,
           borderBottomRightRadius: 36,
-          backgroundColor: "#FFFFFF",
-          boxShadow: "0 28px 60px rgba(34, 30, 24, 0.16)",
+          backgroundColor: colors.surface,
+          boxShadow: `0 28px 60px ${withAlpha(colors.ink, 0.16)}`,
           opacity: interpolate(
             frame,
             [0, 10, durationInFrames - 10, durationInFrames],
