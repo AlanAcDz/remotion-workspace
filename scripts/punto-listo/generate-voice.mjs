@@ -14,7 +14,10 @@ import path from "node:path";
 import process from "node:process";
 import { pathToFileURL } from "node:url";
 import { alignmentToCaptions } from "./alignment-to-captions.mjs";
-import { aryaVoiceConfig } from "../arya/voice-config.mjs";
+import {
+  aryaStoryVoiceConfig,
+  aryaVoiceConfig,
+} from "../arya/voice-config.mjs";
 import { puntoListoVoiceConfig } from "./voice-config.mjs";
 
 const API_BASE_URL = "https://api.elevenlabs.io/v1";
@@ -24,6 +27,7 @@ const REQUEST_TIMEOUT_MS = 120_000;
 export const VOICE_CONFIGS = Object.freeze({
   "punto-listo": puntoListoVoiceConfig,
   arya: aryaVoiceConfig,
+  "arya-story": aryaStoryVoiceConfig,
 });
 
 function printUsage() {
@@ -35,7 +39,7 @@ Uso:
   pnpm arya:voice --slug <nombre> --script <archivo.txt> --dry-run
 
 Opciones:
-  --brand      punto-listo (predeterminada) o arya
+  --brand      punto-listo (predeterminada), arya o arya-story
   --slug       Nombre en minúsculas y guiones, por ejemplo: inventario-rapido
   --script     Ruta al guion, en el idioma de la marca
   --force      Reemplaza archivos de audio y subtítulos existentes
@@ -142,7 +146,7 @@ async function readScript(scriptPath) {
   return text;
 }
 
-async function parseApiError(response) {
+export async function parseApiError(response) {
   const body = await response.json().catch(() => null);
   const detail = body?.detail;
 
