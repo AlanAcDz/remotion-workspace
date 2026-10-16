@@ -52,6 +52,15 @@ import { PhotoStory } from "./photo/photo-story";
 import { photoStorySchema, type PhotoStoryProps } from "./photo/schema";
 import { cocaLoopProps } from "./videos/coca-loop.props";
 import { libretaKiloProps } from "./videos/libreta-kilo.props";
+import { aryaWhyIBuiltAryaProps } from "./videos/av-20261019-why-i-built-arya.props";
+import { aryaDidIGiveItProps } from "./videos/av-20261021-did-i-give-it.props";
+import { aryaForgotDogMedicationProps } from "./videos/av-20261023-forgot-dog-medication.props";
+import { aryaThreeMedsOneListProps } from "./videos/av-20261026-three-meds-one-list.props";
+import { aryaEvery12HoursProps } from "./videos/av-20261028-every-12-hours.props";
+import { aryaWhatIWishIHadProps } from "./videos/av-20261030-what-i-wish-i-had.props";
+import { aryaVetAsksEveryDoseProps } from "./videos/av-20261102-vet-asks-every-dose.props";
+import { aryaVomitedAfterPillProps } from "./videos/av-20261104-vomited-after-pill.props";
+import { aryaRefillBeforeItRunsOutProps } from "./videos/av-20261106-refill-before-it-runs-out.props";
 
 const FPS = 30;
 
@@ -142,196 +151,253 @@ const reto = {
 // src/videos/<name>.props.ts and registering it here.
 export const RemotionRoot: React.FC = () => {
   return (
-    <Folder name="punto-listo">
-      <Composition {...shared} id="Corte" defaultProps={corteProps} />
-      <Composition
-        {...shared}
-        id="CobroRapido"
-        defaultProps={cobroRapidoProps}
-      />
-      <Composition
-        {...shared}
-        id="VentaPorKilo"
-        defaultProps={ventaPorKiloProps}
-      />
-      <Composition
-        {...shared}
-        id="DiferenciasInventario"
-        defaultProps={diferenciasInventarioProps}
-      />
-      <Composition
-        {...shared}
-        id="PermisosCajero"
-        defaultProps={permisosCajeroProps}
-      />
-      <Composition
-        {...shared}
-        id="CatalogoBase"
-        defaultProps={catalogoBaseProps}
-      />
-      <Composition
-        {...shared}
-        id="ComprasProveedor"
-        defaultProps={comprasProveedorProps}
-      />
-      <Composition
-        {...shared}
-        id="DevolucionesAutorizadas"
-        defaultProps={devolucionesAutorizadasProps}
-      />
-      <Composition
-        {...shared}
-        id="ExistenciasBajas"
-        defaultProps={existenciasBajasProps}
-      />
-      <Composition
-        {...shared}
-        id="DescuentosPorCajero"
-        defaultProps={descuentosPorCajeroProps}
-      />
-      <Composition
-        {...shared}
-        id="CorteRehook"
-        defaultProps={corteRehookProps}
-      />
-      <Composition
-        {...shared}
-        id="CobroRapidoRehook"
-        defaultProps={cobroRapidoRehookProps}
-      />
-      <Composition
-        {...shared}
-        id="VentaPorKiloRehook"
-        defaultProps={ventaPorKiloRehookProps}
-      />
-      <Composition
-        {...shared}
-        id="CatalogoBaseRehook"
-        defaultProps={catalogoBaseRehookProps}
-      />
-      <Composition
-        {...shared}
-        id="DiferenciasInventarioRehook"
-        defaultProps={diferenciasInventarioRehookProps}
-      />
-      <Composition
-        {...shared}
-        id="PermisosCajeroRehook"
-        defaultProps={permisosCajeroRehookProps}
-      />
-      <Composition
-        {...shared}
-        id="ExistenciasBajasRehook"
-        defaultProps={existenciasBajasRehookProps}
-      />
-      <Composition
-        {...shared}
-        id="ComprasProveedorRehook"
-        defaultProps={comprasProveedorRehookProps}
-      />
-      <Folder name="reto">
-        <Composition {...reto} id="RetoCambio" defaultProps={retoCambioProps} />
-        <Composition {...reto} id="RetoKilo" defaultProps={retoKiloProps} />
-        <Composition {...reto} id="RetoCompra" defaultProps={retoCompraProps} />
+    <>
+      <Folder name="punto-listo">
+        <Composition {...shared} id="Corte" defaultProps={corteProps} />
         <Composition
-          {...reto}
-          id="RetoCambioOpciones"
-          defaultProps={retoCambioOpcionesProps}
+          {...shared}
+          id="CobroRapido"
+          defaultProps={cobroRapidoProps}
         />
         <Composition
-          {...reto}
-          id="RetoMasVendidos"
-          defaultProps={retoMasVendidosProps}
+          {...shared}
+          id="VentaPorKilo"
+          defaultProps={ventaPorKiloProps}
         />
         <Composition
-          id="RetoErrorCambio"
-          component={RetoTicket}
-          schema={retoTicketSchema}
-          calculateMetadata={retoTicketMetadata}
-          fps={FPS}
-          width={1080}
-          height={1920}
-          durationInFrames={642}
-          defaultProps={retoErrorCambioProps}
+          {...shared}
+          id="DiferenciasInventario"
+          defaultProps={diferenciasInventarioProps}
+        />
+        <Composition
+          {...shared}
+          id="PermisosCajero"
+          defaultProps={permisosCajeroProps}
+        />
+        <Composition
+          {...shared}
+          id="CatalogoBase"
+          defaultProps={catalogoBaseProps}
+        />
+        <Composition
+          {...shared}
+          id="ComprasProveedor"
+          defaultProps={comprasProveedorProps}
+        />
+        <Composition
+          {...shared}
+          id="DevolucionesAutorizadas"
+          defaultProps={devolucionesAutorizadasProps}
+        />
+        <Composition
+          {...shared}
+          id="ExistenciasBajas"
+          defaultProps={existenciasBajasProps}
+        />
+        <Composition
+          {...shared}
+          id="DescuentosPorCajero"
+          defaultProps={descuentosPorCajeroProps}
+        />
+        <Composition
+          {...shared}
+          id="CorteRehook"
+          defaultProps={corteRehookProps}
+        />
+        <Composition
+          {...shared}
+          id="CobroRapidoRehook"
+          defaultProps={cobroRapidoRehookProps}
+        />
+        <Composition
+          {...shared}
+          id="VentaPorKiloRehook"
+          defaultProps={ventaPorKiloRehookProps}
+        />
+        <Composition
+          {...shared}
+          id="CatalogoBaseRehook"
+          defaultProps={catalogoBaseRehookProps}
+        />
+        <Composition
+          {...shared}
+          id="DiferenciasInventarioRehook"
+          defaultProps={diferenciasInventarioRehookProps}
+        />
+        <Composition
+          {...shared}
+          id="PermisosCajeroRehook"
+          defaultProps={permisosCajeroRehookProps}
+        />
+        <Composition
+          {...shared}
+          id="ExistenciasBajasRehook"
+          defaultProps={existenciasBajasRehookProps}
+        />
+        <Composition
+          {...shared}
+          id="ComprasProveedorRehook"
+          defaultProps={comprasProveedorRehookProps}
+        />
+        <Folder name="reto">
+          <Composition
+            {...reto}
+            id="RetoCambio"
+            defaultProps={retoCambioProps}
+          />
+          <Composition {...reto} id="RetoKilo" defaultProps={retoKiloProps} />
+          <Composition
+            {...reto}
+            id="RetoCompra"
+            defaultProps={retoCompraProps}
+          />
+          <Composition
+            {...reto}
+            id="RetoCambioOpciones"
+            defaultProps={retoCambioOpcionesProps}
+          />
+          <Composition
+            {...reto}
+            id="RetoMasVendidos"
+            defaultProps={retoMasVendidosProps}
+          />
+          <Composition
+            id="RetoErrorCambio"
+            component={RetoTicket}
+            schema={retoTicketSchema}
+            calculateMetadata={retoTicketMetadata}
+            fps={FPS}
+            width={1080}
+            height={1920}
+            durationInFrames={642}
+            defaultProps={retoErrorCambioProps}
+          />
+        </Folder>
+        <Folder name="ticket">
+          <Composition
+            id="TicketTienda"
+            component={TicketStory}
+            schema={ticketStorySchema}
+            calculateMetadata={ticketStoryMetadata}
+            fps={FPS}
+            width={1080}
+            height={1920}
+            durationInFrames={660}
+            defaultProps={ticketTiendaProps}
+          />
+          <Composition
+            id="TicketKilo"
+            component={TicketStory}
+            schema={ticketStorySchema}
+            calculateMetadata={ticketStoryMetadata}
+            fps={FPS}
+            width={1080}
+            height={1920}
+            durationInFrames={714}
+            defaultProps={ticketKiloProps}
+          />
+          <Composition
+            id="TicketMerma"
+            component={TicketStory}
+            schema={ticketStorySchema}
+            calculateMetadata={ticketStoryMetadata}
+            fps={FPS}
+            width={1080}
+            height={1920}
+            durationInFrames={858}
+            defaultProps={ticketMermaProps}
+          />
+          <Composition
+            id="TicketDescuentos"
+            component={TicketStory}
+            schema={ticketStorySchema}
+            calculateMetadata={ticketStoryMetadata}
+            fps={FPS}
+            width={1080}
+            height={1920}
+            durationInFrames={726}
+            defaultProps={ticketDescuentosProps}
+          />
+          <Composition
+            id="TicketPrecio"
+            component={TicketStory}
+            schema={ticketStorySchema}
+            calculateMetadata={ticketStoryMetadata}
+            fps={FPS}
+            width={1080}
+            height={1920}
+            durationInFrames={882}
+            defaultProps={ticketPrecioProps}
+          />
+        </Folder>
+        <Folder name="chat">
+          <Composition
+            {...chat}
+            id="ChatFaltante"
+            defaultProps={chatFaltanteProps}
+          />
+          <Composition
+            {...chat}
+            id="ChatYogures"
+            defaultProps={chatYoguresProps}
+          />
+        </Folder>
+        <Folder name="photo">
+          <Composition
+            {...photo}
+            id="LibretaKilo"
+            defaultProps={libretaKiloProps}
+          />
+          <Composition {...photo} id="CocaLoop" defaultProps={cocaLoopProps} />
+        </Folder>
+      </Folder>
+      <Folder name="arya">
+        <Composition
+          {...shared}
+          id="AryaWhyIBuiltArya"
+          defaultProps={aryaWhyIBuiltAryaProps}
+        />
+        <Composition
+          {...shared}
+          id="AryaDidIGiveIt"
+          defaultProps={aryaDidIGiveItProps}
+        />
+        <Composition
+          {...shared}
+          id="AryaForgotDogMedication"
+          defaultProps={aryaForgotDogMedicationProps}
+        />
+        <Composition
+          {...shared}
+          id="AryaThreeMedsOneList"
+          defaultProps={aryaThreeMedsOneListProps}
+        />
+        <Composition
+          {...shared}
+          id="AryaEvery12Hours"
+          defaultProps={aryaEvery12HoursProps}
+        />
+        <Composition
+          {...shared}
+          id="AryaWhatIWishIHad"
+          defaultProps={aryaWhatIWishIHadProps}
+        />
+        <Composition
+          {...shared}
+          id="AryaVetAsksEveryDose"
+          defaultProps={aryaVetAsksEveryDoseProps}
+        />
+        <Composition
+          {...shared}
+          id="AryaVomitedAfterPill"
+          defaultProps={aryaVomitedAfterPillProps}
+        />
+        <Composition
+          {...shared}
+          id="AryaRefillBeforeItRunsOut"
+          defaultProps={aryaRefillBeforeItRunsOutProps}
         />
       </Folder>
-      <Folder name="ticket">
-        <Composition
-          id="TicketTienda"
-          component={TicketStory}
-          schema={ticketStorySchema}
-          calculateMetadata={ticketStoryMetadata}
-          fps={FPS}
-          width={1080}
-          height={1920}
-          durationInFrames={660}
-          defaultProps={ticketTiendaProps}
-        />
-        <Composition
-          id="TicketKilo"
-          component={TicketStory}
-          schema={ticketStorySchema}
-          calculateMetadata={ticketStoryMetadata}
-          fps={FPS}
-          width={1080}
-          height={1920}
-          durationInFrames={714}
-          defaultProps={ticketKiloProps}
-        />
-        <Composition
-          id="TicketMerma"
-          component={TicketStory}
-          schema={ticketStorySchema}
-          calculateMetadata={ticketStoryMetadata}
-          fps={FPS}
-          width={1080}
-          height={1920}
-          durationInFrames={858}
-          defaultProps={ticketMermaProps}
-        />
-        <Composition
-          id="TicketDescuentos"
-          component={TicketStory}
-          schema={ticketStorySchema}
-          calculateMetadata={ticketStoryMetadata}
-          fps={FPS}
-          width={1080}
-          height={1920}
-          durationInFrames={726}
-          defaultProps={ticketDescuentosProps}
-        />
-        <Composition
-          id="TicketPrecio"
-          component={TicketStory}
-          schema={ticketStorySchema}
-          calculateMetadata={ticketStoryMetadata}
-          fps={FPS}
-          width={1080}
-          height={1920}
-          durationInFrames={882}
-          defaultProps={ticketPrecioProps}
-        />
-      </Folder>
-      <Folder name="chat">
-        <Composition
-          {...chat}
-          id="ChatFaltante"
-          defaultProps={chatFaltanteProps}
-        />
-        <Composition
-          {...chat}
-          id="ChatYogures"
-          defaultProps={chatYoguresProps}
-        />
-      </Folder>
-      <Folder name="photo">
-        <Composition
-          {...photo}
-          id="LibretaKilo"
-          defaultProps={libretaKiloProps}
-        />
-        <Composition {...photo} id="CocaLoop" defaultProps={cocaLoopProps} />
-      </Folder>
-    </Folder>
+    </>
   );
 };

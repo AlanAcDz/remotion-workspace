@@ -1,0 +1,422 @@
+[
+  {
+    "text": "Your",
+    "startMs": 46,
+    "endMs": 267,
+    "timestampMs": 46,
+    "confidence": null
+  },
+  {
+    "text": " dog",
+    "startMs": 267,
+    "endMs": 534,
+    "timestampMs": 267,
+    "confidence": null
+  },
+  {
+    "text": " threw",
+    "startMs": 534,
+    "endMs": 789,
+    "timestampMs": 534,
+    "confidence": null
+  },
+  {
+    "text": " up",
+    "startMs": 789,
+    "endMs": 964,
+    "timestampMs": 789,
+    "confidence": null
+  },
+  {
+    "text": " right",
+    "startMs": 964,
+    "endMs": 1207,
+    "timestampMs": 964,
+    "confidence": null
+  },
+  {
+    "text": " after",
+    "startMs": 1207,
+    "endMs": 1440,
+    "timestampMs": 1207,
+    "confidence": null
+  },
+  {
+    "text": " the",
+    "startMs": 1440,
+    "endMs": 1544,
+    "timestampMs": 1440,
+    "confidence": null
+  },
+  {
+    "text": " pill.",
+    "startMs": 1544,
+    "endMs": 2310,
+    "timestampMs": 1544,
+    "confidence": null
+  },
+  {
+    "text": " Now",
+    "startMs": 2310,
+    "endMs": 2589,
+    "timestampMs": 2310,
+    "confidence": null
+  },
+  {
+    "text": " what?",
+    "startMs": 2589,
+    "endMs": 3286,
+    "timestampMs": 2589,
+    "confidence": null
+  },
+  {
+    "text": " Don't",
+    "startMs": 3286,
+    "endMs": 3553,
+    "timestampMs": 3286,
+    "confidence": null
+  },
+  {
+    "text": " give",
+    "startMs": 3553,
+    "endMs": 3750,
+    "timestampMs": 3553,
+    "confidence": null
+  },
+  {
+    "text": " another",
+    "startMs": 3750,
+    "endMs": 4063,
+    "timestampMs": 3750,
+    "confidence": null
+  },
+  {
+    "text": " dose",
+    "startMs": 4063,
+    "endMs": 4354,
+    "timestampMs": 4063,
+    "confidence": null
+  },
+  {
+    "text": " on",
+    "startMs": 4354,
+    "endMs": 4481,
+    "timestampMs": 4354,
+    "confidence": null
+  },
+  {
+    "text": " your",
+    "startMs": 4481,
+    "endMs": 4667,
+    "timestampMs": 4481,
+    "confidence": null
+  },
+  {
+    "text": " own.",
+    "startMs": 4667,
+    "endMs": 5259,
+    "timestampMs": 4667,
+    "confidence": null
+  },
+  {
+    "text": " You",
+    "startMs": 5259,
+    "endMs": 5468,
+    "timestampMs": 5259,
+    "confidence": null
+  },
+  {
+    "text": " can't",
+    "startMs": 5468,
+    "endMs": 5735,
+    "timestampMs": 5468,
+    "confidence": null
+  },
+  {
+    "text": " tell",
+    "startMs": 5735,
+    "endMs": 5991,
+    "timestampMs": 5735,
+    "confidence": null
+  },
+  {
+    "text": " from",
+    "startMs": 5991,
+    "endMs": 6177,
+    "timestampMs": 5991,
+    "confidence": null
+  },
+  {
+    "text": " the",
+    "startMs": 6177,
+    "endMs": 6316,
+    "timestampMs": 6177,
+    "confidence": null
+  },
+  {
+    "text": " mess",
+    "startMs": 6316,
+    "endMs": 6687,
+    "timestampMs": 6316,
+    "confidence": null
+  },
+  {
+    "text": " how",
+    "startMs": 6687,
+    "endMs": 6908,
+    "timestampMs": 6687,
+    "confidence": null
+  },
+  {
+    "text": " much",
+    "startMs": 6908,
+    "endMs": 7152,
+    "timestampMs": 6908,
+    "confidence": null
+  },
+  {
+    "text": " was",
+    "startMs": 7152,
+    "endMs": 7338,
+    "timestampMs": 7152,
+    "confidence": null
+  },
+  {
+    "text": " absorbed.",
+    "startMs": 7338,
+    "endMs": 8266,
+    "timestampMs": 7338,
+    "confidence": null
+  },
+  {
+    "text": " Note",
+    "startMs": 8266,
+    "endMs": 8533,
+    "timestampMs": 8266,
+    "confidence": null
+  },
+  {
+    "text": " when",
+    "startMs": 8533,
+    "endMs": 8707,
+    "timestampMs": 8533,
+    "confidence": null
+  },
+  {
+    "text": " you",
+    "startMs": 8707,
+    "endMs": 8858,
+    "timestampMs": 8707,
+    "confidence": null
+  },
+  {
+    "text": " gave",
+    "startMs": 8858,
+    "endMs": 9137,
+    "timestampMs": 8858,
+    "confidence": null
+  },
+  {
+    "text": " it",
+    "startMs": 9137,
+    "endMs": 9288,
+    "timestampMs": 9137,
+    "confidence": null
+  },
+  {
+    "text": " and",
+    "startMs": 9288,
+    "endMs": 9439,
+    "timestampMs": 9288,
+    "confidence": null
+  },
+  {
+    "text": " when",
+    "startMs": 9439,
+    "endMs": 9625,
+    "timestampMs": 9439,
+    "confidence": null
+  },
+  {
+    "text": " it",
+    "startMs": 9625,
+    "endMs": 9741,
+    "timestampMs": 9625,
+    "confidence": null
+  },
+  {
+    "text": " came",
+    "startMs": 9741,
+    "endMs": 10031,
+    "timestampMs": 9741,
+    "confidence": null
+  },
+  {
+    "text": " up,",
+    "startMs": 10031,
+    "endMs": 10437,
+    "timestampMs": 10031,
+    "confidence": null
+  },
+  {
+    "text": " and",
+    "startMs": 10437,
+    "endMs": 10658,
+    "timestampMs": 10437,
+    "confidence": null
+  },
+  {
+    "text": " call",
+    "startMs": 10658,
+    "endMs": 10902,
+    "timestampMs": 10658,
+    "confidence": null
+  },
+  {
+    "text": " your",
+    "startMs": 10902,
+    "endMs": 11064,
+    "timestampMs": 10902,
+    "confidence": null
+  },
+  {
+    "text": " vet.",
+    "startMs": 11064,
+    "endMs": 11819,
+    "timestampMs": 11064,
+    "confidence": null
+  },
+  {
+    "text": " If",
+    "startMs": 11819,
+    "endMs": 12005,
+    "timestampMs": 11819,
+    "confidence": null
+  },
+  {
+    "text": " your",
+    "startMs": 12005,
+    "endMs": 12167,
+    "timestampMs": 12005,
+    "confidence": null
+  },
+  {
+    "text": " dog",
+    "startMs": 12167,
+    "endMs": 12446,
+    "timestampMs": 12167,
+    "confidence": null
+  },
+  {
+    "text": " seems",
+    "startMs": 12446,
+    "endMs": 12771,
+    "timestampMs": 12446,
+    "confidence": null
+  },
+  {
+    "text": " really",
+    "startMs": 12771,
+    "endMs": 13154,
+    "timestampMs": 12771,
+    "confidence": null
+  },
+  {
+    "text": " unwell,",
+    "startMs": 13154,
+    "endMs": 14024,
+    "timestampMs": 13154,
+    "confidence": null
+  },
+  {
+    "text": " get",
+    "startMs": 14024,
+    "endMs": 14268,
+    "timestampMs": 14024,
+    "confidence": null
+  },
+  {
+    "text": " urgent",
+    "startMs": 14268,
+    "endMs": 14628,
+    "timestampMs": 14268,
+    "confidence": null
+  },
+  {
+    "text": " care.",
+    "startMs": 14628,
+    "endMs": 15545,
+    "timestampMs": 14628,
+    "confidence": null
+  },
+  {
+    "text": " Arya",
+    "startMs": 15545,
+    "endMs": 16033,
+    "timestampMs": 15545,
+    "confidence": null
+  },
+  {
+    "text": " shows",
+    "startMs": 16033,
+    "endMs": 16346,
+    "timestampMs": 16033,
+    "confidence": null
+  },
+  {
+    "text": " exactly",
+    "startMs": 16346,
+    "endMs": 16869,
+    "timestampMs": 16346,
+    "confidence": null
+  },
+  {
+    "text": " when",
+    "startMs": 16869,
+    "endMs": 17031,
+    "timestampMs": 16869,
+    "confidence": null
+  },
+  {
+    "text": " you",
+    "startMs": 17031,
+    "endMs": 17159,
+    "timestampMs": 17031,
+    "confidence": null
+  },
+  {
+    "text": " gave",
+    "startMs": 17159,
+    "endMs": 17426,
+    "timestampMs": 17159,
+    "confidence": null
+  },
+  {
+    "text": " it.",
+    "startMs": 17426,
+    "endMs": 17879,
+    "timestampMs": 17426,
+    "confidence": null
+  },
+  {
+    "text": " Link",
+    "startMs": 17879,
+    "endMs": 18146,
+    "timestampMs": 17879,
+    "confidence": null
+  },
+  {
+    "text": " in",
+    "startMs": 18146,
+    "endMs": 18274,
+    "timestampMs": 18146,
+    "confidence": null
+  },
+  {
+    "text": " bio.",
+    "startMs": 18274,
+    "endMs": 18831,
+    "timestampMs": 18274,
+    "confidence": null
+  }
+]

@@ -65,6 +65,12 @@ export const sfxSchema = z.object({
  */
 export const MUSIC = {
   nastelbom: { src: "music/nastelbom.mp3", trimBefore: 2 },
+  /**
+   * Arya's Eleven Music beds (-14.6 LUFS each). 0.13 lands them near the
+   * level nastelbom plays at under Punto Listo voiceovers (≈ -32 LUFS).
+   */
+  aryaStory: { src: "music/arya-story-bed.mp3", trimBefore: 0, volume: 0.13 },
+  aryaDemo: { src: "music/arya-demo-bed.mp3", trimBefore: 0, volume: 0.13 },
 };
 
 /** The synthesised pack in public/sfx — regenerate with scripts/make-sfx.sh. */

@@ -1,0 +1,310 @@
+[
+  {
+    "text": "At",
+    "startMs": 174,
+    "endMs": 372,
+    "timestampMs": 174,
+    "confidence": null
+  },
+  {
+    "text": " the",
+    "startMs": 372,
+    "endMs": 488,
+    "timestampMs": 372,
+    "confidence": null
+  },
+  {
+    "text": " follow-up,",
+    "startMs": 488,
+    "endMs": 998,
+    "timestampMs": 488,
+    "confidence": null
+  },
+  {
+    "text": " the",
+    "startMs": 998,
+    "endMs": 1115,
+    "timestampMs": 998,
+    "confidence": null
+  },
+  {
+    "text": " vet",
+    "startMs": 1115,
+    "endMs": 1347,
+    "timestampMs": 1115,
+    "confidence": null
+  },
+  {
+    "text": " asks:",
+    "startMs": 1347,
+    "endMs": 2032,
+    "timestampMs": 1347,
+    "confidence": null
+  },
+  {
+    "text": " \"Has",
+    "startMs": 2032,
+    "endMs": 2299,
+    "timestampMs": 2032,
+    "confidence": null
+  },
+  {
+    "text": " she",
+    "startMs": 2299,
+    "endMs": 2461,
+    "timestampMs": 2299,
+    "confidence": null
+  },
+  {
+    "text": " been",
+    "startMs": 2461,
+    "endMs": 2635,
+    "timestampMs": 2461,
+    "confidence": null
+  },
+  {
+    "text": " getting",
+    "startMs": 2635,
+    "endMs": 2891,
+    "timestampMs": 2635,
+    "confidence": null
+  },
+  {
+    "text": " every",
+    "startMs": 2891,
+    "endMs": 3135,
+    "timestampMs": 2891,
+    "confidence": null
+  },
+  {
+    "text": " dose?\"",
+    "startMs": 3135,
+    "endMs": 4098,
+    "timestampMs": 3135,
+    "confidence": null
+  },
+  {
+    "text": " And",
+    "startMs": 4098,
+    "endMs": 4400,
+    "timestampMs": 4098,
+    "confidence": null
+  },
+  {
+    "text": " you",
+    "startMs": 4400,
+    "endMs": 4551,
+    "timestampMs": 4400,
+    "confidence": null
+  },
+  {
+    "text": " think...",
+    "startMs": 4551,
+    "endMs": 5399,
+    "timestampMs": 4551,
+    "confidence": null
+  },
+  {
+    "text": " mostly?",
+    "startMs": 5399,
+    "endMs": 6687,
+    "timestampMs": 5399,
+    "confidence": null
+  },
+  {
+    "text": " With",
+    "startMs": 6687,
+    "endMs": 6931,
+    "timestampMs": 6687,
+    "confidence": null
+  },
+  {
+    "text": " Arya,",
+    "startMs": 6931,
+    "endMs": 7407,
+    "timestampMs": 6931,
+    "confidence": null
+  },
+  {
+    "text": " you",
+    "startMs": 7407,
+    "endMs": 7581,
+    "timestampMs": 7407,
+    "confidence": null
+  },
+  {
+    "text": " open",
+    "startMs": 7581,
+    "endMs": 7837,
+    "timestampMs": 7581,
+    "confidence": null
+  },
+  {
+    "text": " her",
+    "startMs": 7837,
+    "endMs": 7964,
+    "timestampMs": 7837,
+    "confidence": null
+  },
+  {
+    "text": " treatment",
+    "startMs": 7964,
+    "endMs": 8371,
+    "timestampMs": 7964,
+    "confidence": null
+  },
+  {
+    "text": " and",
+    "startMs": 8371,
+    "endMs": 8499,
+    "timestampMs": 8371,
+    "confidence": null
+  },
+  {
+    "text": " show",
+    "startMs": 8499,
+    "endMs": 8766,
+    "timestampMs": 8499,
+    "confidence": null
+  },
+  {
+    "text": " them:",
+    "startMs": 8766,
+    "endMs": 9334,
+    "timestampMs": 8766,
+    "confidence": null
+  },
+  {
+    "text": " every",
+    "startMs": 9334,
+    "endMs": 9718,
+    "timestampMs": 9334,
+    "confidence": null
+  },
+  {
+    "text": " dose,",
+    "startMs": 9718,
+    "endMs": 10333,
+    "timestampMs": 9718,
+    "confidence": null
+  },
+  {
+    "text": " taken",
+    "startMs": 10333,
+    "endMs": 10797,
+    "timestampMs": 10333,
+    "confidence": null
+  },
+  {
+    "text": " or",
+    "startMs": 10797,
+    "endMs": 10960,
+    "timestampMs": 10797,
+    "confidence": null
+  },
+  {
+    "text": " skipped,",
+    "startMs": 10960,
+    "endMs": 11378,
+    "timestampMs": 10960,
+    "confidence": null
+  },
+  {
+    "text": " with",
+    "startMs": 11378,
+    "endMs": 11564,
+    "timestampMs": 11378,
+    "confidence": null
+  },
+  {
+    "text": " the",
+    "startMs": 11564,
+    "endMs": 11668,
+    "timestampMs": 11564,
+    "confidence": null
+  },
+  {
+    "text": " time.",
+    "startMs": 11668,
+    "endMs": 12399,
+    "timestampMs": 11668,
+    "confidence": null
+  },
+  {
+    "text": " No",
+    "startMs": 12399,
+    "endMs": 12608,
+    "timestampMs": 12399,
+    "confidence": null
+  },
+  {
+    "text": " guessing.",
+    "startMs": 12608,
+    "endMs": 13293,
+    "timestampMs": 12608,
+    "confidence": null
+  },
+  {
+    "text": " Just",
+    "startMs": 13293,
+    "endMs": 13595,
+    "timestampMs": 13293,
+    "confidence": null
+  },
+  {
+    "text": " the",
+    "startMs": 13595,
+    "endMs": 13735,
+    "timestampMs": 13595,
+    "confidence": null
+  },
+  {
+    "text": " record.",
+    "startMs": 13735,
+    "endMs": 14756,
+    "timestampMs": 13735,
+    "confidence": null
+  },
+  {
+    "text": " Arya:",
+    "startMs": 14756,
+    "endMs": 15557,
+    "timestampMs": 14756,
+    "confidence": null
+  },
+  {
+    "text": " Pill",
+    "startMs": 15557,
+    "endMs": 15859,
+    "timestampMs": 15557,
+    "confidence": null
+  },
+  {
+    "text": " Reminder.",
+    "startMs": 15859,
+    "endMs": 16625,
+    "timestampMs": 15859,
+    "confidence": null
+  },
+  {
+    "text": " Link",
+    "startMs": 16625,
+    "endMs": 16916,
+    "timestampMs": 16625,
+    "confidence": null
+  },
+  {
+    "text": " in",
+    "startMs": 16916,
+    "endMs": 17043,
+    "timestampMs": 16916,
+    "confidence": null
+  },
+  {
+    "text": " bio.",
+    "startMs": 17043,
+    "endMs": 17577,
+    "timestampMs": 17043,
+    "confidence": null
+  }
+]

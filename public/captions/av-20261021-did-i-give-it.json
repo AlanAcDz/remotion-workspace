@@ -1,0 +1,387 @@
+[
+  {
+    "text": "Did",
+    "startMs": 58,
+    "endMs": 232,
+    "timestampMs": 58,
+    "confidence": null
+  },
+  {
+    "text": " I",
+    "startMs": 232,
+    "endMs": 337,
+    "timestampMs": 232,
+    "confidence": null
+  },
+  {
+    "text": " give",
+    "startMs": 337,
+    "endMs": 522,
+    "timestampMs": 337,
+    "confidence": null
+  },
+  {
+    "text": " her",
+    "startMs": 522,
+    "endMs": 685,
+    "timestampMs": 522,
+    "confidence": null
+  },
+  {
+    "text": " the",
+    "startMs": 685,
+    "endMs": 801,
+    "timestampMs": 685,
+    "confidence": null
+  },
+  {
+    "text": " pill",
+    "startMs": 801,
+    "endMs": 1103,
+    "timestampMs": 801,
+    "confidence": null
+  },
+  {
+    "text": " this",
+    "startMs": 1103,
+    "endMs": 1312,
+    "timestampMs": 1103,
+    "confidence": null
+  },
+  {
+    "text": " morning...",
+    "startMs": 1312,
+    "endMs": 2043,
+    "timestampMs": 1312,
+    "confidence": null
+  },
+  {
+    "text": " or",
+    "startMs": 2043,
+    "endMs": 2276,
+    "timestampMs": 2043,
+    "confidence": null
+  },
+  {
+    "text": " was",
+    "startMs": 2276,
+    "endMs": 2473,
+    "timestampMs": 2276,
+    "confidence": null
+  },
+  {
+    "text": " that",
+    "startMs": 2473,
+    "endMs": 2694,
+    "timestampMs": 2473,
+    "confidence": null
+  },
+  {
+    "text": " yesterday?",
+    "startMs": 2694,
+    "endMs": 3831,
+    "timestampMs": 2694,
+    "confidence": null
+  },
+  {
+    "text": " If",
+    "startMs": 3831,
+    "endMs": 3994,
+    "timestampMs": 3831,
+    "confidence": null
+  },
+  {
+    "text": " you've",
+    "startMs": 3994,
+    "endMs": 4226,
+    "timestampMs": 3994,
+    "confidence": null
+  },
+  {
+    "text": " ever",
+    "startMs": 4226,
+    "endMs": 4470,
+    "timestampMs": 4226,
+    "confidence": null
+  },
+  {
+    "text": " stood",
+    "startMs": 4470,
+    "endMs": 4772,
+    "timestampMs": 4470,
+    "confidence": null
+  },
+  {
+    "text": " there",
+    "startMs": 4772,
+    "endMs": 5039,
+    "timestampMs": 4772,
+    "confidence": null
+  },
+  {
+    "text": " holding",
+    "startMs": 5039,
+    "endMs": 5480,
+    "timestampMs": 5039,
+    "confidence": null
+  },
+  {
+    "text": " the",
+    "startMs": 5480,
+    "endMs": 5596,
+    "timestampMs": 5480,
+    "confidence": null
+  },
+  {
+    "text": " bottle,",
+    "startMs": 5596,
+    "endMs": 6304,
+    "timestampMs": 5596,
+    "confidence": null
+  },
+  {
+    "text": " guessing,",
+    "startMs": 6304,
+    "endMs": 7117,
+    "timestampMs": 6304,
+    "confidence": null
+  },
+  {
+    "text": " this",
+    "startMs": 7117,
+    "endMs": 7372,
+    "timestampMs": 7117,
+    "confidence": null
+  },
+  {
+    "text": " is",
+    "startMs": 7372,
+    "endMs": 7523,
+    "timestampMs": 7372,
+    "confidence": null
+  },
+  {
+    "text": " for",
+    "startMs": 7523,
+    "endMs": 7721,
+    "timestampMs": 7523,
+    "confidence": null
+  },
+  {
+    "text": " you.",
+    "startMs": 7721,
+    "endMs": 8371,
+    "timestampMs": 7721,
+    "confidence": null
+  },
+  {
+    "text": " In",
+    "startMs": 8371,
+    "endMs": 8638,
+    "timestampMs": 8371,
+    "confidence": null
+  },
+  {
+    "text": " Arya,",
+    "startMs": 8638,
+    "endMs": 9392,
+    "timestampMs": 8638,
+    "confidence": null
+  },
+  {
+    "text": " you",
+    "startMs": 9392,
+    "endMs": 9601,
+    "timestampMs": 9392,
+    "confidence": null
+  },
+  {
+    "text": " tap",
+    "startMs": 9601,
+    "endMs": 10008,
+    "timestampMs": 9601,
+    "confidence": null
+  },
+  {
+    "text": " \"Mark",
+    "startMs": 10008,
+    "endMs": 10484,
+    "timestampMs": 10008,
+    "confidence": null
+  },
+  {
+    "text": " as",
+    "startMs": 10484,
+    "endMs": 10728,
+    "timestampMs": 10484,
+    "confidence": null
+  },
+  {
+    "text": " taken\"",
+    "startMs": 10728,
+    "endMs": 11401,
+    "timestampMs": 10728,
+    "confidence": null
+  },
+  {
+    "text": " the",
+    "startMs": 11401,
+    "endMs": 11587,
+    "timestampMs": 11401,
+    "confidence": null
+  },
+  {
+    "text": " second",
+    "startMs": 11587,
+    "endMs": 11970,
+    "timestampMs": 11587,
+    "confidence": null
+  },
+  {
+    "text": " you",
+    "startMs": 11970,
+    "endMs": 12109,
+    "timestampMs": 11970,
+    "confidence": null
+  },
+  {
+    "text": " give",
+    "startMs": 12109,
+    "endMs": 12341,
+    "timestampMs": 12109,
+    "confidence": null
+  },
+  {
+    "text": " it.",
+    "startMs": 12341,
+    "endMs": 12899,
+    "timestampMs": 12341,
+    "confidence": null
+  },
+  {
+    "text": " It",
+    "startMs": 12899,
+    "endMs": 13096,
+    "timestampMs": 12899,
+    "confidence": null
+  },
+  {
+    "text": " saves",
+    "startMs": 13096,
+    "endMs": 13456,
+    "timestampMs": 13096,
+    "confidence": null
+  },
+  {
+    "text": " the",
+    "startMs": 13456,
+    "endMs": 13584,
+    "timestampMs": 13456,
+    "confidence": null
+  },
+  {
+    "text": " time,",
+    "startMs": 13584,
+    "endMs": 14292,
+    "timestampMs": 13584,
+    "confidence": null
+  },
+  {
+    "text": " so",
+    "startMs": 14292,
+    "endMs": 14501,
+    "timestampMs": 14292,
+    "confidence": null
+  },
+  {
+    "text": " the",
+    "startMs": 14501,
+    "endMs": 14652,
+    "timestampMs": 14501,
+    "confidence": null
+  },
+  {
+    "text": " answer",
+    "startMs": 14652,
+    "endMs": 15302,
+    "timestampMs": 14652,
+    "confidence": null
+  },
+  {
+    "text": " is",
+    "startMs": 15302,
+    "endMs": 15534,
+    "timestampMs": 15302,
+    "confidence": null
+  },
+  {
+    "text": " always",
+    "startMs": 15534,
+    "endMs": 15975,
+    "timestampMs": 15534,
+    "confidence": null
+  },
+  {
+    "text": " one",
+    "startMs": 15975,
+    "endMs": 16196,
+    "timestampMs": 15975,
+    "confidence": null
+  },
+  {
+    "text": " look",
+    "startMs": 16196,
+    "endMs": 16393,
+    "timestampMs": 16196,
+    "confidence": null
+  },
+  {
+    "text": " away.",
+    "startMs": 16393,
+    "endMs": 17438,
+    "timestampMs": 16393,
+    "confidence": null
+  },
+  {
+    "text": " Arya:",
+    "startMs": 17438,
+    "endMs": 18495,
+    "timestampMs": 17438,
+    "confidence": null
+  },
+  {
+    "text": " Pill",
+    "startMs": 18495,
+    "endMs": 18831,
+    "timestampMs": 18495,
+    "confidence": null
+  },
+  {
+    "text": " Reminder.",
+    "startMs": 18831,
+    "endMs": 19958,
+    "timestampMs": 18831,
+    "confidence": null
+  },
+  {
+    "text": " Link",
+    "startMs": 19958,
+    "endMs": 20271,
+    "timestampMs": 19958,
+    "confidence": null
+  },
+  {
+    "text": " in",
+    "startMs": 20271,
+    "endMs": 20410,
+    "timestampMs": 20271,
+    "confidence": null
+  },
+  {
+    "text": " bio.",
+    "startMs": 20410,
+    "endMs": 21002,
+    "timestampMs": 20410,
+    "confidence": null
+  }
+]

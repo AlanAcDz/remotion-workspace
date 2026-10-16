@@ -1,0 +1,268 @@
+[
+  {
+    "text": "It's",
+    "startMs": 151,
+    "endMs": 383,
+    "timestampMs": 151,
+    "confidence": null
+  },
+  {
+    "text": " Sunday",
+    "startMs": 383,
+    "endMs": 755,
+    "timestampMs": 383,
+    "confidence": null
+  },
+  {
+    "text": " night,",
+    "startMs": 755,
+    "endMs": 1057,
+    "timestampMs": 755,
+    "confidence": null
+  },
+  {
+    "text": " and",
+    "startMs": 1057,
+    "endMs": 1242,
+    "timestampMs": 1057,
+    "confidence": null
+  },
+  {
+    "text": " you",
+    "startMs": 1242,
+    "endMs": 1428,
+    "timestampMs": 1242,
+    "confidence": null
+  },
+  {
+    "text": " just",
+    "startMs": 1428,
+    "endMs": 1649,
+    "timestampMs": 1428,
+    "confidence": null
+  },
+  {
+    "text": " gave",
+    "startMs": 1649,
+    "endMs": 1881,
+    "timestampMs": 1649,
+    "confidence": null
+  },
+  {
+    "text": " the",
+    "startMs": 1881,
+    "endMs": 2009,
+    "timestampMs": 1881,
+    "confidence": null
+  },
+  {
+    "text": " last",
+    "startMs": 2009,
+    "endMs": 2345,
+    "timestampMs": 2009,
+    "confidence": null
+  },
+  {
+    "text": " pill.",
+    "startMs": 2345,
+    "endMs": 2995,
+    "timestampMs": 2345,
+    "confidence": null
+  },
+  {
+    "text": " The",
+    "startMs": 2995,
+    "endMs": 3158,
+    "timestampMs": 2995,
+    "confidence": null
+  },
+  {
+    "text": " pharmacy's",
+    "startMs": 3158,
+    "endMs": 3692,
+    "timestampMs": 3158,
+    "confidence": null
+  },
+  {
+    "text": " closed",
+    "startMs": 3692,
+    "endMs": 4075,
+    "timestampMs": 3692,
+    "confidence": null
+  },
+  {
+    "text": " until",
+    "startMs": 4075,
+    "endMs": 4342,
+    "timestampMs": 4075,
+    "confidence": null
+  },
+  {
+    "text": " Monday.",
+    "startMs": 4342,
+    "endMs": 5201,
+    "timestampMs": 4342,
+    "confidence": null
+  },
+  {
+    "text": " Arya",
+    "startMs": 5201,
+    "endMs": 5642,
+    "timestampMs": 5201,
+    "confidence": null
+  },
+  {
+    "text": " counts",
+    "startMs": 5642,
+    "endMs": 5968,
+    "timestampMs": 5642,
+    "confidence": null
+  },
+  {
+    "text": " down",
+    "startMs": 5968,
+    "endMs": 6200,
+    "timestampMs": 5968,
+    "confidence": null
+  },
+  {
+    "text": " what's",
+    "startMs": 6200,
+    "endMs": 6478,
+    "timestampMs": 6200,
+    "confidence": null
+  },
+  {
+    "text": " left",
+    "startMs": 6478,
+    "endMs": 6722,
+    "timestampMs": 6478,
+    "confidence": null
+  },
+  {
+    "text": " with",
+    "startMs": 6722,
+    "endMs": 6885,
+    "timestampMs": 6722,
+    "confidence": null
+  },
+  {
+    "text": " every",
+    "startMs": 6885,
+    "endMs": 7152,
+    "timestampMs": 6885,
+    "confidence": null
+  },
+  {
+    "text": " dose,",
+    "startMs": 7152,
+    "endMs": 7570,
+    "timestampMs": 7152,
+    "confidence": null
+  },
+  {
+    "text": " and",
+    "startMs": 7570,
+    "endMs": 7802,
+    "timestampMs": 7570,
+    "confidence": null
+  },
+  {
+    "text": " warns",
+    "startMs": 7802,
+    "endMs": 8266,
+    "timestampMs": 7802,
+    "confidence": null
+  },
+  {
+    "text": " you",
+    "startMs": 8266,
+    "endMs": 8440,
+    "timestampMs": 8266,
+    "confidence": null
+  },
+  {
+    "text": " while",
+    "startMs": 8440,
+    "endMs": 8638,
+    "timestampMs": 8440,
+    "confidence": null
+  },
+  {
+    "text": " there's",
+    "startMs": 8638,
+    "endMs": 8858,
+    "timestampMs": 8638,
+    "confidence": null
+  },
+  {
+    "text": " still",
+    "startMs": 8858,
+    "endMs": 9137,
+    "timestampMs": 8858,
+    "confidence": null
+  },
+  {
+    "text": " time",
+    "startMs": 9137,
+    "endMs": 9427,
+    "timestampMs": 9137,
+    "confidence": null
+  },
+  {
+    "text": " to",
+    "startMs": 9427,
+    "endMs": 9555,
+    "timestampMs": 9427,
+    "confidence": null
+  },
+  {
+    "text": " refill.",
+    "startMs": 9555,
+    "endMs": 10681,
+    "timestampMs": 9555,
+    "confidence": null
+  },
+  {
+    "text": " Arya:",
+    "startMs": 10681,
+    "endMs": 11738,
+    "timestampMs": 10681,
+    "confidence": null
+  },
+  {
+    "text": " Pill",
+    "startMs": 11738,
+    "endMs": 12109,
+    "timestampMs": 11738,
+    "confidence": null
+  },
+  {
+    "text": " Reminder.",
+    "startMs": 12109,
+    "endMs": 12957,
+    "timestampMs": 12109,
+    "confidence": null
+  },
+  {
+    "text": " Link",
+    "startMs": 12957,
+    "endMs": 13259,
+    "timestampMs": 12957,
+    "confidence": null
+  },
+  {
+    "text": " in",
+    "startMs": 13259,
+    "endMs": 13386,
+    "timestampMs": 13259,
+    "confidence": null
+  },
+  {
+    "text": " bio.",
+    "startMs": 13386,
+    "endMs": 13978,
+    "timestampMs": 13386,
+    "confidence": null
+  }
+]

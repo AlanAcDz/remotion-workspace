@@ -1,0 +1,289 @@
+[
+  {
+    "text": "Three",
+    "startMs": 46,
+    "endMs": 337,
+    "timestampMs": 46,
+    "confidence": null
+  },
+  {
+    "text": " medications,",
+    "startMs": 337,
+    "endMs": 1393,
+    "timestampMs": 337,
+    "confidence": null
+  },
+  {
+    "text": " three",
+    "startMs": 1393,
+    "endMs": 1672,
+    "timestampMs": 1393,
+    "confidence": null
+  },
+  {
+    "text": " different",
+    "startMs": 1672,
+    "endMs": 1974,
+    "timestampMs": 1672,
+    "confidence": null
+  },
+  {
+    "text": " schedules,",
+    "startMs": 1974,
+    "endMs": 2926,
+    "timestampMs": 1974,
+    "confidence": null
+  },
+  {
+    "text": " one",
+    "startMs": 2926,
+    "endMs": 3216,
+    "timestampMs": 2926,
+    "confidence": null
+  },
+  {
+    "text": " dog.",
+    "startMs": 3216,
+    "endMs": 3994,
+    "timestampMs": 3216,
+    "confidence": null
+  },
+  {
+    "text": " Instead",
+    "startMs": 3994,
+    "endMs": 4400,
+    "timestampMs": 3994,
+    "confidence": null
+  },
+  {
+    "text": " of",
+    "startMs": 4400,
+    "endMs": 4505,
+    "timestampMs": 4400,
+    "confidence": null
+  },
+  {
+    "text": " three",
+    "startMs": 4505,
+    "endMs": 4760,
+    "timestampMs": 4505,
+    "confidence": null
+  },
+  {
+    "text": " alarms",
+    "startMs": 4760,
+    "endMs": 5190,
+    "timestampMs": 4760,
+    "confidence": null
+  },
+  {
+    "text": " and",
+    "startMs": 5190,
+    "endMs": 5306,
+    "timestampMs": 5190,
+    "confidence": null
+  },
+  {
+    "text": " a",
+    "startMs": 5306,
+    "endMs": 5387,
+    "timestampMs": 5306,
+    "confidence": null
+  },
+  {
+    "text": " sticky",
+    "startMs": 5387,
+    "endMs": 5747,
+    "timestampMs": 5387,
+    "confidence": null
+  },
+  {
+    "text": " note,",
+    "startMs": 5747,
+    "endMs": 6293,
+    "timestampMs": 5747,
+    "confidence": null
+  },
+  {
+    "text": " I",
+    "startMs": 6293,
+    "endMs": 6467,
+    "timestampMs": 6293,
+    "confidence": null
+  },
+  {
+    "text": " added",
+    "startMs": 6467,
+    "endMs": 6792,
+    "timestampMs": 6467,
+    "confidence": null
+  },
+  {
+    "text": " each",
+    "startMs": 6792,
+    "endMs": 7059,
+    "timestampMs": 6792,
+    "confidence": null
+  },
+  {
+    "text": " one",
+    "startMs": 7059,
+    "endMs": 7268,
+    "timestampMs": 7059,
+    "confidence": null
+  },
+  {
+    "text": " to",
+    "startMs": 7268,
+    "endMs": 7430,
+    "timestampMs": 7268,
+    "confidence": null
+  },
+  {
+    "text": " Arya",
+    "startMs": 7430,
+    "endMs": 7895,
+    "timestampMs": 7430,
+    "confidence": null
+  },
+  {
+    "text": " once.",
+    "startMs": 7895,
+    "endMs": 8684,
+    "timestampMs": 7895,
+    "confidence": null
+  },
+  {
+    "text": " Now",
+    "startMs": 8684,
+    "endMs": 8951,
+    "timestampMs": 8684,
+    "confidence": null
+  },
+  {
+    "text": " my",
+    "startMs": 8951,
+    "endMs": 9149,
+    "timestampMs": 8951,
+    "confidence": null
+  },
+  {
+    "text": " day",
+    "startMs": 9149,
+    "endMs": 9369,
+    "timestampMs": 9149,
+    "confidence": null
+  },
+  {
+    "text": " is",
+    "startMs": 9369,
+    "endMs": 9543,
+    "timestampMs": 9369,
+    "confidence": null
+  },
+  {
+    "text": " one",
+    "startMs": 9543,
+    "endMs": 9787,
+    "timestampMs": 9543,
+    "confidence": null
+  },
+  {
+    "text": " list:",
+    "startMs": 9787,
+    "endMs": 10286,
+    "timestampMs": 9787,
+    "confidence": null
+  },
+  {
+    "text": " what's",
+    "startMs": 10286,
+    "endMs": 10612,
+    "timestampMs": 10286,
+    "confidence": null
+  },
+  {
+    "text": " due,",
+    "startMs": 10612,
+    "endMs": 11111,
+    "timestampMs": 10612,
+    "confidence": null
+  },
+  {
+    "text": " what's",
+    "startMs": 11111,
+    "endMs": 11459,
+    "timestampMs": 11111,
+    "confidence": null
+  },
+  {
+    "text": " late,",
+    "startMs": 11459,
+    "endMs": 11889,
+    "timestampMs": 11459,
+    "confidence": null
+  },
+  {
+    "text": " and",
+    "startMs": 11889,
+    "endMs": 12086,
+    "timestampMs": 11889,
+    "confidence": null
+  },
+  {
+    "text": " what's",
+    "startMs": 12086,
+    "endMs": 12388,
+    "timestampMs": 12086,
+    "confidence": null
+  },
+  {
+    "text": " done.",
+    "startMs": 12388,
+    "endMs": 13317,
+    "timestampMs": 12388,
+    "confidence": null
+  },
+  {
+    "text": " Arya:",
+    "startMs": 13317,
+    "endMs": 14234,
+    "timestampMs": 13317,
+    "confidence": null
+  },
+  {
+    "text": " Pill",
+    "startMs": 14234,
+    "endMs": 14582,
+    "timestampMs": 14234,
+    "confidence": null
+  },
+  {
+    "text": " Reminder.",
+    "startMs": 14582,
+    "endMs": 15406,
+    "timestampMs": 14582,
+    "confidence": null
+  },
+  {
+    "text": " Link",
+    "startMs": 15406,
+    "endMs": 15743,
+    "timestampMs": 15406,
+    "confidence": null
+  },
+  {
+    "text": " in",
+    "startMs": 15743,
+    "endMs": 15894,
+    "timestampMs": 15743,
+    "confidence": null
+  },
+  {
+    "text": " bio.",
+    "startMs": 15894,
+    "endMs": 16451,
+    "timestampMs": 15894,
+    "confidence": null
+  }
+]

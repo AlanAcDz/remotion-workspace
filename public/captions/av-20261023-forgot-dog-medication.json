@@ -1,0 +1,436 @@
+[
+  {
+    "text": "Forgot",
+    "startMs": 128,
+    "endMs": 499,
+    "timestampMs": 128,
+    "confidence": null
+  },
+  {
+    "text": " your",
+    "startMs": 499,
+    "endMs": 662,
+    "timestampMs": 499,
+    "confidence": null
+  },
+  {
+    "text": " dog's",
+    "startMs": 662,
+    "endMs": 975,
+    "timestampMs": 662,
+    "confidence": null
+  },
+  {
+    "text": " medication?",
+    "startMs": 975,
+    "endMs": 1916,
+    "timestampMs": 975,
+    "confidence": null
+  },
+  {
+    "text": " Don't",
+    "startMs": 1916,
+    "endMs": 2229,
+    "timestampMs": 1916,
+    "confidence": null
+  },
+  {
+    "text": " double",
+    "startMs": 2229,
+    "endMs": 2531,
+    "timestampMs": 2229,
+    "confidence": null
+  },
+  {
+    "text": " the",
+    "startMs": 2531,
+    "endMs": 2659,
+    "timestampMs": 2531,
+    "confidence": null
+  },
+  {
+    "text": " next",
+    "startMs": 2659,
+    "endMs": 2926,
+    "timestampMs": 2659,
+    "confidence": null
+  },
+  {
+    "text": " dose",
+    "startMs": 2926,
+    "endMs": 3216,
+    "timestampMs": 2926,
+    "confidence": null
+  },
+  {
+    "text": " to",
+    "startMs": 3216,
+    "endMs": 3344,
+    "timestampMs": 3216,
+    "confidence": null
+  },
+  {
+    "text": " catch",
+    "startMs": 3344,
+    "endMs": 3680,
+    "timestampMs": 3344,
+    "confidence": null
+  },
+  {
+    "text": " up.",
+    "startMs": 3680,
+    "endMs": 4087,
+    "timestampMs": 3680,
+    "confidence": null
+  },
+  {
+    "text": " Rule",
+    "startMs": 4087,
+    "endMs": 4365,
+    "timestampMs": 4087,
+    "confidence": null
+  },
+  {
+    "text": " of",
+    "startMs": 4365,
+    "endMs": 4470,
+    "timestampMs": 4365,
+    "confidence": null
+  },
+  {
+    "text": " thumb:",
+    "startMs": 4470,
+    "endMs": 5236,
+    "timestampMs": 4470,
+    "confidence": null
+  },
+  {
+    "text": " if",
+    "startMs": 5236,
+    "endMs": 5422,
+    "timestampMs": 5236,
+    "confidence": null
+  },
+  {
+    "text": " it's",
+    "startMs": 5422,
+    "endMs": 5596,
+    "timestampMs": 5422,
+    "confidence": null
+  },
+  {
+    "text": " only",
+    "startMs": 5596,
+    "endMs": 5840,
+    "timestampMs": 5596,
+    "confidence": null
+  },
+  {
+    "text": " been",
+    "startMs": 5840,
+    "endMs": 6014,
+    "timestampMs": 5840,
+    "confidence": null
+  },
+  {
+    "text": " a",
+    "startMs": 6014,
+    "endMs": 6095,
+    "timestampMs": 6014,
+    "confidence": null
+  },
+  {
+    "text": " few",
+    "startMs": 6095,
+    "endMs": 6269,
+    "timestampMs": 6095,
+    "confidence": null
+  },
+  {
+    "text": " hours,",
+    "startMs": 6269,
+    "endMs": 6664,
+    "timestampMs": 6269,
+    "confidence": null
+  },
+  {
+    "text": " give",
+    "startMs": 6664,
+    "endMs": 6896,
+    "timestampMs": 6664,
+    "confidence": null
+  },
+  {
+    "text": " it",
+    "startMs": 6896,
+    "endMs": 6989,
+    "timestampMs": 6896,
+    "confidence": null
+  },
+  {
+    "text": " when",
+    "startMs": 6989,
+    "endMs": 7152,
+    "timestampMs": 6989,
+    "confidence": null
+  },
+  {
+    "text": " you",
+    "startMs": 7152,
+    "endMs": 7314,
+    "timestampMs": 7152,
+    "confidence": null
+  },
+  {
+    "text": " remember.",
+    "startMs": 7314,
+    "endMs": 8197,
+    "timestampMs": 7314,
+    "confidence": null
+  },
+  {
+    "text": " If",
+    "startMs": 8197,
+    "endMs": 8406,
+    "timestampMs": 8197,
+    "confidence": null
+  },
+  {
+    "text": " the",
+    "startMs": 8406,
+    "endMs": 8533,
+    "timestampMs": 8406,
+    "confidence": null
+  },
+  {
+    "text": " next",
+    "startMs": 8533,
+    "endMs": 8835,
+    "timestampMs": 8533,
+    "confidence": null
+  },
+  {
+    "text": " dose",
+    "startMs": 8835,
+    "endMs": 9172,
+    "timestampMs": 8835,
+    "confidence": null
+  },
+  {
+    "text": " is",
+    "startMs": 9172,
+    "endMs": 9346,
+    "timestampMs": 9172,
+    "confidence": null
+  },
+  {
+    "text": " almost",
+    "startMs": 9346,
+    "endMs": 9834,
+    "timestampMs": 9346,
+    "confidence": null
+  },
+  {
+    "text": " due,",
+    "startMs": 9834,
+    "endMs": 10426,
+    "timestampMs": 9834,
+    "confidence": null
+  },
+  {
+    "text": " skip",
+    "startMs": 10426,
+    "endMs": 10786,
+    "timestampMs": 10426,
+    "confidence": null
+  },
+  {
+    "text": " the",
+    "startMs": 10786,
+    "endMs": 10913,
+    "timestampMs": 10786,
+    "confidence": null
+  },
+  {
+    "text": " missed",
+    "startMs": 10913,
+    "endMs": 11215,
+    "timestampMs": 10913,
+    "confidence": null
+  },
+  {
+    "text": " one.",
+    "startMs": 11215,
+    "endMs": 11923,
+    "timestampMs": 11215,
+    "confidence": null
+  },
+  {
+    "text": " Insulin,",
+    "startMs": 11923,
+    "endMs": 12666,
+    "timestampMs": 11923,
+    "confidence": null
+  },
+  {
+    "text": " seizure",
+    "startMs": 12666,
+    "endMs": 13235,
+    "timestampMs": 12666,
+    "confidence": null
+  },
+  {
+    "text": " or",
+    "startMs": 13235,
+    "endMs": 13479,
+    "timestampMs": 13235,
+    "confidence": null
+  },
+  {
+    "text": " heart",
+    "startMs": 13479,
+    "endMs": 13758,
+    "timestampMs": 13479,
+    "confidence": null
+  },
+  {
+    "text": " meds?",
+    "startMs": 13758,
+    "endMs": 14408,
+    "timestampMs": 13758,
+    "confidence": null
+  },
+  {
+    "text": " Call",
+    "startMs": 14408,
+    "endMs": 14675,
+    "timestampMs": 14408,
+    "confidence": null
+  },
+  {
+    "text": " your",
+    "startMs": 14675,
+    "endMs": 14826,
+    "timestampMs": 14675,
+    "confidence": null
+  },
+  {
+    "text": " vet",
+    "startMs": 14826,
+    "endMs": 15093,
+    "timestampMs": 14826,
+    "confidence": null
+  },
+  {
+    "text": " first.",
+    "startMs": 15093,
+    "endMs": 15778,
+    "timestampMs": 15093,
+    "confidence": null
+  },
+  {
+    "text": " Arya",
+    "startMs": 15778,
+    "endMs": 16266,
+    "timestampMs": 15778,
+    "confidence": null
+  },
+  {
+    "text": " logs",
+    "startMs": 16266,
+    "endMs": 16742,
+    "timestampMs": 16266,
+    "confidence": null
+  },
+  {
+    "text": " every",
+    "startMs": 16742,
+    "endMs": 17090,
+    "timestampMs": 16742,
+    "confidence": null
+  },
+  {
+    "text": " dose,",
+    "startMs": 17090,
+    "endMs": 17508,
+    "timestampMs": 17090,
+    "confidence": null
+  },
+  {
+    "text": " so",
+    "startMs": 17508,
+    "endMs": 17705,
+    "timestampMs": 17508,
+    "confidence": null
+  },
+  {
+    "text": " you",
+    "startMs": 17705,
+    "endMs": 17810,
+    "timestampMs": 17705,
+    "confidence": null
+  },
+  {
+    "text": " know",
+    "startMs": 17810,
+    "endMs": 17937,
+    "timestampMs": 17810,
+    "confidence": null
+  },
+  {
+    "text": " when",
+    "startMs": 17937,
+    "endMs": 18077,
+    "timestampMs": 17937,
+    "confidence": null
+  },
+  {
+    "text": " the",
+    "startMs": 18077,
+    "endMs": 18181,
+    "timestampMs": 18077,
+    "confidence": null
+  },
+  {
+    "text": " last",
+    "startMs": 18181,
+    "endMs": 18460,
+    "timestampMs": 18181,
+    "confidence": null
+  },
+  {
+    "text": " one",
+    "startMs": 18460,
+    "endMs": 18634,
+    "timestampMs": 18460,
+    "confidence": null
+  },
+  {
+    "text": " was.",
+    "startMs": 18634,
+    "endMs": 19458,
+    "timestampMs": 18634,
+    "confidence": null
+  },
+  {
+    "text": " Link",
+    "startMs": 19458,
+    "endMs": 19783,
+    "timestampMs": 19458,
+    "confidence": null
+  },
+  {
+    "text": " in",
+    "startMs": 19783,
+    "endMs": 19934,
+    "timestampMs": 19783,
+    "confidence": null
+  },
+  {
+    "text": " bio.",
+    "startMs": 19934,
+    "endMs": 20492,
+    "timestampMs": 19934,
+    "confidence": null
+  }
+]
