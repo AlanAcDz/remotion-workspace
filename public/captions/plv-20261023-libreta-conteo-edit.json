@@ -1,0 +1,352 @@
+[
+  {
+    "text": "Llegaron",
+    "startMs": 34,
+    "endMs": 525,
+    "timestampMs": 34,
+    "confidence": null
+  },
+  {
+    "text": " veinticuatro.",
+    "startMs": 525,
+    "endMs": 1540,
+    "timestampMs": 525,
+    "confidence": null
+  },
+  {
+    "text": " Vendí",
+    "startMs": 1540,
+    "endMs": 1976,
+    "timestampMs": 1540,
+    "confidence": null
+  },
+  {
+    "text": " doce.",
+    "startMs": 1976,
+    "endMs": 2862,
+    "timestampMs": 1976,
+    "confidence": null
+  },
+  {
+    "text": " Deberían",
+    "startMs": 2862,
+    "endMs": 3421,
+    "timestampMs": 2862,
+    "confidence": null
+  },
+  {
+    "text": " quedar",
+    "startMs": 3421,
+    "endMs": 3700,
+    "timestampMs": 3421,
+    "confidence": null
+  },
+  {
+    "text": " doce...",
+    "startMs": 3700,
+    "endMs": 4571,
+    "timestampMs": 3700,
+    "confidence": null
+  },
+  {
+    "text": " y",
+    "startMs": 4571,
+    "endMs": 4693,
+    "timestampMs": 4571,
+    "confidence": null
+  },
+  {
+    "text": " en",
+    "startMs": 4693,
+    "endMs": 4838,
+    "timestampMs": 4693,
+    "confidence": null
+  },
+  {
+    "text": " el",
+    "startMs": 4838,
+    "endMs": 4995,
+    "timestampMs": 4838,
+    "confidence": null
+  },
+  {
+    "text": " refri",
+    "startMs": 4995,
+    "endMs": 5407,
+    "timestampMs": 4995,
+    "confidence": null
+  },
+  {
+    "text": " hay",
+    "startMs": 5407,
+    "endMs": 5632,
+    "timestampMs": 5407,
+    "confidence": null
+  },
+  {
+    "text": " nueve.",
+    "startMs": 5632,
+    "endMs": 6225,
+    "timestampMs": 5632,
+    "confidence": null
+  },
+  {
+    "text": " En",
+    "startMs": 6225,
+    "endMs": 6381,
+    "timestampMs": 6225,
+    "confidence": null
+  },
+  {
+    "text": " la",
+    "startMs": 6381,
+    "endMs": 6492,
+    "timestampMs": 6381,
+    "confidence": null
+  },
+  {
+    "text": " libreta,",
+    "startMs": 6492,
+    "endMs": 7238,
+    "timestampMs": 6492,
+    "confidence": null
+  },
+  {
+    "text": " tachas",
+    "startMs": 7238,
+    "endMs": 7696,
+    "timestampMs": 7238,
+    "confidence": null
+  },
+  {
+    "text": " el",
+    "startMs": 7696,
+    "endMs": 7819,
+    "timestampMs": 7696,
+    "confidence": null
+  },
+  {
+    "text": " doce",
+    "startMs": 7819,
+    "endMs": 8309,
+    "timestampMs": 7819,
+    "confidence": null
+  },
+  {
+    "text": " y",
+    "startMs": 8309,
+    "endMs": 8522,
+    "timestampMs": 8309,
+    "confidence": null
+  },
+  {
+    "text": " pones",
+    "startMs": 8522,
+    "endMs": 8890,
+    "timestampMs": 8522,
+    "confidence": null
+  },
+  {
+    "text": " nueve.",
+    "startMs": 8890,
+    "endMs": 9515,
+    "timestampMs": 8890,
+    "confidence": null
+  },
+  {
+    "text": " ¿Y",
+    "startMs": 9515,
+    "endMs": 9783,
+    "timestampMs": 9515,
+    "confidence": null
+  },
+  {
+    "text": " los",
+    "startMs": 9783,
+    "endMs": 9984,
+    "timestampMs": 9783,
+    "confidence": null
+  },
+  {
+    "text": " otros",
+    "startMs": 9984,
+    "endMs": 10252,
+    "timestampMs": 9984,
+    "confidence": null
+  },
+  {
+    "text": " tres?",
+    "startMs": 10252,
+    "endMs": 10899,
+    "timestampMs": 10252,
+    "confidence": null
+  },
+  {
+    "text": " Ya",
+    "startMs": 10899,
+    "endMs": 11112,
+    "timestampMs": 10899,
+    "confidence": null
+  },
+  {
+    "text": " nadie",
+    "startMs": 11112,
+    "endMs": 11402,
+    "timestampMs": 11112,
+    "confidence": null
+  },
+  {
+    "text": " sabe.",
+    "startMs": 11402,
+    "endMs": 11978,
+    "timestampMs": 11402,
+    "confidence": null
+  },
+  {
+    "text": " En",
+    "startMs": 11978,
+    "endMs": 12168,
+    "timestampMs": 11978,
+    "confidence": null
+  },
+  {
+    "text": " Punto",
+    "startMs": 12168,
+    "endMs": 12492,
+    "timestampMs": 12168,
+    "confidence": null
+  },
+  {
+    "text": " Listo",
+    "startMs": 12492,
+    "endMs": 12804,
+    "timestampMs": 12492,
+    "confidence": null
+  },
+  {
+    "text": " capturas",
+    "startMs": 12804,
+    "endMs": 13262,
+    "timestampMs": 12804,
+    "confidence": null
+  },
+  {
+    "text": " tu",
+    "startMs": 13262,
+    "endMs": 13385,
+    "timestampMs": 13262,
+    "confidence": null
+  },
+  {
+    "text": " conteo,",
+    "startMs": 13385,
+    "endMs": 14211,
+    "timestampMs": 13385,
+    "confidence": null
+  },
+  {
+    "text": " y",
+    "startMs": 14211,
+    "endMs": 14367,
+    "timestampMs": 14211,
+    "confidence": null
+  },
+  {
+    "text": " la",
+    "startMs": 14367,
+    "endMs": 14490,
+    "timestampMs": 14367,
+    "confidence": null
+  },
+  {
+    "text": " diferencia",
+    "startMs": 14490,
+    "endMs": 15093,
+    "timestampMs": 14490,
+    "confidence": null
+  },
+  {
+    "text": " queda",
+    "startMs": 15093,
+    "endMs": 15417,
+    "timestampMs": 15093,
+    "confidence": null
+  },
+  {
+    "text": " como",
+    "startMs": 15417,
+    "endMs": 15628,
+    "timestampMs": 15417,
+    "confidence": null
+  },
+  {
+    "text": " ajuste,",
+    "startMs": 15628,
+    "endMs": 16374,
+    "timestampMs": 15628,
+    "confidence": null
+  },
+  {
+    "text": " con",
+    "startMs": 16374,
+    "endMs": 16665,
+    "timestampMs": 16374,
+    "confidence": null
+  },
+  {
+    "text": " su",
+    "startMs": 16665,
+    "endMs": 16798,
+    "timestampMs": 16665,
+    "confidence": null
+  },
+  {
+    "text": " motivo.",
+    "startMs": 16798,
+    "endMs": 17501,
+    "timestampMs": 16798,
+    "confidence": null
+  },
+  {
+    "text": " Pruébalo",
+    "startMs": 17501,
+    "endMs": 17992,
+    "timestampMs": 17501,
+    "confidence": null
+  },
+  {
+    "text": " gratis",
+    "startMs": 17992,
+    "endMs": 18462,
+    "timestampMs": 17992,
+    "confidence": null
+  },
+  {
+    "text": " 14",
+    "startMs": 18462,
+    "endMs": 18941,
+    "timestampMs": 18462,
+    "confidence": null
+  },
+  {
+    "text": " días,",
+    "startMs": 18941,
+    "endMs": 19612,
+    "timestampMs": 18941,
+    "confidence": null
+  },
+  {
+    "text": " sin",
+    "startMs": 19612,
+    "endMs": 19879,
+    "timestampMs": 19612,
+    "confidence": null
+  },
+  {
+    "text": " tarjeta.",
+    "startMs": 19879,
+    "endMs": 20460,
+    "timestampMs": 19879,
+    "confidence": null
+  }
+]

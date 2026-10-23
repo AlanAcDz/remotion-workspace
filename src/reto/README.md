@@ -48,3 +48,9 @@ receipt prints. The last headline asks for a share, not a comment.
 
 All `timing` values are on the final timeline (after the countdown); `pause.at`
 is on the voice take's own clock.
+
+The receipt is any list of lines: `items`, then `summary` under the second
+rule, with `wrongLine` naming the one to ring and `display` setting the
+printer's figures. `reto-error-corte.props.ts` (#7) plays a cashier's cash cut
+whose card sales were added to the drawer. When the take scrolls past the
+moment that proves it, export that frame and set `proof.still`.

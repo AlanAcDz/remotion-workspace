@@ -124,6 +124,8 @@ export const ticketStorySchema = z.object({
     .object({
       headline: headlineSchema,
       clip: z.string(),
+      /** A frame exported from a take, for a moment the recording scrolls past. */
+      still: z.boolean().default(false),
       /** Pixel size of the recording, so the card takes the crop's aspect. */
       source: z.object({ width: z.number(), height: z.number() }),
       trimBefore: z.number(),

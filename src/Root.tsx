@@ -5,6 +5,7 @@ import {
   Composition,
   Folder,
   staticFile,
+  Still,
 } from "remotion";
 import { PosDemo } from "./template/pos-demo";
 import { posDemoSchema, type PosDemoProps } from "./template/schema";
@@ -21,6 +22,7 @@ import { retoMasVendidosProps } from "./videos/reto-mas-vendidos.props";
 import { RetoTicket } from "./reto/reto-ticket";
 import { retoTicketSchema, type RetoTicketProps } from "./reto/ticket-schema";
 import { retoErrorCambioProps } from "./videos/reto-error-cambio.props";
+import { retoErrorCorteProps } from "./videos/reto-error-corte.props";
 import { catalogoBaseProps } from "./videos/catalogo-base.props";
 import { catalogoBaseRehookProps } from "./videos/catalogo-base-rehook.props";
 import { cobroRapidoProps } from "./videos/cobro-rapido.props";
@@ -48,10 +50,17 @@ import { ChatStory } from "./chat/chat-story";
 import { chatStorySchema, type ChatStoryProps } from "./chat/schema";
 import { chatFaltanteProps } from "./videos/chat-faltante.props";
 import { chatYoguresProps } from "./videos/chat-yogures.props";
+import { CarouselSlideView } from "./carousel/carousel-slide";
+import { CAROUSEL, carouselSlideSchema } from "./carousel/schema";
+import { diaDeMuertosSlides } from "./videos/dia-de-muertos.carousel";
 import { PhotoStory } from "./photo/photo-story";
 import { photoStorySchema, type PhotoStoryProps } from "./photo/schema";
 import { cocaLoopProps } from "./videos/coca-loop.props";
 import { libretaKiloProps } from "./videos/libreta-kilo.props";
+import { libretaConteoProps } from "./videos/libreta-conteo.props";
+import { descuentoLoopProps } from "./videos/descuento-loop.props";
+import { clientesQuincenaProps } from "./videos/clientes-quincena.props";
+import { calaveritaMermaProps } from "./videos/calaverita-merma.props";
 import { aryaWhyIBuiltAryaProps } from "./videos/av-20261019-why-i-built-arya.props";
 import { aryaDidIGiveItProps } from "./videos/av-20261021-did-i-give-it.props";
 import { aryaForgotDogMedicationProps } from "./videos/av-20261023-forgot-dog-medication.props";
@@ -272,6 +281,17 @@ export const RemotionRoot: React.FC = () => {
             durationInFrames={642}
             defaultProps={retoErrorCambioProps}
           />
+          <Composition
+            id="RetoErrorCorte"
+            component={RetoTicket}
+            schema={retoTicketSchema}
+            calculateMetadata={retoTicketMetadata}
+            fps={FPS}
+            width={1080}
+            height={1920}
+            durationInFrames={750}
+            defaultProps={retoErrorCorteProps}
+          />
         </Folder>
         <Folder name="ticket">
           <Composition
@@ -349,6 +369,44 @@ export const RemotionRoot: React.FC = () => {
             defaultProps={libretaKiloProps}
           />
           <Composition {...photo} id="CocaLoop" defaultProps={cocaLoopProps} />
+          <Composition
+            {...photo}
+            id="LibretaConteo"
+            defaultProps={libretaConteoProps}
+          />
+          <Composition
+            {...photo}
+            id="DescuentoLoop"
+            defaultProps={descuentoLoopProps}
+          />
+          <Composition
+            {...photo}
+            id="ClientesQuincena"
+            defaultProps={clientesQuincenaProps}
+          />
+          <Composition
+            {...photo}
+            id="CalaveritaMerma"
+            defaultProps={calaveritaMermaProps}
+          />
+        </Folder>
+        <Folder name="carrusel">
+          {diaDeMuertosSlides.map((slide, index) => (
+            <Still
+              key={index}
+              id={`DiaDeMuertos-${String(index + 1).padStart(2, "0")}`}
+              component={CarouselSlideView}
+              schema={carouselSlideSchema}
+              width={CAROUSEL.width}
+              height={CAROUSEL.height}
+              defaultProps={{
+                slide,
+                page: index + 1,
+                pages: diaDeMuertosSlides.length,
+                logo: "videos/punto-listo/logo.png",
+              }}
+            />
+          ))}
         </Folder>
       </Folder>
       <Folder name="arya">

@@ -1,0 +1,548 @@
+[
+  {
+    "text": "Clientes",
+    "startMs": 35,
+    "endMs": 453,
+    "timestampMs": 35,
+    "confidence": null
+  },
+  {
+    "text": " de",
+    "startMs": 453,
+    "endMs": 557,
+    "timestampMs": 453,
+    "confidence": null
+  },
+  {
+    "text": " quincena",
+    "startMs": 557,
+    "endMs": 1277,
+    "timestampMs": 557,
+    "confidence": null
+  },
+  {
+    "text": " que",
+    "startMs": 1277,
+    "endMs": 1521,
+    "timestampMs": 1277,
+    "confidence": null
+  },
+  {
+    "text": " todo",
+    "startMs": 1521,
+    "endMs": 1858,
+    "timestampMs": 1521,
+    "confidence": null
+  },
+  {
+    "text": " tendero",
+    "startMs": 1858,
+    "endMs": 2264,
+    "timestampMs": 1858,
+    "confidence": null
+  },
+  {
+    "text": " conoce.",
+    "startMs": 2264,
+    "endMs": 3611,
+    "timestampMs": 2264,
+    "confidence": null
+  },
+  {
+    "text": " El",
+    "startMs": 3611,
+    "endMs": 3820,
+    "timestampMs": 3611,
+    "confidence": null
+  },
+  {
+    "text": " que",
+    "startMs": 3820,
+    "endMs": 3959,
+    "timestampMs": 3820,
+    "confidence": null
+  },
+  {
+    "text": " paga",
+    "startMs": 3959,
+    "endMs": 4261,
+    "timestampMs": 3959,
+    "confidence": null
+  },
+  {
+    "text": " un",
+    "startMs": 4261,
+    "endMs": 4377,
+    "timestampMs": 4261,
+    "confidence": null
+  },
+  {
+    "text": " chicle",
+    "startMs": 4377,
+    "endMs": 4714,
+    "timestampMs": 4377,
+    "confidence": null
+  },
+  {
+    "text": " con",
+    "startMs": 4714,
+    "endMs": 4888,
+    "timestampMs": 4714,
+    "confidence": null
+  },
+  {
+    "text": " billete",
+    "startMs": 4888,
+    "endMs": 5271,
+    "timestampMs": 4888,
+    "confidence": null
+  },
+  {
+    "text": " de",
+    "startMs": 5271,
+    "endMs": 5375,
+    "timestampMs": 5271,
+    "confidence": null
+  },
+  {
+    "text": " quinientos.",
+    "startMs": 5375,
+    "endMs": 6583,
+    "timestampMs": 5375,
+    "confidence": null
+  },
+  {
+    "text": " La",
+    "startMs": 6583,
+    "endMs": 6769,
+    "timestampMs": 6583,
+    "confidence": null
+  },
+  {
+    "text": " que",
+    "startMs": 6769,
+    "endMs": 6896,
+    "timestampMs": 6769,
+    "confidence": null
+  },
+  {
+    "text": " pide",
+    "startMs": 6896,
+    "endMs": 7152,
+    "timestampMs": 6896,
+    "confidence": null
+  },
+  {
+    "text": " un",
+    "startMs": 7152,
+    "endMs": 7268,
+    "timestampMs": 7152,
+    "confidence": null
+  },
+  {
+    "text": " cuarto",
+    "startMs": 7268,
+    "endMs": 7616,
+    "timestampMs": 7268,
+    "confidence": null
+  },
+  {
+    "text": " de",
+    "startMs": 7616,
+    "endMs": 7709,
+    "timestampMs": 7616,
+    "confidence": null
+  },
+  {
+    "text": " jamón...",
+    "startMs": 7709,
+    "endMs": 8777,
+    "timestampMs": 7709,
+    "confidence": null
+  },
+  {
+    "text": " pero",
+    "startMs": 8777,
+    "endMs": 9033,
+    "timestampMs": 8777,
+    "confidence": null
+  },
+  {
+    "text": " del",
+    "startMs": 9033,
+    "endMs": 9183,
+    "timestampMs": 9033,
+    "confidence": null
+  },
+  {
+    "text": " bueno.",
+    "startMs": 9183,
+    "endMs": 10298,
+    "timestampMs": 9183,
+    "confidence": null
+  },
+  {
+    "text": " El",
+    "startMs": 10298,
+    "endMs": 10507,
+    "timestampMs": 10298,
+    "confidence": null
+  },
+  {
+    "text": " que",
+    "startMs": 10507,
+    "endMs": 10635,
+    "timestampMs": 10507,
+    "confidence": null
+  },
+  {
+    "text": " ya",
+    "startMs": 10635,
+    "endMs": 10786,
+    "timestampMs": 10635,
+    "confidence": null
+  },
+  {
+    "text": " trae",
+    "startMs": 10786,
+    "endMs": 11029,
+    "timestampMs": 10786,
+    "confidence": null
+  },
+  {
+    "text": " la",
+    "startMs": 11029,
+    "endMs": 11146,
+    "timestampMs": 11029,
+    "confidence": null
+  },
+  {
+    "text": " cuenta",
+    "startMs": 11146,
+    "endMs": 11517,
+    "timestampMs": 11146,
+    "confidence": null
+  },
+  {
+    "text": " hecha...",
+    "startMs": 11517,
+    "endMs": 12341,
+    "timestampMs": 11517,
+    "confidence": null
+  },
+  {
+    "text": " y",
+    "startMs": 12341,
+    "endMs": 12504,
+    "timestampMs": 12341,
+    "confidence": null
+  },
+  {
+    "text": " está",
+    "startMs": 12504,
+    "endMs": 12759,
+    "timestampMs": 12504,
+    "confidence": null
+  },
+  {
+    "text": " mal.",
+    "startMs": 12759,
+    "endMs": 13781,
+    "timestampMs": 12759,
+    "confidence": null
+  },
+  {
+    "text": " El",
+    "startMs": 13781,
+    "endMs": 14002,
+    "timestampMs": 13781,
+    "confidence": null
+  },
+  {
+    "text": " de:",
+    "startMs": 14002,
+    "endMs": 14629,
+    "timestampMs": 14002,
+    "confidence": null
+  },
+  {
+    "text": " ¿me",
+    "startMs": 14629,
+    "endMs": 14907,
+    "timestampMs": 14629,
+    "confidence": null
+  },
+  {
+    "text": " lo",
+    "startMs": 14907,
+    "endMs": 15047,
+    "timestampMs": 14907,
+    "confidence": null
+  },
+  {
+    "text": " deja",
+    "startMs": 15047,
+    "endMs": 15255,
+    "timestampMs": 15047,
+    "confidence": null
+  },
+  {
+    "text": " en",
+    "startMs": 15255,
+    "endMs": 15360,
+    "timestampMs": 15255,
+    "confidence": null
+  },
+  {
+    "text": " cuarenta?",
+    "startMs": 15360,
+    "endMs": 16672,
+    "timestampMs": 15360,
+    "confidence": null
+  },
+  {
+    "text": " Y",
+    "startMs": 16672,
+    "endMs": 16823,
+    "timestampMs": 16672,
+    "confidence": null
+  },
+  {
+    "text": " el",
+    "startMs": 16823,
+    "endMs": 16939,
+    "timestampMs": 16823,
+    "confidence": null
+  },
+  {
+    "text": " que",
+    "startMs": 16939,
+    "endMs": 17078,
+    "timestampMs": 16939,
+    "confidence": null
+  },
+  {
+    "text": " pregunta",
+    "startMs": 17078,
+    "endMs": 17566,
+    "timestampMs": 17078,
+    "confidence": null
+  },
+  {
+    "text": " si",
+    "startMs": 17566,
+    "endMs": 17682,
+    "timestampMs": 17566,
+    "confidence": null
+  },
+  {
+    "text": " aceptas",
+    "startMs": 17682,
+    "endMs": 18135,
+    "timestampMs": 17682,
+    "confidence": null
+  },
+  {
+    "text": " tarjeta...",
+    "startMs": 18135,
+    "endMs": 19075,
+    "timestampMs": 18135,
+    "confidence": null
+  },
+  {
+    "text": " cuando",
+    "startMs": 19075,
+    "endMs": 19493,
+    "timestampMs": 19075,
+    "confidence": null
+  },
+  {
+    "text": " ya",
+    "startMs": 19493,
+    "endMs": 19679,
+    "timestampMs": 19493,
+    "confidence": null
+  },
+  {
+    "text": " le",
+    "startMs": 19679,
+    "endMs": 19795,
+    "timestampMs": 19679,
+    "confidence": null
+  },
+  {
+    "text": " cobraste.",
+    "startMs": 19795,
+    "endMs": 21037,
+    "timestampMs": 19795,
+    "confidence": null
+  },
+  {
+    "text": " Para",
+    "startMs": 21037,
+    "endMs": 21281,
+    "timestampMs": 21037,
+    "confidence": null
+  },
+  {
+    "text": " el",
+    "startMs": 21281,
+    "endMs": 21374,
+    "timestampMs": 21281,
+    "confidence": null
+  },
+  {
+    "text": " del",
+    "startMs": 21374,
+    "endMs": 21548,
+    "timestampMs": 21374,
+    "confidence": null
+  },
+  {
+    "text": " billete",
+    "startMs": 21548,
+    "endMs": 21931,
+    "timestampMs": 21548,
+    "confidence": null
+  },
+  {
+    "text": " grande:",
+    "startMs": 21931,
+    "endMs": 22837,
+    "timestampMs": 21931,
+    "confidence": null
+  },
+  {
+    "text": " en",
+    "startMs": 22837,
+    "endMs": 23034,
+    "timestampMs": 22837,
+    "confidence": null
+  },
+  {
+    "text": " Punto",
+    "startMs": 23034,
+    "endMs": 23417,
+    "timestampMs": 23034,
+    "confidence": null
+  },
+  {
+    "text": " Listo",
+    "startMs": 23417,
+    "endMs": 23789,
+    "timestampMs": 23417,
+    "confidence": null
+  },
+  {
+    "text": " tecleas",
+    "startMs": 23789,
+    "endMs": 24230,
+    "timestampMs": 23789,
+    "confidence": null
+  },
+  {
+    "text": " con",
+    "startMs": 24230,
+    "endMs": 24439,
+    "timestampMs": 24230,
+    "confidence": null
+  },
+  {
+    "text": " cuánto",
+    "startMs": 24439,
+    "endMs": 24776,
+    "timestampMs": 24439,
+    "confidence": null
+  },
+  {
+    "text": " te",
+    "startMs": 24776,
+    "endMs": 24915,
+    "timestampMs": 24776,
+    "confidence": null
+  },
+  {
+    "text": " pagan,",
+    "startMs": 24915,
+    "endMs": 25704,
+    "timestampMs": 24915,
+    "confidence": null
+  },
+  {
+    "text": " y",
+    "startMs": 25704,
+    "endMs": 25821,
+    "timestampMs": 25704,
+    "confidence": null
+  },
+  {
+    "text": " el",
+    "startMs": 25821,
+    "endMs": 25983,
+    "timestampMs": 25821,
+    "confidence": null
+  },
+  {
+    "text": " cambio",
+    "startMs": 25983,
+    "endMs": 26424,
+    "timestampMs": 25983,
+    "confidence": null
+  },
+  {
+    "text": " sale",
+    "startMs": 26424,
+    "endMs": 26761,
+    "timestampMs": 26424,
+    "confidence": null
+  },
+  {
+    "text": " solo.",
+    "startMs": 26761,
+    "endMs": 27759,
+    "timestampMs": 26761,
+    "confidence": null
+  },
+  {
+    "text": " Pruébalo",
+    "startMs": 27759,
+    "endMs": 28317,
+    "timestampMs": 27759,
+    "confidence": null
+  },
+  {
+    "text": " gratis",
+    "startMs": 28317,
+    "endMs": 28793,
+    "timestampMs": 28317,
+    "confidence": null
+  },
+  {
+    "text": " 14",
+    "startMs": 28793,
+    "endMs": 29385,
+    "timestampMs": 28793,
+    "confidence": null
+  },
+  {
+    "text": " días,",
+    "startMs": 29385,
+    "endMs": 30093,
+    "timestampMs": 29385,
+    "confidence": null
+  },
+  {
+    "text": " sin",
+    "startMs": 30093,
+    "endMs": 30383,
+    "timestampMs": 30093,
+    "confidence": null
+  },
+  {
+    "text": " tarjeta.",
+    "startMs": 30383,
+    "endMs": 30906,
+    "timestampMs": 30383,
+    "confidence": null
+  }
+]

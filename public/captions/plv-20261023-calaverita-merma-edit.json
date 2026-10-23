@@ -1,0 +1,569 @@
+[
+  {
+    "text": "Calaverita",
+    "startMs": 46,
+    "endMs": 743,
+    "timestampMs": 46,
+    "confidence": null
+  },
+  {
+    "text": " para",
+    "startMs": 743,
+    "endMs": 929,
+    "timestampMs": 743,
+    "confidence": null
+  },
+  {
+    "text": " el",
+    "startMs": 929,
+    "endMs": 1045,
+    "timestampMs": 929,
+    "confidence": null
+  },
+  {
+    "text": " yogur",
+    "startMs": 1045,
+    "endMs": 1428,
+    "timestampMs": 1045,
+    "confidence": null
+  },
+  {
+    "text": " que",
+    "startMs": 1428,
+    "endMs": 1660,
+    "timestampMs": 1428,
+    "confidence": null
+  },
+  {
+    "text": " nadie",
+    "startMs": 1660,
+    "endMs": 1962,
+    "timestampMs": 1660,
+    "confidence": null
+  },
+  {
+    "text": " vio.",
+    "startMs": 1962,
+    "endMs": 2842,
+    "timestampMs": 1962,
+    "confidence": null
+  },
+  {
+    "text": " Al",
+    "startMs": 2842,
+    "endMs": 3086,
+    "timestampMs": 2842,
+    "confidence": null
+  },
+  {
+    "text": " fondo",
+    "startMs": 3086,
+    "endMs": 3388,
+    "timestampMs": 3086,
+    "confidence": null
+  },
+  {
+    "text": " del",
+    "startMs": 3388,
+    "endMs": 3573,
+    "timestampMs": 3388,
+    "confidence": null
+  },
+  {
+    "text": " refri",
+    "startMs": 3573,
+    "endMs": 3991,
+    "timestampMs": 3573,
+    "confidence": null
+  },
+  {
+    "text": " estaba",
+    "startMs": 3991,
+    "endMs": 4421,
+    "timestampMs": 3991,
+    "confidence": null
+  },
+  {
+    "text": " un",
+    "startMs": 4421,
+    "endMs": 4549,
+    "timestampMs": 4421,
+    "confidence": null
+  },
+  {
+    "text": " yogur,",
+    "startMs": 4549,
+    "endMs": 5419,
+    "timestampMs": 4549,
+    "confidence": null
+  },
+  {
+    "text": " solito",
+    "startMs": 5419,
+    "endMs": 6116,
+    "timestampMs": 5419,
+    "confidence": null
+  },
+  {
+    "text": " y",
+    "startMs": 6116,
+    "endMs": 6302,
+    "timestampMs": 6116,
+    "confidence": null
+  },
+  {
+    "text": " fiel;",
+    "startMs": 6302,
+    "endMs": 7207,
+    "timestampMs": 6302,
+    "confidence": null
+  },
+  {
+    "text": " lo",
+    "startMs": 7207,
+    "endMs": 7404,
+    "timestampMs": 7207,
+    "confidence": null
+  },
+  {
+    "text": " nuevo",
+    "startMs": 7404,
+    "endMs": 7729,
+    "timestampMs": 7404,
+    "confidence": null
+  },
+  {
+    "text": " llegó",
+    "startMs": 7729,
+    "endMs": 8066,
+    "timestampMs": 7729,
+    "confidence": null
+  },
+  {
+    "text": " adelante,",
+    "startMs": 8066,
+    "endMs": 8890,
+    "timestampMs": 8066,
+    "confidence": null
+  },
+  {
+    "text": " y",
+    "startMs": 8890,
+    "endMs": 9111,
+    "timestampMs": 8890,
+    "confidence": null
+  },
+  {
+    "text": " nadie",
+    "startMs": 9111,
+    "endMs": 9459,
+    "timestampMs": 9111,
+    "confidence": null
+  },
+  {
+    "text": " se",
+    "startMs": 9459,
+    "endMs": 9540,
+    "timestampMs": 9459,
+    "confidence": null
+  },
+  {
+    "text": " acordó",
+    "startMs": 9540,
+    "endMs": 9924,
+    "timestampMs": 9540,
+    "confidence": null
+  },
+  {
+    "text": " de",
+    "startMs": 9924,
+    "endMs": 10063,
+    "timestampMs": 9924,
+    "confidence": null
+  },
+  {
+    "text": " él.",
+    "startMs": 10063,
+    "endMs": 10777,
+    "timestampMs": 10063,
+    "confidence": null
+  },
+  {
+    "text": " Llegó",
+    "startMs": 10777,
+    "endMs": 11137,
+    "timestampMs": 10777,
+    "confidence": null
+  },
+  {
+    "text": " la",
+    "startMs": 11137,
+    "endMs": 11276,
+    "timestampMs": 11137,
+    "confidence": null
+  },
+  {
+    "text": " Flaca",
+    "startMs": 11276,
+    "endMs": 11590,
+    "timestampMs": 11276,
+    "confidence": null
+  },
+  {
+    "text": " en",
+    "startMs": 11590,
+    "endMs": 11683,
+    "timestampMs": 11590,
+    "confidence": null
+  },
+  {
+    "text": " domingo,",
+    "startMs": 11683,
+    "endMs": 12414,
+    "timestampMs": 11683,
+    "confidence": null
+  },
+  {
+    "text": " y",
+    "startMs": 12414,
+    "endMs": 12576,
+    "timestampMs": 12414,
+    "confidence": null
+  },
+  {
+    "text": " le",
+    "startMs": 12576,
+    "endMs": 12716,
+    "timestampMs": 12576,
+    "confidence": null
+  },
+  {
+    "text": " revisó",
+    "startMs": 12716,
+    "endMs": 13087,
+    "timestampMs": 12716,
+    "confidence": null
+  },
+  {
+    "text": " la",
+    "startMs": 13087,
+    "endMs": 13203,
+    "timestampMs": 13087,
+    "confidence": null
+  },
+  {
+    "text": " fecha:",
+    "startMs": 13203,
+    "endMs": 14042,
+    "timestampMs": 13203,
+    "confidence": null
+  },
+  {
+    "text": " Ya",
+    "startMs": 14042,
+    "endMs": 14298,
+    "timestampMs": 14042,
+    "confidence": null
+  },
+  {
+    "text": " caducó,",
+    "startMs": 14298,
+    "endMs": 14913,
+    "timestampMs": 14298,
+    "confidence": null
+  },
+  {
+    "text": " compadrito,",
+    "startMs": 14913,
+    "endMs": 16063,
+    "timestampMs": 14913,
+    "confidence": null
+  },
+  {
+    "text": " esta",
+    "startMs": 16063,
+    "endMs": 16388,
+    "timestampMs": 16063,
+    "confidence": null
+  },
+  {
+    "text": " merma",
+    "startMs": 16388,
+    "endMs": 16759,
+    "timestampMs": 16388,
+    "confidence": null
+  },
+  {
+    "text": " ya",
+    "startMs": 16759,
+    "endMs": 16864,
+    "timestampMs": 16759,
+    "confidence": null
+  },
+  {
+    "text": " está",
+    "startMs": 16864,
+    "endMs": 17096,
+    "timestampMs": 16864,
+    "confidence": null
+  },
+  {
+    "text": " hecha.",
+    "startMs": 17096,
+    "endMs": 17877,
+    "timestampMs": 17096,
+    "confidence": null
+  },
+  {
+    "text": " El",
+    "startMs": 17877,
+    "endMs": 18109,
+    "timestampMs": 17877,
+    "confidence": null
+  },
+  {
+    "text": " tendero",
+    "startMs": 18109,
+    "endMs": 18794,
+    "timestampMs": 18109,
+    "confidence": null
+  },
+  {
+    "text": " no",
+    "startMs": 18794,
+    "endMs": 19015,
+    "timestampMs": 18794,
+    "confidence": null
+  },
+  {
+    "text": " lo",
+    "startMs": 19015,
+    "endMs": 19165,
+    "timestampMs": 19015,
+    "confidence": null
+  },
+  {
+    "text": " tira",
+    "startMs": 19165,
+    "endMs": 19758,
+    "timestampMs": 19165,
+    "confidence": null
+  },
+  {
+    "text": " sin",
+    "startMs": 19758,
+    "endMs": 20048,
+    "timestampMs": 19758,
+    "confidence": null
+  },
+  {
+    "text": " dejarlo",
+    "startMs": 20048,
+    "endMs": 20501,
+    "timestampMs": 20048,
+    "confidence": null
+  },
+  {
+    "text": " registrado:",
+    "startMs": 20501,
+    "endMs": 21662,
+    "timestampMs": 20501,
+    "confidence": null
+  },
+  {
+    "text": " ajuste",
+    "startMs": 21662,
+    "endMs": 22220,
+    "timestampMs": 21662,
+    "confidence": null
+  },
+  {
+    "text": " con",
+    "startMs": 22220,
+    "endMs": 22394,
+    "timestampMs": 22220,
+    "confidence": null
+  },
+  {
+    "text": " su",
+    "startMs": 22394,
+    "endMs": 22510,
+    "timestampMs": 22394,
+    "confidence": null
+  },
+  {
+    "text": " motivo,",
+    "startMs": 22510,
+    "endMs": 23470,
+    "timestampMs": 22510,
+    "confidence": null
+  },
+  {
+    "text": " y",
+    "startMs": 23470,
+    "endMs": 23621,
+    "timestampMs": 23470,
+    "confidence": null
+  },
+  {
+    "text": " en",
+    "startMs": 23621,
+    "endMs": 23725,
+    "timestampMs": 23621,
+    "confidence": null
+  },
+  {
+    "text": " su",
+    "startMs": 23725,
+    "endMs": 23841,
+    "timestampMs": 23725,
+    "confidence": null
+  },
+  {
+    "text": " historial,",
+    "startMs": 23841,
+    "endMs": 24584,
+    "timestampMs": 23841,
+    "confidence": null
+  },
+  {
+    "text": " guardado.",
+    "startMs": 24584,
+    "endMs": 25695,
+    "timestampMs": 24584,
+    "confidence": null
+  },
+  {
+    "text": " Este",
+    "startMs": 25695,
+    "endMs": 26078,
+    "timestampMs": 25695,
+    "confidence": null
+  },
+  {
+    "text": " Día",
+    "startMs": 26078,
+    "endMs": 26275,
+    "timestampMs": 26078,
+    "confidence": null
+  },
+  {
+    "text": " de",
+    "startMs": 26275,
+    "endMs": 26380,
+    "timestampMs": 26275,
+    "confidence": null
+  },
+  {
+    "text": " Muertos,",
+    "startMs": 26380,
+    "endMs": 27134,
+    "timestampMs": 26380,
+    "confidence": null
+  },
+  {
+    "text": " que",
+    "startMs": 27134,
+    "endMs": 27320,
+    "timestampMs": 27134,
+    "confidence": null
+  },
+  {
+    "text": " tu",
+    "startMs": 27320,
+    "endMs": 27494,
+    "timestampMs": 27320,
+    "confidence": null
+  },
+  {
+    "text": " merma",
+    "startMs": 27494,
+    "endMs": 28063,
+    "timestampMs": 27494,
+    "confidence": null
+  },
+  {
+    "text": " no",
+    "startMs": 28063,
+    "endMs": 28295,
+    "timestampMs": 28063,
+    "confidence": null
+  },
+  {
+    "text": " se",
+    "startMs": 28295,
+    "endMs": 28446,
+    "timestampMs": 28295,
+    "confidence": null
+  },
+  {
+    "text": " vaya",
+    "startMs": 28446,
+    "endMs": 28737,
+    "timestampMs": 28446,
+    "confidence": null
+  },
+  {
+    "text": " sin",
+    "startMs": 28737,
+    "endMs": 28911,
+    "timestampMs": 28737,
+    "confidence": null
+  },
+  {
+    "text": " dejar",
+    "startMs": 28911,
+    "endMs": 29213,
+    "timestampMs": 28911,
+    "confidence": null
+  },
+  {
+    "text": " rastro.",
+    "startMs": 29213,
+    "endMs": 30039,
+    "timestampMs": 29213,
+    "confidence": null
+  },
+  {
+    "text": " Pruébalo",
+    "startMs": 30039,
+    "endMs": 30503,
+    "timestampMs": 30039,
+    "confidence": null
+  },
+  {
+    "text": " gratis",
+    "startMs": 30503,
+    "endMs": 30921,
+    "timestampMs": 30503,
+    "confidence": null
+  },
+  {
+    "text": " 14",
+    "startMs": 30921,
+    "endMs": 31455,
+    "timestampMs": 30921,
+    "confidence": null
+  },
+  {
+    "text": " días,",
+    "startMs": 31455,
+    "endMs": 32094,
+    "timestampMs": 31455,
+    "confidence": null
+  },
+  {
+    "text": " sin",
+    "startMs": 32094,
+    "endMs": 32373,
+    "timestampMs": 32094,
+    "confidence": null
+  },
+  {
+    "text": " tarjeta.",
+    "startMs": 32373,
+    "endMs": 32976,
+    "timestampMs": 32373,
+    "confidence": null
+  }
+]

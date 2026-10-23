@@ -31,11 +31,11 @@ const TEAR_LEAD = 16; // frames the receipt is torn off before the CTA prints
 const MECHANICAL_LEVEL = 0.17;
 
 /**
- * Reto del mostrador #6 and on: the whole receipt is already printed on frame
- * 0 with one wrong line, the voice asks "¿Lo ves?", a three-beat countdown
- * scans the paper while the viewer hunts, then the wrong line is ringed, the
- * right amount takes the printer's display and a recording proves Punto
- * Listo would have got it right.
+ * Reto del mostrador #6 and on: the whole receipt (a sale, a cash cut) is
+ * already printed on frame 0 with one wrong line, the voice asks "¿Lo ves?",
+ * a three-beat countdown scans the paper while the viewer hunts, then the
+ * wrong line is ringed, the right figure takes the printer's display and a
+ * recording proves Punto Listo would have got it right.
  */
 export function RetoTicket(props: RetoTicketProps) {
   const frame = useCurrentFrame();
@@ -55,21 +55,18 @@ export function RetoTicket(props: RetoTicketProps) {
   const beat = Math.round(fps / 2); // nastelbom at 120 bpm
 
   const rows = receiptRows(receipt);
-  // Rows are stacked up from the slot, so the last one (CAMBIO) sits on it.
+  const wrongRow = rows.findIndex(
+    (candidate) => candidate.key === lineKey(props.wrongLine),
+  );
+  // Rows are stacked up from the slot, so the last one sits on it.
   const rowTop = (index: number) =>
     STAGE.slotY -
     SLOT_GAP -
     rows.slice(index).reduce((sum, row) => sum + row.height, 0);
   const firstItem = 4; // store, title, disclaimer, rule
-  const changeRow = rows.length - 1;
   const scanRows = rows
     .map((_, index) => index)
-    .filter(
-      (index) =>
-        index >= firstItem &&
-        rows[index].key !== "rule-2" &&
-        index <= changeRow,
-    );
+    .filter((index) => index >= firstItem && rows[index].key !== "rule-2");
 
   const ctaRows = ctaReceiptRows(props.cta, (index) => beat * (1 + index));
 
@@ -159,7 +156,7 @@ export function RetoTicket(props: RetoTicketProps) {
           frames={pauseFrames}
         />
         <WrongLine
-          top={rowTop(changeRow)}
+          top={rowTop(wrongRow)}
           ringAt={ringAt}
           strikeAt={ringAt + 8}
           until={ctaAt - TEAR_LEAD}
@@ -224,6 +221,12 @@ function row(
   return { key, height, at: PRINTED, content };
 }
 
+type LineRef = RetoTicketProps["wrongLine"];
+
+function lineKey({ section, index }: LineRef): string {
+  return `${section}-${index}`;
+}
+
 function receiptRows(receipt: RetoTicketProps["receipt"]): ReceiptRow[] {
   return [
     row("store", 70, <Centered text={receipt.store} size={40} weight={700} />),
@@ -239,30 +242,29 @@ function receiptRows(receipt: RetoTicketProps["receipt"]): ReceiptRow[] {
       />,
     ),
     row("rule-1", ROW.rule, <Rule />),
-    ...receipt.items.map((item, index) =>
-      row(
-        `item-${index}`,
-        ROW.line,
-        <Line label={item.label} value={formatMoney(item.amount)} />,
-      ),
+    ...receipt.items.map((line, index) =>
+      lineRow({ section: "items", index }, line),
     ),
     row("rule-2", ROW.rule, <Rule />),
-    row(
-      "total",
-      ROW.line,
-      <Line label="TOTAL" value={formatMoney(receipt.total)} isBold />,
-    ),
-    row(
-      "paid",
-      ROW.line,
-      <Line label="EFECTIVO" value={formatMoney(receipt.paid)} />,
-    ),
-    row(
-      "change",
-      ROW.line,
-      <Line label="CAMBIO" value={formatMoney(receipt.change)} isBold />,
+    ...receipt.summary.map((line, index) =>
+      lineRow({ section: "summary", index }, line),
     ),
   ];
+}
+
+function lineRow(
+  ref: LineRef,
+  line: RetoTicketProps["receipt"]["items"][number],
+): ReceiptRow {
+  return row(
+    lineKey(ref),
+    ROW.line,
+    <Line
+      label={line.label}
+      value={formatMoney(line.amount)}
+      isBold={line.isBold}
+    />,
+  );
 }
 
 /** A marker that walks the paper line by line while the viewer looks. */
@@ -414,16 +416,12 @@ interface Marks {
   beat: number;
 }
 
-/** The printer's display: total, the countdown, the overpay, the right change. */
+/** The printer's display: the start figure, the countdown, the error, the fix. */
 function displayAt(frame: number, props: RetoTicketProps, marks: Marks) {
-  const { receipt, cta } = props;
+  const { display, cta } = props;
 
   if (frame < marks.pauseAt) {
-    return {
-      label: "TOTAL",
-      value: formatMoney(receipt.total),
-      color: COLORS.tomato,
-    };
+    return { ...display.start, color: COLORS.tomato };
   }
   if (frame < marks.revealFrom) {
     const index = Math.min(
@@ -436,18 +434,10 @@ function displayAt(frame: number, props: RetoTicketProps, marks: Marks) {
     return { label: "", value: "", color: COLORS.muted };
   }
   if (frame < marks.correctAt) {
-    return {
-      label: "SE DIERON DE MÁS",
-      value: formatMoney(receipt.change - props.correctChange),
-      color: COLORS.tomato,
-    };
+    return { ...display.wrong, color: COLORS.tomato };
   }
   if (frame < marks.ctaAt) {
-    return {
-      label: "CAMBIO CORRECTO",
-      value: formatMoney(props.correctChange),
-      color: COLORS.successGlow,
-    };
+    return { ...display.right, color: COLORS.successGlow };
   }
   return {
     label: cta.displayLabel,

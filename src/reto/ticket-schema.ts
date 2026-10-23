@@ -1,6 +1,14 @@
 import { z } from "zod";
 import { ticketStorySchema } from "../ticket/schema";
 
+const receiptLineSchema = z.object({
+  label: z.string().max(22),
+  amount: z.number(),
+  isBold: z.boolean().default(false),
+});
+
+const displaySchema = z.object({ label: z.string(), value: z.string() });
+
 /**
  * "Reto del mostrador" played on a printed receipt: the viewer hunts for the
  * wrong line instead of doing the sum. Reuses El Ticket's printer, paper and
@@ -21,14 +29,25 @@ export const retoTicketSchema = z.object({
     store: z.string(),
     title: z.string(),
     disclaimer: z.string(),
-    items: z
-      .array(z.object({ label: z.string().max(22), amount: z.number() }))
-      .min(1)
-      .max(5),
-    total: z.number(),
-    paid: z.number(),
-    /** What was handed back — the error. */
-    change: z.number(),
+    items: z.array(receiptLineSchema).min(1).max(5),
+    /** Under the second rule: a sale ends TOTAL / EFECTIVO / CAMBIO. */
+    summary: z.array(receiptLineSchema).min(1).max(4),
+  }),
+
+  /** The line the viewer hunts for: ringed and struck on the reveal. */
+  wrongLine: z.object({
+    section: z.enum(["items", "summary"]),
+    index: z.number().int().min(0),
+  }),
+
+  /**
+   * The printer's display: before the countdown, from the ring (what the
+   * error cost) and from `timing.correct` (the right figure).
+   */
+  display: z.object({
+    start: displaySchema,
+    wrong: displaySchema,
+    right: displaySchema,
   }),
 
   /** On the voice take's own clock; the countdown sits at `pause.at`. */
@@ -50,7 +69,7 @@ export const retoTicketSchema = z.object({
 
   /**
    * Seconds on the final timeline (after the countdown): the wrong line is
-   * ringed, the right change shows on the display, the proof, the CTA, the
+   * ringed, the right figure shows on the display, the proof, the CTA, the
    * share ask and the end.
    */
   timing: z.object({
@@ -62,10 +81,7 @@ export const retoTicketSchema = z.object({
     end: z.number(),
   }),
 
-  /** The right change on the display after the reveal. */
-  correctChange: z.number(),
-
-  proof: ticketStorySchema.shape.proof.unwrap().omit({ cut: true }),
+  proof: ticketStorySchema.shape.proof.unwrap(),
   cta: ticketStorySchema.shape.cta,
 });
 

@@ -1,0 +1,121 @@
+[
+  {
+    "text": "Cinco",
+    "startMs": 35,
+    "endMs": 453,
+    "timestampMs": 35,
+    "confidence": null
+  },
+  {
+    "text": " pesos",
+    "startMs": 453,
+    "endMs": 871,
+    "timestampMs": 453,
+    "confidence": null
+  },
+  {
+    "text": " aquí,",
+    "startMs": 871,
+    "endMs": 1625,
+    "timestampMs": 871,
+    "confidence": null
+  },
+  {
+    "text": " cinco",
+    "startMs": 1625,
+    "endMs": 2067,
+    "timestampMs": 1625,
+    "confidence": null
+  },
+  {
+    "text": " allá...",
+    "startMs": 2067,
+    "endMs": 2961,
+    "timestampMs": 2067,
+    "confidence": null
+  },
+  {
+    "text": " ¿quién",
+    "startMs": 2961,
+    "endMs": 3344,
+    "timestampMs": 2961,
+    "confidence": null
+  },
+  {
+    "text": " los",
+    "startMs": 3344,
+    "endMs": 3518,
+    "timestampMs": 3344,
+    "confidence": null
+  },
+  {
+    "text": " dio?",
+    "startMs": 3518,
+    "endMs": 4063,
+    "timestampMs": 3518,
+    "confidence": null
+  },
+  {
+    "text": " Con",
+    "startMs": 4063,
+    "endMs": 4342,
+    "timestampMs": 4063,
+    "confidence": null
+  },
+  {
+    "text": " Punto",
+    "startMs": 4342,
+    "endMs": 4772,
+    "timestampMs": 4342,
+    "confidence": null
+  },
+  {
+    "text": " Listo",
+    "startMs": 4772,
+    "endMs": 5108,
+    "timestampMs": 4772,
+    "confidence": null
+  },
+  {
+    "text": " ves",
+    "startMs": 5108,
+    "endMs": 5329,
+    "timestampMs": 5108,
+    "confidence": null
+  },
+  {
+    "text": " el",
+    "startMs": 5329,
+    "endMs": 5422,
+    "timestampMs": 5329,
+    "confidence": null
+  },
+  {
+    "text": " descuento",
+    "startMs": 5422,
+    "endMs": 5944,
+    "timestampMs": 5422,
+    "confidence": null
+  },
+  {
+    "text": " de",
+    "startMs": 5944,
+    "endMs": 6072,
+    "timestampMs": 5944,
+    "confidence": null
+  },
+  {
+    "text": " cada",
+    "startMs": 6072,
+    "endMs": 6385,
+    "timestampMs": 6072,
+    "confidence": null
+  },
+  {
+    "text": " cajero.",
+    "startMs": 6385,
+    "endMs": 6908,
+    "timestampMs": 6385,
+    "confidence": null
+  }
+]

@@ -1,6 +1,7 @@
 import { z } from "zod";
 import { retoTicketSchema, type RetoTicketProps } from "../reto/ticket-schema";
 import { MUSIC } from "../template/schema";
+import { formatMoney } from "../ticket/theme";
 
 /**
  * Reto del mostrador #6 — ¿Dónde está el error? (PLV-20261016-reto-error-
@@ -46,11 +47,18 @@ const input = {
       { label: "QUESO OAXACA 0.500 KG", amount: 74.0 },
       { label: "CONCHAS VAINILLA", amount: 20.0 },
     ],
-    total: 107.3,
-    paid: 200.0,
-    change: 142.7,
+    summary: [
+      { label: "TOTAL", amount: 107.3, isBold: true },
+      { label: "EFECTIVO", amount: 200.0 },
+      { label: "CAMBIO", amount: 142.7, isBold: true },
+    ],
   },
-  correctChange: 92.7,
+  wrongLine: { section: "summary", index: 2 },
+  display: {
+    start: { label: "TOTAL", value: formatMoney(107.3) },
+    wrong: { label: "SE DIERON DE MÁS", value: formatMoney(142.7 - 92.7) },
+    right: { label: "CAMBIO CORRECTO", value: formatMoney(92.7) },
+  },
 
   pause: { at: 3.5, for: 3, prompt: "¿Ya lo viste?" },
 

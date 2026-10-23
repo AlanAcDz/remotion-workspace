@@ -1,0 +1,331 @@
+[
+  {
+    "text": "Según",
+    "startMs": 35,
+    "endMs": 453,
+    "timestampMs": 35,
+    "confidence": null
+  },
+  {
+    "text": " este",
+    "startMs": 453,
+    "endMs": 673,
+    "timestampMs": 453,
+    "confidence": null
+  },
+  {
+    "text": " corte,",
+    "startMs": 673,
+    "endMs": 1300,
+    "timestampMs": 673,
+    "confidence": null
+  },
+  {
+    "text": " faltan",
+    "startMs": 1300,
+    "endMs": 1753,
+    "timestampMs": 1300,
+    "confidence": null
+  },
+  {
+    "text": " trescientos",
+    "startMs": 1753,
+    "endMs": 2380,
+    "timestampMs": 1753,
+    "confidence": null
+  },
+  {
+    "text": " noventa",
+    "startMs": 2380,
+    "endMs": 2740,
+    "timestampMs": 2380,
+    "confidence": null
+  },
+  {
+    "text": " y",
+    "startMs": 2740,
+    "endMs": 2810,
+    "timestampMs": 2740,
+    "confidence": null
+  },
+  {
+    "text": " nueve",
+    "startMs": 2810,
+    "endMs": 3053,
+    "timestampMs": 2810,
+    "confidence": null
+  },
+  {
+    "text": " pesos.",
+    "startMs": 3053,
+    "endMs": 3889,
+    "timestampMs": 3053,
+    "confidence": null
+  },
+  {
+    "text": " Pero",
+    "startMs": 3889,
+    "endMs": 4238,
+    "timestampMs": 3889,
+    "confidence": null
+  },
+  {
+    "text": " no",
+    "startMs": 4238,
+    "endMs": 4423,
+    "timestampMs": 4238,
+    "confidence": null
+  },
+  {
+    "text": " falta",
+    "startMs": 4423,
+    "endMs": 4807,
+    "timestampMs": 4423,
+    "confidence": null
+  },
+  {
+    "text": " nada.",
+    "startMs": 4807,
+    "endMs": 5654,
+    "timestampMs": 4807,
+    "confidence": null
+  },
+  {
+    "text": " ¿Dónde",
+    "startMs": 5654,
+    "endMs": 6142,
+    "timestampMs": 5654,
+    "confidence": null
+  },
+  {
+    "text": " está",
+    "startMs": 6142,
+    "endMs": 6316,
+    "timestampMs": 6142,
+    "confidence": null
+  },
+  {
+    "text": " el",
+    "startMs": 6316,
+    "endMs": 6420,
+    "timestampMs": 6316,
+    "confidence": null
+  },
+  {
+    "text": " error?",
+    "startMs": 6420,
+    "endMs": 7338,
+    "timestampMs": 6420,
+    "confidence": null
+  },
+  {
+    "text": " Aquí:",
+    "startMs": 7338,
+    "endMs": 8208,
+    "timestampMs": 7338,
+    "confidence": null
+  },
+  {
+    "text": " la",
+    "startMs": 8208,
+    "endMs": 8371,
+    "timestampMs": 8208,
+    "confidence": null
+  },
+  {
+    "text": " venta",
+    "startMs": 8371,
+    "endMs": 8696,
+    "timestampMs": 8371,
+    "confidence": null
+  },
+  {
+    "text": " con",
+    "startMs": 8696,
+    "endMs": 8882,
+    "timestampMs": 8696,
+    "confidence": null
+  },
+  {
+    "text": " tarjeta",
+    "startMs": 8882,
+    "endMs": 9520,
+    "timestampMs": 8882,
+    "confidence": null
+  },
+  {
+    "text": " nunca",
+    "startMs": 9520,
+    "endMs": 10008,
+    "timestampMs": 9520,
+    "confidence": null
+  },
+  {
+    "text": " entró",
+    "startMs": 10008,
+    "endMs": 10252,
+    "timestampMs": 10008,
+    "confidence": null
+  },
+  {
+    "text": " al",
+    "startMs": 10252,
+    "endMs": 10356,
+    "timestampMs": 10252,
+    "confidence": null
+  },
+  {
+    "text": " cajón.",
+    "startMs": 10356,
+    "endMs": 11366,
+    "timestampMs": 10356,
+    "confidence": null
+  },
+  {
+    "text": " No",
+    "startMs": 11366,
+    "endMs": 11598,
+    "timestampMs": 11366,
+    "confidence": null
+  },
+  {
+    "text": " se",
+    "startMs": 11598,
+    "endMs": 11761,
+    "timestampMs": 11598,
+    "confidence": null
+  },
+  {
+    "text": " suma",
+    "startMs": 11761,
+    "endMs": 12225,
+    "timestampMs": 11761,
+    "confidence": null
+  },
+  {
+    "text": " al",
+    "startMs": 12225,
+    "endMs": 12423,
+    "timestampMs": 12225,
+    "confidence": null
+  },
+  {
+    "text": " efectivo.",
+    "startMs": 12423,
+    "endMs": 13584,
+    "timestampMs": 12423,
+    "confidence": null
+  },
+  {
+    "text": " Con",
+    "startMs": 13584,
+    "endMs": 13839,
+    "timestampMs": 13584,
+    "confidence": null
+  },
+  {
+    "text": " Punto",
+    "startMs": 13839,
+    "endMs": 14234,
+    "timestampMs": 13839,
+    "confidence": null
+  },
+  {
+    "text": " Listo,",
+    "startMs": 14234,
+    "endMs": 14977,
+    "timestampMs": 14234,
+    "confidence": null
+  },
+  {
+    "text": " el",
+    "startMs": 14977,
+    "endMs": 15197,
+    "timestampMs": 14977,
+    "confidence": null
+  },
+  {
+    "text": " corte",
+    "startMs": 15197,
+    "endMs": 15523,
+    "timestampMs": 15197,
+    "confidence": null
+  },
+  {
+    "text": " separa",
+    "startMs": 15523,
+    "endMs": 15894,
+    "timestampMs": 15523,
+    "confidence": null
+  },
+  {
+    "text": " efectivo,",
+    "startMs": 15894,
+    "endMs": 16811,
+    "timestampMs": 15894,
+    "confidence": null
+  },
+  {
+    "text": " tarjeta",
+    "startMs": 16811,
+    "endMs": 17577,
+    "timestampMs": 16811,
+    "confidence": null
+  },
+  {
+    "text": " y",
+    "startMs": 17577,
+    "endMs": 17786,
+    "timestampMs": 17577,
+    "confidence": null
+  },
+  {
+    "text": " transferencia.",
+    "startMs": 17786,
+    "endMs": 19133,
+    "timestampMs": 17786,
+    "confidence": null
+  },
+  {
+    "text": " Pruébalo",
+    "startMs": 19133,
+    "endMs": 19667,
+    "timestampMs": 19133,
+    "confidence": null
+  },
+  {
+    "text": " gratis",
+    "startMs": 19667,
+    "endMs": 20120,
+    "timestampMs": 19667,
+    "confidence": null
+  },
+  {
+    "text": " 14",
+    "startMs": 20120,
+    "endMs": 20677,
+    "timestampMs": 20120,
+    "confidence": null
+  },
+  {
+    "text": " días,",
+    "startMs": 20677,
+    "endMs": 21374,
+    "timestampMs": 20677,
+    "confidence": null
+  },
+  {
+    "text": " sin",
+    "startMs": 21374,
+    "endMs": 21722,
+    "timestampMs": 21374,
+    "confidence": null
+  },
+  {
+    "text": " tarjeta.",
+    "startMs": 21722,
+    "endMs": 22372,
+    "timestampMs": 21722,
+    "confidence": null
+  }
+]

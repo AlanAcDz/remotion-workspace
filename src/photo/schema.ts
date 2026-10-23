@@ -88,11 +88,27 @@ const pillSchema = timedSchema.extend({
   y: z.number(),
 });
 
+/**
+ * Big copy on a paper band: a format's title card, a list's entry, a verse.
+ * "*word*" is painted tomato and "\n" breaks the line.
+ */
+const titleSchema = timedSchema.extend({
+  type: z.literal("title"),
+  text: z.string(),
+  y: z.number(), // top of the band, frame pixels
+  size: z.number().default(72),
+  /** A small tomato chip on the band's top edge: "#1", "CALAVERITA". */
+  kicker: z.string().optional(),
+  /** The band rises in; false holds it set, as on frame 0. */
+  animate: z.boolean().default(true),
+});
+
 export const overlaySchema = z.discriminatedUnion("type", [
   handSchema,
   circleSchema,
   bubbleSchema,
   pillSchema,
+  titleSchema,
 ]);
 
 export const photoStorySchema = z.object({

@@ -55,7 +55,10 @@ export function PhotoStory(props: PhotoStoryProps) {
     (overlay) => overlay.type === "hand" || overlay.type === "circle",
   );
   const floating = props.overlays.filter(
-    (overlay) => overlay.type === "bubble" || overlay.type === "pill",
+    (overlay) =>
+      overlay.type === "bubble" ||
+      overlay.type === "pill" ||
+      overlay.type === "title",
   );
 
   return (
@@ -265,6 +268,8 @@ function OverlayView({ overlay, since, fps }: OverlayViewProps) {
       return <SpeechBubble overlay={overlay} since={since} />;
     case "pill":
       return <CtaPill overlay={overlay} since={since} />;
+    case "title":
+      return <TitleBand overlay={overlay} since={since} />;
     default:
       return null;
   }
@@ -484,6 +489,83 @@ function CtaPill({ overlay, since }: { overlay: Of<"pill">; since: number }) {
         }}
       >
         {overlay.text}
+      </div>
+    </div>
+  );
+}
+
+/** "a *b c* d" → runs, with the starred ones painted tomato. */
+function accentRuns(text: string): { text: string; isAccent: boolean }[] {
+  return text
+    .split(/(\*[^*]+\*)/)
+    .filter(Boolean)
+    .map((part) => {
+      const isAccent = part.startsWith("*") && part.endsWith("*");
+      return { text: isAccent ? part.slice(1, -1) : part, isAccent };
+    });
+}
+
+function TitleBand({ overlay, since }: { overlay: Of<"title">; since: number }) {
+  const progress = overlay.animate ? popIn(since, overlay.from === 0) : 1;
+
+  return (
+    <div
+      style={{
+        position: "absolute",
+        left: 0,
+        width: 1080,
+        top: overlay.y,
+        display: "flex",
+        justifyContent: "center",
+        opacity: Math.min(1, progress * 1.5),
+        translate: `0px ${(1 - progress) * 40}px`,
+      }}
+    >
+      <div
+        style={{
+          position: "relative",
+          maxWidth: 960,
+          padding: overlay.kicker ? "52px 48px 34px" : "34px 48px",
+          borderRadius: 36,
+          backgroundColor: "#F7F4EF",
+          boxShadow: "0 24px 60px rgba(0, 0, 0, 0.4)",
+          fontFamily: "Archivo",
+          fontSize: overlay.size,
+          fontWeight: 700,
+          lineHeight: 1.08,
+          letterSpacing: "-0.03em",
+          color: COLORS.ink,
+          textAlign: "center",
+          whiteSpace: "pre-line",
+        }}
+      >
+        {overlay.kicker ? (
+          <div
+            style={{
+              position: "absolute",
+              left: "50%",
+              top: 0,
+              translate: "-50% -50%",
+              padding: "10px 26px",
+              borderRadius: 999,
+              backgroundColor: COLORS.tomato,
+              color: "#FFFFFF",
+              fontSize: 34,
+              letterSpacing: "0.04em",
+              whiteSpace: "nowrap",
+            }}
+          >
+            {overlay.kicker}
+          </div>
+        ) : null}
+        {accentRuns(overlay.text).map((run, index) => (
+          <span
+            key={index}
+            style={{ color: run.isAccent ? COLORS.tomato : undefined }}
+          >
+            {run.text}
+          </span>
+        ))}
       </div>
     </div>
   );

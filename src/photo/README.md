@@ -12,10 +12,14 @@ then PosDemo's end card — or a `pill` and no end card at all, for a loop.
   paper; give them `until` so they leave with their scene.
 - For a loop, end on a scene that eases back to frame 0's framing and repeats
   frame 0's overlays.
+- `title` is big copy on a paper band, with an optional tomato `kicker` chip:
+  a format's title card, a list entry ("Los de siempre"), a verse ("La
+  Calaverita"). Where bands carry the words, limit `captions` to the rest.
 
 ## New episode
 
-1. Copy `src/videos/libreta-kilo.props.ts` (or `coca-loop.props.ts`).
+1. Copy `src/videos/libreta-kilo.props.ts` (or `coca-loop.props.ts`, or
+   `clientes-quincena.props.ts` / `calaverita-merma.props.ts` for bands).
 2. Generate the photo with Codex — blank surfaces where text will be written,
    no brand logos — and keep the exact numbers in the composition.
 3. Register a `<Composition>` in the `photo` folder of `src/Root.tsx`.

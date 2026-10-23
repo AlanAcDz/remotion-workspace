@@ -63,7 +63,7 @@ export function ProofCard({ proof }: ProofCardProps) {
 
   const pane = (trimBefore: number, crop: Pane["frame"]): Pane => ({
     clip: proof.clip,
-    still: false,
+    still: proof.still,
     trimBefore,
     playbackRate: 1,
     frame: crop,
