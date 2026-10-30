@@ -1,0 +1,93 @@
+[
+  {
+    "text": "¿Trescientos",
+    "startMs": 35,
+    "endMs": 615,
+    "timestampMs": 35,
+    "confidence": null
+  },
+  {
+    "text": " cincuenta",
+    "startMs": 615,
+    "endMs": 1091,
+    "timestampMs": 615,
+    "confidence": null
+  },
+  {
+    "text": " gramos",
+    "startMs": 1091,
+    "endMs": 1556,
+    "timestampMs": 1091,
+    "confidence": null
+  },
+  {
+    "text": " a",
+    "startMs": 1556,
+    "endMs": 1660,
+    "timestampMs": 1556,
+    "confidence": null
+  },
+  {
+    "text": " treinta",
+    "startMs": 1660,
+    "endMs": 2043,
+    "timestampMs": 1660,
+    "confidence": null
+  },
+  {
+    "text": " y",
+    "startMs": 2043,
+    "endMs": 2125,
+    "timestampMs": 2043,
+    "confidence": null
+  },
+  {
+    "text": " ocho",
+    "startMs": 2125,
+    "endMs": 2322,
+    "timestampMs": 2125,
+    "confidence": null
+  },
+  {
+    "text": " el",
+    "startMs": 2322,
+    "endMs": 2426,
+    "timestampMs": 2322,
+    "confidence": null
+  },
+  {
+    "text": " kilo?",
+    "startMs": 2426,
+    "endMs": 2902,
+    "timestampMs": 2426,
+    "confidence": null
+  },
+  {
+    "text": " Trece",
+    "startMs": 2902,
+    "endMs": 3332,
+    "timestampMs": 2902,
+    "confidence": null
+  },
+  {
+    "text": " treinta.",
+    "startMs": 3332,
+    "endMs": 3843,
+    "timestampMs": 3332,
+    "confidence": null
+  },
+  {
+    "text": " Sin",
+    "startMs": 3843,
+    "endMs": 4110,
+    "timestampMs": 3843,
+    "confidence": null
+  },
+  {
+    "text": " libreta.",
+    "startMs": 4110,
+    "endMs": 4702,
+    "timestampMs": 4110,
+    "confidence": null
+  }
+]

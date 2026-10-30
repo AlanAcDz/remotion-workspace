@@ -1,0 +1,317 @@
+[
+  {
+    "text": "Se",
+    "startMs": 34,
+    "endMs": 223,
+    "timestampMs": 34,
+    "confidence": null
+  },
+  {
+    "text": " solicita",
+    "startMs": 223,
+    "endMs": 782,
+    "timestampMs": 223,
+    "confidence": null
+  },
+  {
+    "text": " cajero",
+    "startMs": 782,
+    "endMs": 1172,
+    "timestampMs": 782,
+    "confidence": null
+  },
+  {
+    "text": " de",
+    "startMs": 1172,
+    "endMs": 1284,
+    "timestampMs": 1172,
+    "confidence": null
+  },
+  {
+    "text": " confianza.",
+    "startMs": 1284,
+    "endMs": 2173,
+    "timestampMs": 1284,
+    "confidence": null
+  },
+  {
+    "text": " Ya",
+    "startMs": 2173,
+    "endMs": 2363,
+    "timestampMs": 2173,
+    "confidence": null
+  },
+  {
+    "text": " lo",
+    "startMs": 2363,
+    "endMs": 2441,
+    "timestampMs": 2363,
+    "confidence": null
+  },
+  {
+    "text": " encontraste.",
+    "startMs": 2441,
+    "endMs": 3185,
+    "timestampMs": 2441,
+    "confidence": null
+  },
+  {
+    "text": " ¿Y",
+    "startMs": 3185,
+    "endMs": 3468,
+    "timestampMs": 3185,
+    "confidence": null
+  },
+  {
+    "text": " ahora",
+    "startMs": 3468,
+    "endMs": 3769,
+    "timestampMs": 3468,
+    "confidence": null
+  },
+  {
+    "text": " le",
+    "startMs": 3769,
+    "endMs": 3892,
+    "timestampMs": 3769,
+    "confidence": null
+  },
+  {
+    "text": " das",
+    "startMs": 3892,
+    "endMs": 4070,
+    "timestampMs": 3892,
+    "confidence": null
+  },
+  {
+    "text": " tu",
+    "startMs": 4070,
+    "endMs": 4193,
+    "timestampMs": 4070,
+    "confidence": null
+  },
+  {
+    "text": " contraseña?",
+    "startMs": 4193,
+    "endMs": 5063,
+    "timestampMs": 4193,
+    "confidence": null
+  },
+  {
+    "text": " En",
+    "startMs": 5063,
+    "endMs": 5286,
+    "timestampMs": 5063,
+    "confidence": null
+  },
+  {
+    "text": " Punto",
+    "startMs": 5286,
+    "endMs": 5655,
+    "timestampMs": 5286,
+    "confidence": null
+  },
+  {
+    "text": " Listo",
+    "startMs": 5655,
+    "endMs": 6102,
+    "timestampMs": 5655,
+    "confidence": null
+  },
+  {
+    "text": " entra",
+    "startMs": 6102,
+    "endMs": 6504,
+    "timestampMs": 6102,
+    "confidence": null
+  },
+  {
+    "text": " con",
+    "startMs": 6504,
+    "endMs": 6659,
+    "timestampMs": 6504,
+    "confidence": null
+  },
+  {
+    "text": " su",
+    "startMs": 6659,
+    "endMs": 6828,
+    "timestampMs": 6659,
+    "confidence": null
+  },
+  {
+    "text": " propio",
+    "startMs": 6828,
+    "endMs": 7151,
+    "timestampMs": 6828,
+    "confidence": null
+  },
+  {
+    "text": " usuario:",
+    "startMs": 7151,
+    "endMs": 7885,
+    "timestampMs": 7151,
+    "confidence": null
+  },
+  {
+    "text": " ve",
+    "startMs": 7885,
+    "endMs": 8064,
+    "timestampMs": 7885,
+    "confidence": null
+  },
+  {
+    "text": " la",
+    "startMs": 8064,
+    "endMs": 8187,
+    "timestampMs": 8064,
+    "confidence": null
+  },
+  {
+    "text": " venta,",
+    "startMs": 8187,
+    "endMs": 8924,
+    "timestampMs": 8187,
+    "confidence": null
+  },
+  {
+    "text": " el",
+    "startMs": 8924,
+    "endMs": 9136,
+    "timestampMs": 8924,
+    "confidence": null
+  },
+  {
+    "text": " inventario",
+    "startMs": 9136,
+    "endMs": 9851,
+    "timestampMs": 9136,
+    "confidence": null
+  },
+  {
+    "text": " y",
+    "startMs": 9851,
+    "endMs": 10007,
+    "timestampMs": 9851,
+    "confidence": null
+  },
+  {
+    "text": " su",
+    "startMs": 10007,
+    "endMs": 10174,
+    "timestampMs": 10007,
+    "confidence": null
+  },
+  {
+    "text": " corte.",
+    "startMs": 10174,
+    "endMs": 10774,
+    "timestampMs": 10174,
+    "confidence": null
+  },
+  {
+    "text": " Compras,",
+    "startMs": 10774,
+    "endMs": 11566,
+    "timestampMs": 10774,
+    "confidence": null
+  },
+  {
+    "text": " estadísticas",
+    "startMs": 11566,
+    "endMs": 12471,
+    "timestampMs": 11566,
+    "confidence": null
+  },
+  {
+    "text": " y",
+    "startMs": 12471,
+    "endMs": 12605,
+    "timestampMs": 12471,
+    "confidence": null
+  },
+  {
+    "text": " tu",
+    "startMs": 12605,
+    "endMs": 12705,
+    "timestampMs": 12605,
+    "confidence": null
+  },
+  {
+    "text": " equipo,",
+    "startMs": 12705,
+    "endMs": 13480,
+    "timestampMs": 12705,
+    "confidence": null
+  },
+  {
+    "text": " solo",
+    "startMs": 13480,
+    "endMs": 13848,
+    "timestampMs": 13480,
+    "confidence": null
+  },
+  {
+    "text": " los",
+    "startMs": 13848,
+    "endMs": 14015,
+    "timestampMs": 13848,
+    "confidence": null
+  },
+  {
+    "text": " ves",
+    "startMs": 14015,
+    "endMs": 14206,
+    "timestampMs": 14015,
+    "confidence": null
+  },
+  {
+    "text": " tú.",
+    "startMs": 14206,
+    "endMs": 14644,
+    "timestampMs": 14206,
+    "confidence": null
+  },
+  {
+    "text": " Pruébalo",
+    "startMs": 14644,
+    "endMs": 15201,
+    "timestampMs": 14644,
+    "confidence": null
+  },
+  {
+    "text": " gratis",
+    "startMs": 15201,
+    "endMs": 15637,
+    "timestampMs": 15201,
+    "confidence": null
+  },
+  {
+    "text": " 14",
+    "startMs": 15637,
+    "endMs": 16128,
+    "timestampMs": 15637,
+    "confidence": null
+  },
+  {
+    "text": " días,",
+    "startMs": 16128,
+    "endMs": 16820,
+    "timestampMs": 16128,
+    "confidence": null
+  },
+  {
+    "text": " sin",
+    "startMs": 16820,
+    "endMs": 17099,
+    "timestampMs": 16820,
+    "confidence": null
+  },
+  {
+    "text": " tarjeta.",
+    "startMs": 17099,
+    "endMs": 17744,
+    "timestampMs": 17099,
+    "confidence": null
+  }
+]

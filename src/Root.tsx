@@ -61,6 +61,12 @@ import { libretaConteoProps } from "./videos/libreta-conteo.props";
 import { descuentoLoopProps } from "./videos/descuento-loop.props";
 import { clientesQuincenaProps } from "./videos/clientes-quincena.props";
 import { calaveritaMermaProps } from "./videos/calaverita-merma.props";
+import { libretaNotasProps } from "./videos/libreta-notas.props";
+import { retoFolioFaltaProps } from "./videos/reto-folio-falta.props";
+import { chatDevolucionProps } from "./videos/chat-devolucion.props";
+import { libretaLoopProps } from "./videos/libreta-loop.props";
+import { cartelCajeroProps } from "./videos/cartel-cajero.props";
+import { ticketNoVendisteProps } from "./videos/ticket-no-vendiste.props";
 import { aryaWhyIBuiltAryaProps } from "./videos/av-20261019-why-i-built-arya.props";
 import { aryaDidIGiveItProps } from "./videos/av-20261021-did-i-give-it.props";
 import { aryaForgotDogMedicationProps } from "./videos/av-20261023-forgot-dog-medication.props";
@@ -292,6 +298,17 @@ export const RemotionRoot: React.FC = () => {
             durationInFrames={750}
             defaultProps={retoErrorCorteProps}
           />
+          <Composition
+            id="RetoFolioFalta"
+            component={RetoTicket}
+            schema={retoTicketSchema}
+            calculateMetadata={retoTicketMetadata}
+            fps={FPS}
+            width={1080}
+            height={1920}
+            durationInFrames={732}
+            defaultProps={retoFolioFaltaProps}
+          />
         </Folder>
         <Folder name="ticket">
           <Composition
@@ -349,6 +366,17 @@ export const RemotionRoot: React.FC = () => {
             durationInFrames={882}
             defaultProps={ticketPrecioProps}
           />
+          <Composition
+            id="TicketNoVendiste"
+            component={TicketStory}
+            schema={ticketStorySchema}
+            calculateMetadata={ticketStoryMetadata}
+            fps={FPS}
+            width={1080}
+            height={1920}
+            durationInFrames={750}
+            defaultProps={ticketNoVendisteProps}
+          />
         </Folder>
         <Folder name="chat">
           <Composition
@@ -360,6 +388,11 @@ export const RemotionRoot: React.FC = () => {
             {...chat}
             id="ChatYogures"
             defaultProps={chatYoguresProps}
+          />
+          <Composition
+            {...chat}
+            id="ChatDevolucion"
+            defaultProps={chatDevolucionProps}
           />
         </Folder>
         <Folder name="photo">
@@ -388,6 +421,21 @@ export const RemotionRoot: React.FC = () => {
             {...photo}
             id="CalaveritaMerma"
             defaultProps={calaveritaMermaProps}
+          />
+          <Composition
+            {...photo}
+            id="LibretaNotas"
+            defaultProps={libretaNotasProps}
+          />
+          <Composition
+            {...photo}
+            id="LibretaLoop"
+            defaultProps={libretaLoopProps}
+          />
+          <Composition
+            {...photo}
+            id="CartelCajero"
+            defaultProps={cartelCajeroProps}
           />
         </Folder>
         <Folder name="carrusel">

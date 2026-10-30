@@ -1,0 +1,415 @@
+[
+  {
+    "text": "Tengo",
+    "startMs": 44,
+    "endMs": 301,
+    "timestampMs": 44,
+    "confidence": null
+  },
+  {
+    "text": " el",
+    "startMs": 301,
+    "endMs": 413,
+    "timestampMs": 301,
+    "confidence": null
+  },
+  {
+    "text": " ticket",
+    "startMs": 413,
+    "endMs": 904,
+    "timestampMs": 413,
+    "confidence": null
+  },
+  {
+    "text": " dos",
+    "startMs": 904,
+    "endMs": 1194,
+    "timestampMs": 904,
+    "confidence": null
+  },
+  {
+    "text": " mil",
+    "startMs": 1194,
+    "endMs": 1385,
+    "timestampMs": 1194,
+    "confidence": null
+  },
+  {
+    "text": " cincuenta",
+    "startMs": 1385,
+    "endMs": 1875,
+    "timestampMs": 1385,
+    "confidence": null
+  },
+  {
+    "text": " y",
+    "startMs": 1875,
+    "endMs": 1954,
+    "timestampMs": 1875,
+    "confidence": null
+  },
+  {
+    "text": " uno,",
+    "startMs": 1954,
+    "endMs": 2482,
+    "timestampMs": 1954,
+    "confidence": null
+  },
+  {
+    "text": " el",
+    "startMs": 2482,
+    "endMs": 2683,
+    "timestampMs": 2482,
+    "confidence": null
+  },
+  {
+    "text": " dos",
+    "startMs": 2683,
+    "endMs": 2895,
+    "timestampMs": 2683,
+    "confidence": null
+  },
+  {
+    "text": " mil",
+    "startMs": 2895,
+    "endMs": 3074,
+    "timestampMs": 2895,
+    "confidence": null
+  },
+  {
+    "text": " cincuenta",
+    "startMs": 3074,
+    "endMs": 3531,
+    "timestampMs": 3074,
+    "confidence": null
+  },
+  {
+    "text": " y",
+    "startMs": 3531,
+    "endMs": 3587,
+    "timestampMs": 3531,
+    "confidence": null
+  },
+  {
+    "text": " dos",
+    "startMs": 3587,
+    "endMs": 3955,
+    "timestampMs": 3587,
+    "confidence": null
+  },
+  {
+    "text": " y",
+    "startMs": 3955,
+    "endMs": 4078,
+    "timestampMs": 3955,
+    "confidence": null
+  },
+  {
+    "text": " el",
+    "startMs": 4078,
+    "endMs": 4190,
+    "timestampMs": 4078,
+    "confidence": null
+  },
+  {
+    "text": " dos",
+    "startMs": 4190,
+    "endMs": 4380,
+    "timestampMs": 4190,
+    "confidence": null
+  },
+  {
+    "text": " mil",
+    "startMs": 4380,
+    "endMs": 4558,
+    "timestampMs": 4380,
+    "confidence": null
+  },
+  {
+    "text": " cincuenta",
+    "startMs": 4558,
+    "endMs": 4960,
+    "timestampMs": 4558,
+    "confidence": null
+  },
+  {
+    "text": " y",
+    "startMs": 4960,
+    "endMs": 5027,
+    "timestampMs": 4960,
+    "confidence": null
+  },
+  {
+    "text": " cuatro.",
+    "startMs": 5027,
+    "endMs": 5521,
+    "timestampMs": 5027,
+    "confidence": null
+  },
+  {
+    "text": " ¿Cuál",
+    "startMs": 5521,
+    "endMs": 5878,
+    "timestampMs": 5521,
+    "confidence": null
+  },
+  {
+    "text": " falta?",
+    "startMs": 5878,
+    "endMs": 6543,
+    "timestampMs": 5878,
+    "confidence": null
+  },
+  {
+    "text": " El",
+    "startMs": 6543,
+    "endMs": 6733,
+    "timestampMs": 6543,
+    "confidence": null
+  },
+  {
+    "text": " dos",
+    "startMs": 6733,
+    "endMs": 6945,
+    "timestampMs": 6733,
+    "confidence": null
+  },
+  {
+    "text": " mil",
+    "startMs": 6945,
+    "endMs": 7135,
+    "timestampMs": 6945,
+    "confidence": null
+  },
+  {
+    "text": " cincuenta",
+    "startMs": 7135,
+    "endMs": 7537,
+    "timestampMs": 7135,
+    "confidence": null
+  },
+  {
+    "text": " y",
+    "startMs": 7537,
+    "endMs": 7593,
+    "timestampMs": 7537,
+    "confidence": null
+  },
+  {
+    "text": " tres.",
+    "startMs": 7593,
+    "endMs": 8205,
+    "timestampMs": 7593,
+    "confidence": null
+  },
+  {
+    "text": " Ese",
+    "startMs": 8205,
+    "endMs": 8506,
+    "timestampMs": 8205,
+    "confidence": null
+  },
+  {
+    "text": " papelito",
+    "startMs": 8506,
+    "endMs": 9108,
+    "timestampMs": 8506,
+    "confidence": null
+  },
+  {
+    "text": " se",
+    "startMs": 9108,
+    "endMs": 9309,
+    "timestampMs": 9108,
+    "confidence": null
+  },
+  {
+    "text": " perdió...",
+    "startMs": 9309,
+    "endMs": 9973,
+    "timestampMs": 9309,
+    "confidence": null
+  },
+  {
+    "text": " pero",
+    "startMs": 9973,
+    "endMs": 10264,
+    "timestampMs": 9973,
+    "confidence": null
+  },
+  {
+    "text": " la",
+    "startMs": 10264,
+    "endMs": 10375,
+    "timestampMs": 10264,
+    "confidence": null
+  },
+  {
+    "text": " venta",
+    "startMs": 10375,
+    "endMs": 10688,
+    "timestampMs": 10375,
+    "confidence": null
+  },
+  {
+    "text": " no.",
+    "startMs": 10688,
+    "endMs": 11083,
+    "timestampMs": 10688,
+    "confidence": null
+  },
+  {
+    "text": " En",
+    "startMs": 11083,
+    "endMs": 11295,
+    "timestampMs": 11083,
+    "confidence": null
+  },
+  {
+    "text": " Punto",
+    "startMs": 11295,
+    "endMs": 11630,
+    "timestampMs": 11295,
+    "confidence": null
+  },
+  {
+    "text": " Listo",
+    "startMs": 11630,
+    "endMs": 12077,
+    "timestampMs": 11630,
+    "confidence": null
+  },
+  {
+    "text": " el",
+    "startMs": 12077,
+    "endMs": 12289,
+    "timestampMs": 12077,
+    "confidence": null
+  },
+  {
+    "text": " folio",
+    "startMs": 12289,
+    "endMs": 12735,
+    "timestampMs": 12289,
+    "confidence": null
+  },
+  {
+    "text": " sigue",
+    "startMs": 12735,
+    "endMs": 13070,
+    "timestampMs": 12735,
+    "confidence": null
+  },
+  {
+    "text": " ahí:",
+    "startMs": 13070,
+    "endMs": 13542,
+    "timestampMs": 13070,
+    "confidence": null
+  },
+  {
+    "text": " quién",
+    "startMs": 13542,
+    "endMs": 13776,
+    "timestampMs": 13542,
+    "confidence": null
+  },
+  {
+    "text": " lo",
+    "startMs": 13776,
+    "endMs": 13910,
+    "timestampMs": 13776,
+    "confidence": null
+  },
+  {
+    "text": " cobró,",
+    "startMs": 13910,
+    "endMs": 14484,
+    "timestampMs": 13910,
+    "confidence": null
+  },
+  {
+    "text": " cómo",
+    "startMs": 14484,
+    "endMs": 14852,
+    "timestampMs": 14484,
+    "confidence": null
+  },
+  {
+    "text": " se",
+    "startMs": 14852,
+    "endMs": 14998,
+    "timestampMs": 14852,
+    "confidence": null
+  },
+  {
+    "text": " pagó",
+    "startMs": 14998,
+    "endMs": 15467,
+    "timestampMs": 14998,
+    "confidence": null
+  },
+  {
+    "text": " y",
+    "startMs": 15467,
+    "endMs": 15712,
+    "timestampMs": 15467,
+    "confidence": null
+  },
+  {
+    "text": " qué",
+    "startMs": 15712,
+    "endMs": 15869,
+    "timestampMs": 15712,
+    "confidence": null
+  },
+  {
+    "text": " llevaba.",
+    "startMs": 15869,
+    "endMs": 16543,
+    "timestampMs": 15869,
+    "confidence": null
+  },
+  {
+    "text": " Pruébalo",
+    "startMs": 16543,
+    "endMs": 17045,
+    "timestampMs": 16543,
+    "confidence": null
+  },
+  {
+    "text": " gratis",
+    "startMs": 17045,
+    "endMs": 17469,
+    "timestampMs": 17045,
+    "confidence": null
+  },
+  {
+    "text": " 14",
+    "startMs": 17469,
+    "endMs": 18005,
+    "timestampMs": 17469,
+    "confidence": null
+  },
+  {
+    "text": " días,",
+    "startMs": 18005,
+    "endMs": 18462,
+    "timestampMs": 18005,
+    "confidence": null
+  },
+  {
+    "text": " sin",
+    "startMs": 18462,
+    "endMs": 18753,
+    "timestampMs": 18462,
+    "confidence": null
+  },
+  {
+    "text": " tarjeta.",
+    "startMs": 18753,
+    "endMs": 19300,
+    "timestampMs": 18753,
+    "confidence": null
+  }
+]
