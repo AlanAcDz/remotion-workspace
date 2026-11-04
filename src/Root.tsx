@@ -76,8 +76,24 @@ import { aryaWhatIWishIHadProps } from "./videos/av-20261030-what-i-wish-i-had.p
 import { aryaVetAsksEveryDoseProps } from "./videos/av-20261102-vet-asks-every-dose.props";
 import { aryaVomitedAfterPillProps } from "./videos/av-20261104-vomited-after-pill.props";
 import { aryaRefillBeforeItRunsOutProps } from "./videos/av-20261106-refill-before-it-runs-out.props";
+import { StoreVideo } from "./store-video/store-video";
+import {
+  CANVAS,
+  DURATION as STORE_VIDEO_DURATION,
+  storeVideoSchema,
+  type Lang as StoreVideoLang,
+  type Store as StoreVideoStore,
+} from "./store-video/schema";
 
 const FPS = 30;
+
+// Arya's store videos: App Store previews (portrait) and Google Play promos (landscape).
+const STORE_VIDEOS: { id: string; store: StoreVideoStore; lang: StoreVideoLang }[] = [
+  { id: "arya-appstore-preview-en", store: "apple", lang: "en" },
+  { id: "arya-appstore-preview-es", store: "apple", lang: "es" },
+  { id: "arya-play-promo-en", store: "google", lang: "en" },
+  { id: "arya-play-promo-es", store: "google", lang: "es" },
+];
 
 // Every video is as long as its own voiceover, plus 1.5s of air for the CTA.
 const posDemoMetadata: CalculateMetadataFunction<PosDemoProps> = async ({
@@ -503,6 +519,21 @@ export const RemotionRoot: React.FC = () => {
           id="AryaRefillBeforeItRunsOut"
           defaultProps={aryaRefillBeforeItRunsOutProps}
         />
+        <Folder name="arya-store">
+          {STORE_VIDEOS.map(({ id, store, lang }) => (
+            <Composition
+              key={id}
+              id={id}
+              component={StoreVideo}
+              schema={storeVideoSchema}
+              fps={FPS}
+              width={CANVAS[store].width}
+              height={CANVAS[store].height}
+              durationInFrames={STORE_VIDEO_DURATION}
+              defaultProps={{ lang, store }}
+            />
+          ))}
+        </Folder>
       </Folder>
     </>
   );
