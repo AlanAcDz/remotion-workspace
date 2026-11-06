@@ -76,6 +76,20 @@ import { aryaWhatIWishIHadProps } from "./videos/av-20261030-what-i-wish-i-had.p
 import { aryaVetAsksEveryDoseProps } from "./videos/av-20261102-vet-asks-every-dose.props";
 import { aryaVomitedAfterPillProps } from "./videos/av-20261104-vomited-after-pill.props";
 import { aryaRefillBeforeItRunsOutProps } from "./videos/av-20261106-refill-before-it-runs-out.props";
+import { Diary } from "./arya-shorts/diary";
+import { DoseBeat } from "./arya-shorts/dose-beat";
+import { FiveSecond } from "./arya-shorts/five-second";
+import { Flipbook } from "./arya-shorts/flipbook";
+import { TierList } from "./arya-shorts/tier-list";
+import { Trailer } from "./arya-shorts/trailer";
+import { Trile } from "./arya-shorts/trile";
+import { aryaDiaryProps } from "./videos/av-20261107-diary-of-a-dog-on-meds.props";
+import { aryaFindThePillProps } from "./videos/av-20261108-find-the-pill.props";
+import { aryaFiveSecondProps } from "./videos/av-20261109-five-second-test.props";
+import { aryaDoseBeatProps } from "./videos/av-20261110-dose-beat.props";
+import { aryaTierListProps } from "./videos/av-20261111-pill-dodge-tier-list.props";
+import { aryaSesentaDiasProps } from "./videos/av-20261112-sesenta-dias.props";
+import { aryaThePillProps } from "./videos/av-20261113-the-pill-trailer.props";
 import { StoreVideo } from "./store-video/store-video";
 import {
   CANVAS,
@@ -116,6 +130,9 @@ const shared = {
   height: 1920,
   durationInFrames: 840,
 } as const;
+
+// The no-voice Arya shorts have nothing to measure: each carries its `end`.
+const aryaShort = { fps: FPS, width: 1080, height: 1920 } as const;
 
 // "El Ticket" has no voiceover to measure: its length is the beat grid's.
 const ticketStoryMetadata: CalculateMetadataFunction<TicketStoryProps> = ({
@@ -519,6 +536,57 @@ export const RemotionRoot: React.FC = () => {
           id="AryaRefillBeforeItRunsOut"
           defaultProps={aryaRefillBeforeItRunsOutProps}
         />
+        <Folder name="arya-shorts">
+          <Composition
+            {...aryaShort}
+            id="AryaDiaryOfADogOnMeds"
+            component={Diary}
+            durationInFrames={Math.round(aryaDiaryProps.end * FPS)}
+            defaultProps={aryaDiaryProps}
+          />
+          <Composition
+            {...aryaShort}
+            id="AryaFindThePill"
+            component={Trile}
+            durationInFrames={Math.round(aryaFindThePillProps.end * FPS)}
+            defaultProps={aryaFindThePillProps}
+          />
+          <Composition
+            {...aryaShort}
+            id="AryaFiveSecondTest"
+            component={FiveSecond}
+            durationInFrames={Math.round(aryaFiveSecondProps.end * FPS)}
+            defaultProps={aryaFiveSecondProps}
+          />
+          <Composition
+            {...aryaShort}
+            id="AryaDoseBeat"
+            component={DoseBeat}
+            durationInFrames={Math.round(aryaDoseBeatProps.end * FPS)}
+            defaultProps={aryaDoseBeatProps}
+          />
+          <Composition
+            {...aryaShort}
+            id="AryaPillDodgeTierList"
+            component={TierList}
+            durationInFrames={Math.round(aryaTierListProps.end * FPS)}
+            defaultProps={aryaTierListProps}
+          />
+          <Composition
+            {...aryaShort}
+            id="AryaSesentaDias"
+            component={Flipbook}
+            durationInFrames={Math.round(aryaSesentaDiasProps.end * FPS)}
+            defaultProps={aryaSesentaDiasProps}
+          />
+          <Composition
+            {...aryaShort}
+            id="AryaThePillTrailer"
+            component={Trailer}
+            durationInFrames={Math.round(aryaThePillProps.end * FPS)}
+            defaultProps={aryaThePillProps}
+          />
+        </Folder>
         <Folder name="arya-store">
           {STORE_VIDEOS.map(({ id, store, lang }) => (
             <Composition
