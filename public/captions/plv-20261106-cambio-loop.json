@@ -1,0 +1,100 @@
+[
+  {
+    "text": "¿Ciento",
+    "startMs": 35,
+    "endMs": 464,
+    "timestampMs": 35,
+    "confidence": null
+  },
+  {
+    "text": " siete",
+    "startMs": 464,
+    "endMs": 766,
+    "timestampMs": 464,
+    "confidence": null
+  },
+  {
+    "text": " treinta",
+    "startMs": 766,
+    "endMs": 1254,
+    "timestampMs": 766,
+    "confidence": null
+  },
+  {
+    "text": " y",
+    "startMs": 1254,
+    "endMs": 1451,
+    "timestampMs": 1254,
+    "confidence": null
+  },
+  {
+    "text": " te",
+    "startMs": 1451,
+    "endMs": 1602,
+    "timestampMs": 1451,
+    "confidence": null
+  },
+  {
+    "text": " pagan",
+    "startMs": 1602,
+    "endMs": 1985,
+    "timestampMs": 1602,
+    "confidence": null
+  },
+  {
+    "text": " con",
+    "startMs": 1985,
+    "endMs": 2159,
+    "timestampMs": 1985,
+    "confidence": null
+  },
+  {
+    "text": " doscientos?",
+    "startMs": 2159,
+    "endMs": 3390,
+    "timestampMs": 2159,
+    "confidence": null
+  },
+  {
+    "text": " Noventa",
+    "startMs": 3390,
+    "endMs": 3924,
+    "timestampMs": 3390,
+    "confidence": null
+  },
+  {
+    "text": " y",
+    "startMs": 3924,
+    "endMs": 3994,
+    "timestampMs": 3924,
+    "confidence": null
+  },
+  {
+    "text": " dos",
+    "startMs": 3994,
+    "endMs": 4180,
+    "timestampMs": 3994,
+    "confidence": null
+  },
+  {
+    "text": " setenta.",
+    "startMs": 4180,
+    "endMs": 4830,
+    "timestampMs": 4180,
+    "confidence": null
+  },
+  {
+    "text": " Sin",
+    "startMs": 4830,
+    "endMs": 5108,
+    "timestampMs": 4830,
+    "confidence": null
+  },
+  {
+    "text": " libreta.",
+    "startMs": 5108,
+    "endMs": 5677,
+    "timestampMs": 5108,
+    "confidence": null
+  }
+]

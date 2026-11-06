@@ -17,6 +17,18 @@ The chat is bottom-anchored like a real one; every bubble pushes the stack up
 by its own height. Heights are computed, not measured, so copy breaks lines
 with `\n` and never wraps — keep each line short enough for one row.
 
+## Voice notes
+
+A message with `voice` is a voice note instead of a text: a player row over its
+transcript. The bars sweep and the words light up on the audio's clock, and the
+music ducks while it plays, so `at: 0` puts motion on frame 0.
+
+- `transcript` breaks with `\n` and never wraps, like `text`; the bubble is
+  760 wide, so keep each line short.
+- `wordTimes` holds one start per word, in order, from the take's caption JSON.
+- `chat-buen-fin.props.ts` is the example. Generate the take with
+  `--brand punto-listo-chat`, not the narrator's voice.
+
 ## New episode
 
 1. Copy `src/videos/chat-faltante.props.ts`.

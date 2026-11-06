@@ -66,6 +66,24 @@ export const retoSchema = z.object({
     at: z.number(),
     text: z.string(), // "Cambio: $92.70"
     subline: z.string(),
+    /**
+     * The working, one row at a time on the final timeline, instead of a
+     * subline that lands all at once: it keeps the card moving under the voice.
+     * "big" is the payoff; "note" is small print.
+     */
+    steps: z
+      .array(
+        z.object({
+          at: z.number(),
+          text: z.string(),
+          tone: z.enum(["line", "big", "note"]).default("line"),
+        }),
+      )
+      .default([]),
+    /** The ring slides here at `at` (final timeline). Card pixels. */
+    ringMoves: z
+      .array(cardRectSchema.extend({ at: z.number() }))
+      .default([]),
     /** Index into `question.options` of the right one, marked at `at`. */
     correct: z.number().int().min(0).optional(),
     ring: cardRectSchema,

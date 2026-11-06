@@ -1,0 +1,226 @@
+[
+  {
+    "text": "¡Arrancan!",
+    "startMs": 50,
+    "endMs": 520,
+    "timestampMs": 50,
+    "confidence": null
+  },
+  {
+    "text": " ¿Quién",
+    "startMs": 582,
+    "endMs": 815,
+    "timestampMs": 582,
+    "confidence": null
+  },
+  {
+    "text": " saca",
+    "startMs": 815,
+    "endMs": 1035,
+    "timestampMs": 815,
+    "confidence": null
+  },
+  {
+    "text": " la",
+    "startMs": 1035,
+    "endMs": 1140,
+    "timestampMs": 1035,
+    "confidence": null
+  },
+  {
+    "text": " cuenta",
+    "startMs": 1140,
+    "endMs": 1442,
+    "timestampMs": 1140,
+    "confidence": null
+  },
+  {
+    "text": " primero?",
+    "startMs": 1442,
+    "endMs": 2161,
+    "timestampMs": 1442,
+    "confidence": null
+  },
+  {
+    "text": " ¡La",
+    "startMs": 2310,
+    "endMs": 2453,
+    "timestampMs": 2310,
+    "confidence": null
+  },
+  {
+    "text": " libreta",
+    "startMs": 2453,
+    "endMs": 2738,
+    "timestampMs": 2453,
+    "confidence": null
+  },
+  {
+    "text": " lleva",
+    "startMs": 2738,
+    "endMs": 2952,
+    "timestampMs": 2738,
+    "confidence": null
+  },
+  {
+    "text": " el",
+    "startMs": 2952,
+    "endMs": 3059,
+    "timestampMs": 2952,
+    "confidence": null
+  },
+  {
+    "text": " treinta",
+    "startMs": 3059,
+    "endMs": 3345,
+    "timestampMs": 3059,
+    "confidence": null
+  },
+  {
+    "text": " y",
+    "startMs": 3345,
+    "endMs": 3416,
+    "timestampMs": 3345,
+    "confidence": null
+  },
+  {
+    "text": " ocho,",
+    "startMs": 3416,
+    "endMs": 3630,
+    "timestampMs": 3416,
+    "confidence": null
+  },
+  {
+    "text": " baja",
+    "startMs": 3780,
+    "endMs": 3992,
+    "timestampMs": 3780,
+    "confidence": null
+  },
+  {
+    "text": " el",
+    "startMs": 3992,
+    "endMs": 4120,
+    "timestampMs": 3992,
+    "confidence": null
+  },
+  {
+    "text": " cinco,",
+    "startMs": 4120,
+    "endMs": 4418,
+    "timestampMs": 4120,
+    "confidence": null
+  },
+  {
+    "text": " se",
+    "startMs": 4418,
+    "endMs": 4545,
+    "timestampMs": 4418,
+    "confidence": null
+  },
+  {
+    "text": " la",
+    "startMs": 4545,
+    "endMs": 4673,
+    "timestampMs": 4545,
+    "confidence": null
+  },
+  {
+    "text": " lleva!",
+    "startMs": 4673,
+    "endMs": 4970,
+    "timestampMs": 4673,
+    "confidence": null
+  },
+  {
+    "text": " ¡Y",
+    "startMs": 5602,
+    "endMs": 5834,
+    "timestampMs": 5602,
+    "confidence": null
+  },
+  {
+    "text": " Punto",
+    "startMs": 5834,
+    "endMs": 6101,
+    "timestampMs": 5834,
+    "confidence": null
+  },
+  {
+    "text": " Listo",
+    "startMs": 6101,
+    "endMs": 6322,
+    "timestampMs": 6101,
+    "confidence": null
+  },
+  {
+    "text": " ya",
+    "startMs": 6322,
+    "endMs": 6449,
+    "timestampMs": 6322,
+    "confidence": null
+  },
+  {
+    "text": " tiene",
+    "startMs": 6449,
+    "endMs": 6647,
+    "timestampMs": 6449,
+    "confidence": null
+  },
+  {
+    "text": " el",
+    "startMs": 6647,
+    "endMs": 6728,
+    "timestampMs": 6647,
+    "confidence": null
+  },
+  {
+    "text": " total!",
+    "startMs": 6728,
+    "endMs": 7262,
+    "timestampMs": 6728,
+    "confidence": null
+  },
+  {
+    "text": " ¡Trece",
+    "startMs": 7250,
+    "endMs": 7543,
+    "timestampMs": 7250,
+    "confidence": null
+  },
+  {
+    "text": " treinta!",
+    "startMs": 7543,
+    "endMs": 7920,
+    "timestampMs": 7543,
+    "confidence": null
+  },
+  {
+    "text": " ¡Gooool",
+    "startMs": 8110,
+    "endMs": 8553,
+    "timestampMs": 8110,
+    "confidence": null
+  },
+  {
+    "text": " de",
+    "startMs": 8553,
+    "endMs": 8642,
+    "timestampMs": 8553,
+    "confidence": null
+  },
+  {
+    "text": " Punto",
+    "startMs": 8642,
+    "endMs": 8864,
+    "timestampMs": 8642,
+    "confidence": null
+  },
+  {
+    "text": " Listo!",
+    "startMs": 8864,
+    "endMs": 9130,
+    "timestampMs": 8864,
+    "confidence": null
+  }
+]

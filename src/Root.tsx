@@ -64,6 +64,14 @@ import { calaveritaMermaProps } from "./videos/calaverita-merma.props";
 import { libretaNotasProps } from "./videos/libreta-notas.props";
 import { retoFolioFaltaProps } from "./videos/reto-folio-falta.props";
 import { chatDevolucionProps } from "./videos/chat-devolucion.props";
+import { CarreraStory } from "./carrera/carrera-story";
+import { carreraStorySchema, type CarreraStoryProps } from "./carrera/schema";
+import { cambioLoopProps } from "./videos/cambio-loop.props";
+import { carreraKiloProps } from "./videos/carrera-kilo.props";
+import { chatBuenFinProps } from "./videos/chat-buen-fin.props";
+import { libretaCorteProps } from "./videos/libreta-corte.props";
+import { retoPromoProps } from "./videos/reto-promo.props";
+import { ticketCocasProps } from "./videos/ticket-cocas.props";
 import { libretaLoopProps } from "./videos/libreta-loop.props";
 import { cartelCajeroProps } from "./videos/cartel-cajero.props";
 import { ticketNoVendisteProps } from "./videos/ticket-no-vendiste.props";
@@ -162,6 +170,11 @@ const photo = {
   height: 1920,
   durationInFrames: 621,
 } as const;
+
+// "La Carrera" ends where its props say, past the commentator.
+const carreraStoryMetadata: CalculateMetadataFunction<CarreraStoryProps> = ({
+  props,
+}) => ({ durationInFrames: Math.round(props.end * FPS) });
 
 // The receipt reto ends where its timing says, past the voice.
 const retoTicketMetadata: CalculateMetadataFunction<RetoTicketProps> = ({
@@ -325,6 +338,11 @@ export const RemotionRoot: React.FC = () => {
             durationInFrames={732}
             defaultProps={retoFolioFaltaProps}
           />
+          <Composition
+            {...reto}
+            id="RetoPromo"
+            defaultProps={retoPromoProps}
+          />
         </Folder>
         <Folder name="ticket">
           <Composition
@@ -393,6 +411,17 @@ export const RemotionRoot: React.FC = () => {
             durationInFrames={750}
             defaultProps={ticketNoVendisteProps}
           />
+          <Composition
+            id="TicketCocas"
+            component={TicketStory}
+            schema={ticketStorySchema}
+            calculateMetadata={ticketStoryMetadata}
+            fps={FPS}
+            width={1080}
+            height={1920}
+            durationInFrames={720}
+            defaultProps={ticketCocasProps}
+          />
         </Folder>
         <Folder name="chat">
           <Composition
@@ -409,6 +438,24 @@ export const RemotionRoot: React.FC = () => {
             {...chat}
             id="ChatDevolucion"
             defaultProps={chatDevolucionProps}
+          />
+          <Composition
+            {...chat}
+            id="ChatBuenFin"
+            defaultProps={chatBuenFinProps}
+          />
+        </Folder>
+        <Folder name="carrera">
+          <Composition
+            id="CarreraKilo"
+            component={CarreraStory}
+            schema={carreraStorySchema}
+            calculateMetadata={carreraStoryMetadata}
+            fps={FPS}
+            width={1080}
+            height={1920}
+            durationInFrames={345}
+            defaultProps={carreraKiloProps}
           />
         </Folder>
         <Folder name="photo">
@@ -452,6 +499,16 @@ export const RemotionRoot: React.FC = () => {
             {...photo}
             id="CartelCajero"
             defaultProps={cartelCajeroProps}
+          />
+          <Composition
+            {...photo}
+            id="CambioLoop"
+            defaultProps={cambioLoopProps}
+          />
+          <Composition
+            {...photo}
+            id="LibretaCorte"
+            defaultProps={libretaCorteProps}
           />
         </Folder>
         <Folder name="carrusel">
