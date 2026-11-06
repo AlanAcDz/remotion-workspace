@@ -49,7 +49,7 @@ const timedSchema = z.object({
 });
 
 /** Written on the paper, left to right, in a ballpoint hand. */
-const handSchema = timedSchema.extend({
+export const handSchema = timedSchema.extend({
   type: z.literal("hand"),
   text: z.string(),
   x: z.number(),

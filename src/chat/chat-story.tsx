@@ -29,6 +29,8 @@ const COLORS = {
   headerMuted: "#CFC6BC",
   typing: "#F4A28F",
   ticks: "#3B82F6",
+  bars: "#D5CDC3",
+  unsaid: "#B9AFA4",
 } as const;
 
 const FONT = "Archivo";
@@ -56,6 +58,22 @@ const BUBBLE = {
   themLeft: 40,
   imageWidth: 620,
   imagePad: 10,
+} as const;
+
+/** A voice note: a player row over its transcript. Lines never wrap. */
+const VOICE = {
+  width: 760,
+  playerRow: 112,
+  playButton: 88,
+  bars: 30,
+  barWidth: 8,
+  barGap: 6,
+  barMaxHeight: 76,
+  /** The takes peak near 0 dBFS; this leaves headroom over the bed. */
+  level: 0.8,
+  /** The bed sits this far under a note, so its words carry. */
+  duck: 0.3,
+  duckFrames: 6,
 } as const;
 
 const DOTS_HEIGHT = 96;
@@ -112,9 +130,20 @@ export function ChatStory(props: ChatStoryProps) {
             [0, 1, durationInFrames - 20, durationInFrames],
             [0, props.music.volume, props.music.volume, 0],
             { extrapolateLeft: "clamp", extrapolateRight: "clamp" },
-          )
+          ) * voiceDuck(f, props.messages, fps)
         }
       />
+      {props.messages.map((message, index) =>
+        message.voice ? (
+          <Sequence
+            key={`voice-${index}`}
+            name="Nota de voz"
+            from={Math.round(message.at * fps)}
+          >
+            <Audio src={staticFile(message.voice.src)} volume={() => VOICE.level} />
+          </Sequence>
+        ) : null,
+      )}
       <SfxCues cues={soundCues(props, fps)} />
 
       <AbsoluteFill style={{ opacity: chatOpacity }}>
@@ -251,7 +280,21 @@ function imageHeight(message: ChatMessage): number {
   return Math.round((inner * message.image.height) / message.image.width);
 }
 
+function voiceLines(message: ChatMessage): string[] {
+  return message.voice ? message.voice.transcript.split("\n") : [];
+}
+
 function messageHeight(message: ChatMessage): number {
+  if (message.voice) {
+    return (
+      BUBBLE.padTop +
+      VOICE.playerRow +
+      voiceLines(message).length * BUBBLE.lineHeight +
+      BUBBLE.timeRow +
+      BUBBLE.padBottom
+    );
+  }
+
   const lines = textLines(message).length;
   const image = message.image ? imageHeight(message) + BUBBLE.imagePad : 0;
   const text = lines > 0 ? BUBBLE.padTop + lines * BUBBLE.lineHeight : 0;
@@ -323,7 +366,11 @@ function Bubble({ message, frame, fps }: BubbleProps) {
         borderTopRightRadius: isMe ? 8 : 30,
         boxShadow: "0 2px 3px rgba(31, 26, 23, 0.12)",
         height: messageHeight(message),
-        width: message.image ? BUBBLE.imageWidth : undefined,
+        width: message.voice
+          ? VOICE.width
+          : message.image
+            ? BUBBLE.imageWidth
+            : undefined,
         minWidth: 260,
         fontFamily: FONT,
         color: COLORS.ink,
@@ -362,6 +409,10 @@ function Bubble({ message, frame, fps }: BubbleProps) {
             />
           ) : null}
         </div>
+      ) : null}
+
+      {message.voice ? (
+        <VoiceNote message={message} frame={frame} fps={fps} />
       ) : null}
 
       {lines.length > 0 ? (
@@ -403,6 +454,155 @@ function Bubble({ message, frame, fps }: BubbleProps) {
       </div>
     </div>
   );
+}
+
+/** Seconds played: the sweep and counter start with the audio, on `at`. */
+function voiceElapsed(frame: number, message: ChatMessage, fps: number): number {
+  const duration = message.voice?.duration ?? 0;
+  return Math.min(duration, Math.max(0, frame / fps - message.at));
+}
+
+function VoiceNote({ message, frame, fps }: BubbleProps) {
+  if (!message.voice) {
+    return null;
+  }
+
+  const { duration, wordTimes } = message.voice;
+  const elapsed = voiceElapsed(frame, message, fps);
+  const played = duration > 0 ? elapsed / duration : 0;
+  const isPlaying = elapsed > 0 && elapsed < duration;
+
+  let wordIndex = 0;
+
+  return (
+    <div
+      style={{
+        paddingTop: BUBBLE.padTop,
+        paddingLeft: BUBBLE.padX,
+        paddingRight: BUBBLE.padX,
+      }}
+    >
+      <div
+        style={{
+          height: VOICE.playerRow,
+          display: "flex",
+          alignItems: "center",
+          gap: 22,
+        }}
+      >
+        <div
+          style={{
+            width: VOICE.playButton,
+            height: VOICE.playButton,
+            borderRadius: VOICE.playButton / 2,
+            flexShrink: 0,
+            backgroundColor: COLORS.tomato,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <svg width={40} height={40} viewBox="0 0 24 24" aria-hidden>
+            <path
+              d={isPlaying ? "M6 4h4v16H6zM14 4h4v16h-4z" : "M7 4l13 8-13 8z"}
+              fill="#FFFFFF"
+            />
+          </svg>
+        </div>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: VOICE.barGap,
+            height: VOICE.barMaxHeight,
+          }}
+        >
+          {Array.from({ length: VOICE.bars }, (_, index) => {
+            const position = index / VOICE.bars;
+            const isPlayed = position < played;
+            // Bars at the playhead bounce, so the note reads as live audio.
+            const nearHead = isPlaying && Math.abs(position - played) < 0.07;
+            const bounce = nearHead ? 0.25 * Math.sin(frame * 0.9 + index) : 0;
+            const level = barLevel(index) + bounce;
+            return (
+              <div
+                key={index}
+                style={{
+                  width: VOICE.barWidth,
+                  height: Math.max(10, level * VOICE.barMaxHeight),
+                  borderRadius: VOICE.barWidth / 2,
+                  backgroundColor: isPlayed ? COLORS.tomato : COLORS.bars,
+                }}
+              />
+            );
+          })}
+        </div>
+        <div
+          style={{
+            fontSize: 32,
+            fontWeight: 600,
+            color: COLORS.muted,
+            fontVariantNumeric: "tabular-nums",
+          }}
+        >
+          {`0:${String(Math.ceil(duration - elapsed)).padStart(2, "0")}`}
+        </div>
+      </div>
+
+      <div
+        style={{
+          fontSize: BUBBLE.fontSize,
+          lineHeight: `${BUBBLE.lineHeight}px`,
+          fontWeight: 500,
+          letterSpacing: "-0.01em",
+          whiteSpace: "pre",
+        }}
+      >
+        {voiceLines(message).map((line, lineIndex) => (
+          <div key={lineIndex}>
+            {line.split(" ").map((word, index) => {
+              const at = wordTimes[wordIndex] ?? 0;
+              wordIndex += 1;
+              return (
+                <span
+                  key={index}
+                  style={{ color: elapsed >= at ? COLORS.ink : COLORS.unsaid }}
+                >
+                  {index > 0 ? " " : ""}
+                  {word}
+                </span>
+              );
+            })}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+/** A fixed, speech-like silhouette: 0.25–1, the same on every render. */
+function barLevel(index: number): number {
+  const wave = Math.sin(index * 1.7) * 0.5 + Math.sin(index * 0.6 + 1) * 0.5;
+  return 0.25 + 0.75 * Math.abs(wave);
+}
+
+/** The bed's multiplier: 1, easing down under any voice note that plays. */
+function voiceDuck(frame: number, messages: ChatMessage[], fps: number): number {
+  return messages.reduce((level, message) => {
+    if (!message.voice) {
+      return level;
+    }
+    const start = Math.round(message.at * fps);
+    const end = start + Math.round(message.voice.duration * fps);
+    const fade = VOICE.duckFrames;
+    const duck = interpolate(
+      frame,
+      [start - fade, start, end, end + fade],
+      [1, VOICE.duck, VOICE.duck, 1],
+      { extrapolateLeft: "clamp", extrapolateRight: "clamp" },
+    );
+    return Math.min(level, duck);
+  }, 1);
 }
 
 function ReadTicks() {

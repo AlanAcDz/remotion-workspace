@@ -37,6 +37,16 @@ screen within a second) and 03b's quiz.
 - `follow` swaps the subline for a follow ask ("Sigue la cuenta para el
   próximo reto") when the voice says it, before the CTA.
 
+## Working it out
+
+`reto-promo.props.ts` builds its answer instead of landing it all at once, so
+the card keeps moving under the voice:
+
+- `answer.steps` are rows on the final timeline: each pops in as the voice
+  reaches it, with one `big` payoff and small-print `note` rows. Leave
+  `answer.subline` empty when you use them.
+- `answer.ringMoves` slides the ring to whatever the voice is talking about.
+
 ## On a receipt (RetoTicket)
 
 `reto-error-cambio.props.ts` plays the reto on El Ticket's printer instead of

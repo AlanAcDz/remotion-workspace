@@ -1,0 +1,100 @@
+[
+  {
+    "text": "Jefe,",
+    "startMs": 46,
+    "endMs": 453,
+    "timestampMs": 46,
+    "confidence": null
+  },
+  {
+    "text": " la",
+    "startMs": 453,
+    "endMs": 592,
+    "timestampMs": 453,
+    "confidence": null
+  },
+  {
+    "text": " señora",
+    "startMs": 592,
+    "endMs": 929,
+    "timestampMs": 592,
+    "confidence": null
+  },
+  {
+    "text": " dice",
+    "startMs": 929,
+    "endMs": 1161,
+    "timestampMs": 929,
+    "confidence": null
+  },
+  {
+    "text": " que",
+    "startMs": 1161,
+    "endMs": 1265,
+    "timestampMs": 1161,
+    "confidence": null
+  },
+  {
+    "text": " si",
+    "startMs": 1265,
+    "endMs": 1393,
+    "timestampMs": 1265,
+    "confidence": null
+  },
+  {
+    "text": " no",
+    "startMs": 1393,
+    "endMs": 1486,
+    "timestampMs": 1393,
+    "confidence": null
+  },
+  {
+    "text": " hay",
+    "startMs": 1486,
+    "endMs": 1614,
+    "timestampMs": 1486,
+    "confidence": null
+  },
+  {
+    "text": " Buen",
+    "startMs": 1614,
+    "endMs": 1811,
+    "timestampMs": 1614,
+    "confidence": null
+  },
+  {
+    "text": " Fin...",
+    "startMs": 1811,
+    "endMs": 2334,
+    "timestampMs": 1811,
+    "confidence": null
+  },
+  {
+    "text": " le",
+    "startMs": 2334,
+    "endMs": 2426,
+    "timestampMs": 2334,
+    "confidence": null
+  },
+  {
+    "text": " hice",
+    "startMs": 2426,
+    "endMs": 2624,
+    "timestampMs": 2426,
+    "confidence": null
+  },
+  {
+    "text": " cinco",
+    "startMs": 2624,
+    "endMs": 2961,
+    "timestampMs": 2624,
+    "confidence": null
+  },
+  {
+    "text": " pesos.",
+    "startMs": 2961,
+    "endMs": 3379,
+    "timestampMs": 2961,
+    "confidence": null
+  }
+]

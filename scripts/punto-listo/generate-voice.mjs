@@ -18,7 +18,11 @@ import {
   aryaStoryVoiceConfig,
   aryaVoiceConfig,
 } from "../arya/voice-config.mjs";
-import { puntoListoVoiceConfig } from "./voice-config.mjs";
+import {
+  puntoListoCarreraVoiceConfig,
+  puntoListoChatVoiceConfig,
+  puntoListoVoiceConfig,
+} from "./voice-config.mjs";
 
 const API_BASE_URL = "https://api.elevenlabs.io/v1";
 const REQUEST_TIMEOUT_MS = 120_000;
@@ -26,6 +30,8 @@ const REQUEST_TIMEOUT_MS = 120_000;
 // Each brand pins exactly one voice preset; pick it with --brand.
 export const VOICE_CONFIGS = Object.freeze({
   "punto-listo": puntoListoVoiceConfig,
+  "punto-listo-carrera": puntoListoCarreraVoiceConfig,
+  "punto-listo-chat": puntoListoChatVoiceConfig,
   arya: aryaVoiceConfig,
   "arya-story": aryaStoryVoiceConfig,
 });
@@ -39,7 +45,8 @@ Uso:
   pnpm arya:voice --slug <nombre> --script <archivo.txt> --dry-run
 
 Opciones:
-  --brand      punto-listo (predeterminada), arya o arya-story
+  --brand      punto-listo (predeterminada), punto-listo-carrera,
+               punto-listo-chat, arya o arya-story
   --slug       Nombre en minúsculas y guiones, por ejemplo: inventario-rapido
   --script     Ruta al guion, en el idioma de la marca
   --force      Reemplaza archivos de audio y subtítulos existentes

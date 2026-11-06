@@ -24,6 +24,18 @@ const messageSchema = z
     /** "9:47 p. m." — printed in the bubble's corner. */
     time: z.string(),
     text: z.string().optional(),
+    /** A voice note: it plays from `at`, with its words lit as they are said. */
+    voice: z
+      .object({
+        src: z.string(),
+        /** Seconds the note lasts: the bar sweep and the counter run on it. */
+        duration: z.number(),
+        /** Breaks with "\n" and never wraps, like `text`. */
+        transcript: z.string(),
+        /** Seconds into the note each word starts, in transcript order. */
+        wordTimes: z.array(z.number()),
+      })
+      .optional(),
     image: z
       .object({
         src: z.string(),
@@ -34,8 +46,8 @@ const messageSchema = z
       })
       .optional(),
   })
-  .refine((message) => message.text || message.image, {
-    message: "A message needs text, an image or both",
+  .refine((message) => message.text || message.image || message.voice, {
+    message: "A message needs text, an image or a voice note",
   });
 
 export const chatStorySchema = z.object({

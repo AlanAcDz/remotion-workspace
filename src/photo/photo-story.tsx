@@ -278,7 +278,7 @@ function OverlayView({ overlay, since, fps }: OverlayViewProps) {
 type Of<T extends PhotoOverlay["type"]> = Extract<PhotoOverlay, { type: T }>;
 
 /** Revealed left to right, as fast as the pen moves. */
-function Handwriting({
+export function Handwriting({
   overlay,
   since,
   fps,

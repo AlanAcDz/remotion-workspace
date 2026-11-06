@@ -57,6 +57,13 @@ export function RetoMostrador(props: RetoProps) {
     })),
     { sound: SFX.whoosh, at: revealFrom / fps, volume: 0.2 },
     { sound: SFX.ding, at: answerAt / fps, volume: 0.3 },
+    ...answer.steps
+      .filter((step) => step.tone !== "note")
+      .map((step) => ({
+        sound: step.tone === "big" ? SFX.softHit : SFX.pop,
+        at: step.at,
+        volume: step.tone === "big" ? 0.5 : 0.35,
+      })),
   ];
 
   return (
@@ -364,7 +371,7 @@ function RetoCard({
         <div
           style={{
             position: "absolute",
-            ...answer.ring,
+            ...ringRect(answer, frame, fps),
             borderRadius: 20,
             border: `7px solid ${TOMATO}`,
             opacity: ring,
@@ -373,6 +380,9 @@ function RetoCard({
         />
       </Interactive.Div>
 
+      {answer.steps.length > 0 ? (
+        <Steps steps={answer.steps} top={sublineTop} frame={frame} fps={fps} />
+      ) : null}
       <div
         style={{
           position: "absolute",
@@ -385,6 +395,7 @@ function RetoCard({
           fontWeight: 700,
           letterSpacing: "-0.02em",
           color: INK,
+          whiteSpace: "pre-line",
           opacity: subline * (1 - swap),
           translate: `0px ${(1 - subline) * 16 - swap * 16}px`,
         }}
@@ -412,6 +423,93 @@ function RetoCard({
         </div>
       ) : null}
     </>
+  );
+}
+
+const RING_MOVE_FRAMES = 9;
+
+/** The ring's box: `answer.ring`, gliding through `answer.ringMoves`. */
+function ringRect(answer: RetoProps["answer"], frame: number, fps: number) {
+  const keys = ["left", "top", "width", "height"] as const;
+
+  return answer.ringMoves.reduce(
+    (from, move) => {
+      const at = Math.round(move.at * fps);
+      const progress = interpolate(frame, [at, at + RING_MOVE_FRAMES], [0, 1], {
+        extrapolateLeft: "clamp",
+        extrapolateRight: "clamp",
+        easing: EASE_OUT,
+      });
+      const [left, top, width, height] = keys.map((key) =>
+        interpolate(progress, [0, 1], [from[key], move[key]]),
+      );
+      return { left, top, width, height };
+    },
+    {
+      left: answer.ring.left,
+      top: answer.ring.top,
+      width: answer.ring.width,
+      height: answer.ring.height,
+    },
+  );
+}
+
+const STEP_STYLE = {
+  line: { size: 50, height: 66, color: INK },
+  big: { size: 92, height: 112, color: TOMATO },
+  note: { size: 32, height: 44, color: "#7A7167" },
+} as const;
+
+interface StepsProps {
+  steps: RetoProps["answer"]["steps"];
+  top: number;
+  frame: number;
+  fps: number;
+}
+
+/** The working, one row at a time as the voice reaches it. */
+function Steps({ steps, top, frame, fps }: StepsProps) {
+  return (
+    <div
+      style={{
+        position: "absolute",
+        left: 60,
+        top,
+        width: 960,
+        textAlign: "center",
+        fontFamily: "Archivo",
+        fontWeight: 700,
+        letterSpacing: "-0.02em",
+      }}
+    >
+      {steps.map((step) => {
+        const at = Math.round(step.at * fps);
+        const isBig = step.tone === "big";
+        const enter = interpolate(frame, [at, at + 8], [0, 1], {
+          extrapolateLeft: "clamp",
+          extrapolateRight: "clamp",
+          easing: isBig ? Easing.out(Easing.back(2.2)) : EASE_OUT,
+        });
+        const style = STEP_STYLE[step.tone];
+
+        return (
+          <div
+            key={step.text}
+            style={{
+              height: style.height,
+              lineHeight: `${style.height}px`,
+              fontSize: style.size,
+              color: style.color,
+              opacity: Math.min(1, enter),
+              translate: isBig ? undefined : `0px ${(1 - enter) * 20}px`,
+              scale: isBig ? String(interpolate(enter, [0, 1], [0.7, 1])) : undefined,
+            }}
+          >
+            {step.text}
+          </div>
+        );
+      })}
+    </div>
   );
 }
 
@@ -496,6 +594,9 @@ function Countdown({ prompt, beat }: CountdownProps) {
   );
 }
 
+/** Characters an option can hold at full size. */
+const OPTION_SHORT = 12;
+
 interface OptionsProps {
   options: string[];
   correct: number | undefined;
@@ -566,9 +667,11 @@ function Options({ options, correct, top, answerAt }: OptionsProps) {
             </span>
             <span
               style={{
-                fontSize: 52,
+                // Amounts fit at 52; a phrase steps down to stay on one line.
+                fontSize: option.length > OPTION_SHORT ? 40 : 52,
                 fontWeight: 700,
                 letterSpacing: "-0.03em",
+                whiteSpace: "nowrap",
               }}
             >
               {option}
