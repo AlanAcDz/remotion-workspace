@@ -91,6 +91,9 @@ import { Flipbook } from "./arya-shorts/flipbook";
 import { TierList } from "./arya-shorts/tier-list";
 import { Trailer } from "./arya-shorts/trailer";
 import { Trile } from "./arya-shorts/trile";
+import { TrileVacio } from "./arya-shorts/trile-vacio";
+import { NoSabe } from "./arya-shorts/no-sabe";
+import { aryaNoSabeProps } from "./videos/av-20261117-arya-no-sabe.props";
 import { aryaDiaryProps } from "./videos/av-20261107-diary-of-a-dog-on-meds.props";
 import { aryaFindThePillProps } from "./videos/av-20261108-find-the-pill.props";
 import { aryaFiveSecondProps } from "./videos/av-20261109-five-second-test.props";
@@ -98,6 +101,15 @@ import { aryaDoseBeatProps } from "./videos/av-20261110-dose-beat.props";
 import { aryaTierListProps } from "./videos/av-20261111-pill-dodge-tier-list.props";
 import { aryaSesentaDiasProps } from "./videos/av-20261112-sesenta-dias.props";
 import { aryaThePillProps } from "./videos/av-20261113-the-pill-trailer.props";
+import { AryaChat } from "./arya-shorts/chat";
+import { aryaElGrupoDeLaFamiliaProps } from "./videos/av-20261118-el-grupo-de-la-familia.props";
+import { aryaDondeQuedoLaPastillitaProps } from "./videos/av-20261115-donde-quedo-la-pastillita.props";
+import { aryaDiarioProps } from "./videos/av-20261114-diario-de-una-perrita.props";
+import { aryaSixtyDaysProps } from "./videos/av-20261119-sixty-days.props";
+import { Loteria } from "./arya-shorts/loteria";
+import { aryaLoteriaProps } from "./videos/av-20261116-loteria-de-la-pastilla.props";
+import { SeBusca } from "./arya-shorts/se-busca";
+import { aryaSeBuscaProps } from "./videos/av-20261120-se-busca.props";
 import { StoreVideo } from "./store-video/store-video";
 import {
   CANVAS,
@@ -603,6 +615,13 @@ export const RemotionRoot: React.FC = () => {
           />
           <Composition
             {...aryaShort}
+            id="AryaDiarioDeUnaPerrita"
+            component={Diary}
+            durationInFrames={Math.round(aryaDiarioProps.end * FPS)}
+            defaultProps={aryaDiarioProps}
+          />
+          <Composition
+            {...aryaShort}
             id="AryaFindThePill"
             component={Trile}
             durationInFrames={Math.round(aryaFindThePillProps.end * FPS)}
@@ -638,10 +657,52 @@ export const RemotionRoot: React.FC = () => {
           />
           <Composition
             {...aryaShort}
+            id="AryaSixtyDays"
+            component={Flipbook}
+            durationInFrames={Math.round(aryaSixtyDaysProps.end * FPS)}
+            defaultProps={aryaSixtyDaysProps}
+          />
+          <Composition
+            {...aryaShort}
             id="AryaThePillTrailer"
             component={Trailer}
             durationInFrames={Math.round(aryaThePillProps.end * FPS)}
             defaultProps={aryaThePillProps}
+          />
+          <Composition
+            {...aryaShort}
+            id="AryaElGrupoDeLaFamilia"
+            component={AryaChat}
+            durationInFrames={Math.round(aryaElGrupoDeLaFamiliaProps.end * FPS)}
+            defaultProps={aryaElGrupoDeLaFamiliaProps}
+          />
+          <Composition
+            {...aryaShort}
+            id="AryaNoSabe"
+            component={NoSabe}
+            durationInFrames={Math.round(aryaNoSabeProps.end * FPS)}
+            defaultProps={aryaNoSabeProps}
+          />
+          <Composition
+            {...aryaShort}
+            id="AryaDondeQuedoLaPastillita"
+            component={TrileVacio}
+            durationInFrames={Math.round(aryaDondeQuedoLaPastillitaProps.end * FPS)}
+            defaultProps={aryaDondeQuedoLaPastillitaProps}
+          />
+          <Composition
+            {...aryaShort}
+            id="AryaLoteriaDeLaPastilla"
+            component={Loteria}
+            durationInFrames={Math.round(aryaLoteriaProps.end * FPS)}
+            defaultProps={aryaLoteriaProps}
+          />
+          <Composition
+            {...aryaShort}
+            id="AryaSeBusca"
+            component={SeBusca}
+            durationInFrames={Math.round(aryaSeBuscaProps.end * FPS)}
+            defaultProps={aryaSeBuscaProps}
           />
         </Folder>
         <Folder name="arya-store">
