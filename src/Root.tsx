@@ -112,6 +112,20 @@ import { SeBusca } from "./arya-shorts/se-busca";
 import { aryaSeBuscaProps } from "./videos/av-20261120-se-busca.props";
 import { StoreVideo } from "./store-video/store-video";
 import {
+  BON_FPS,
+  BonUnaTarde,
+  calculateBonMetadata,
+} from "./bon/bon-una-tarde";
+import { bonSchema } from "./bon/schema";
+import { bonUnaTardeProps } from "./videos/bon-una-tarde.props";
+import {
+  VIDANTA_FAMILIA_FPS,
+  VidantaFamilia,
+  calculateVidantaFamiliaMetadata,
+} from "./vidanta-familia/vidanta-familia";
+import { vidantaFamiliaSchema } from "./vidanta-familia/schema";
+import { vidantaFamiliaProps } from "./videos/vidanta-familia.props";
+import {
   CANVAS,
   DURATION as STORE_VIDEO_DURATION,
   storeVideoSchema,
@@ -720,6 +734,32 @@ export const RemotionRoot: React.FC = () => {
             />
           ))}
         </Folder>
+      </Folder>
+      <Folder name="bon">
+        <Composition
+          id="bon-una-tarde"
+          component={BonUnaTarde}
+          schema={bonSchema}
+          calculateMetadata={calculateBonMetadata}
+          fps={BON_FPS}
+          width={1080}
+          height={1920}
+          durationInFrames={2097}
+          defaultProps={bonUnaTardeProps}
+        />
+      </Folder>
+      <Folder name="vidanta-familia">
+        <Composition
+          id="vidanta-familia"
+          component={VidantaFamilia}
+          schema={vidantaFamiliaSchema}
+          calculateMetadata={calculateVidantaFamiliaMetadata}
+          fps={VIDANTA_FAMILIA_FPS}
+          width={1080}
+          height={1920}
+          durationInFrames={1920}
+          defaultProps={vidantaFamiliaProps}
+        />
       </Folder>
     </>
   );
