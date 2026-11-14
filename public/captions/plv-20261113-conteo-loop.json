@@ -1,0 +1,128 @@
+[
+  {
+    "text": "Llegaron",
+    "startMs": 46,
+    "endMs": 488,
+    "timestampMs": 46,
+    "confidence": null
+  },
+  {
+    "text": " veinticuatro.",
+    "startMs": 488,
+    "endMs": 1591,
+    "timestampMs": 488,
+    "confidence": null
+  },
+  {
+    "text": " Vendí",
+    "startMs": 1591,
+    "endMs": 1974,
+    "timestampMs": 1591,
+    "confidence": null
+  },
+  {
+    "text": " doce.",
+    "startMs": 1974,
+    "endMs": 2612,
+    "timestampMs": 1974,
+    "confidence": null
+  },
+  {
+    "text": " ¿Y",
+    "startMs": 2612,
+    "endMs": 2891,
+    "timestampMs": 2612,
+    "confidence": null
+  },
+  {
+    "text": " hay",
+    "startMs": 2891,
+    "endMs": 3019,
+    "timestampMs": 2891,
+    "confidence": null
+  },
+  {
+    "text": " nueve?",
+    "startMs": 3019,
+    "endMs": 3959,
+    "timestampMs": 3019,
+    "confidence": null
+  },
+  {
+    "text": " En",
+    "startMs": 3959,
+    "endMs": 4156,
+    "timestampMs": 3959,
+    "confidence": null
+  },
+  {
+    "text": " Punto",
+    "startMs": 4156,
+    "endMs": 4505,
+    "timestampMs": 4156,
+    "confidence": null
+  },
+  {
+    "text": " Listo",
+    "startMs": 4505,
+    "endMs": 4818,
+    "timestampMs": 4505,
+    "confidence": null
+  },
+  {
+    "text": " queda",
+    "startMs": 4818,
+    "endMs": 5039,
+    "timestampMs": 4818,
+    "confidence": null
+  },
+  {
+    "text": " el",
+    "startMs": 5039,
+    "endMs": 5132,
+    "timestampMs": 5039,
+    "confidence": null
+  },
+  {
+    "text": " ajuste:",
+    "startMs": 5132,
+    "endMs": 5828,
+    "timestampMs": 5132,
+    "confidence": null
+  },
+  {
+    "text": " menos",
+    "startMs": 5828,
+    "endMs": 6177,
+    "timestampMs": 5828,
+    "confidence": null
+  },
+  {
+    "text": " tres,",
+    "startMs": 6177,
+    "endMs": 6455,
+    "timestampMs": 6177,
+    "confidence": null
+  },
+  {
+    "text": " con",
+    "startMs": 6455,
+    "endMs": 6606,
+    "timestampMs": 6455,
+    "confidence": null
+  },
+  {
+    "text": " su",
+    "startMs": 6606,
+    "endMs": 6722,
+    "timestampMs": 6606,
+    "confidence": null
+  },
+  {
+    "text": " motivo.",
+    "startMs": 6722,
+    "endMs": 7210,
+    "timestampMs": 6722,
+    "confidence": null
+  }
+]

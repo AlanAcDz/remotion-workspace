@@ -1,0 +1,65 @@
+[
+  {
+    "text": "Esta",
+    "startMs": 34,
+    "endMs": 346,
+    "timestampMs": 34,
+    "confidence": null
+  },
+  {
+    "text": " cuenta",
+    "startMs": 346,
+    "endMs": 770,
+    "timestampMs": 346,
+    "confidence": null
+  },
+  {
+    "text": " está",
+    "startMs": 770,
+    "endMs": 1138,
+    "timestampMs": 770,
+    "confidence": null
+  },
+  {
+    "text": " mal",
+    "startMs": 1138,
+    "endMs": 1407,
+    "timestampMs": 1138,
+    "confidence": null
+  },
+  {
+    "text": " por",
+    "startMs": 1407,
+    "endMs": 1652,
+    "timestampMs": 1407,
+    "confidence": null
+  },
+  {
+    "text": " veinte",
+    "startMs": 1652,
+    "endMs": 1954,
+    "timestampMs": 1652,
+    "confidence": null
+  },
+  {
+    "text": " pesos.",
+    "startMs": 1954,
+    "endMs": 2696,
+    "timestampMs": 1954,
+    "confidence": null
+  },
+  {
+    "text": " ¿Lo",
+    "startMs": 2696,
+    "endMs": 2834,
+    "timestampMs": 2696,
+    "confidence": null
+  },
+  {
+    "text": " ves?",
+    "startMs": 2834,
+    "endMs": 3467,
+    "timestampMs": 2834,
+    "confidence": null
+  }
+]

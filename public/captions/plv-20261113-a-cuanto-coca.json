@@ -1,0 +1,205 @@
+[
+  {
+    "text": "¿A",
+    "startMs": 35,
+    "endMs": 221,
+    "timestampMs": 35,
+    "confidence": null
+  },
+  {
+    "text": " cuánto",
+    "startMs": 221,
+    "endMs": 615,
+    "timestampMs": 221,
+    "confidence": null
+  },
+  {
+    "text": " das",
+    "startMs": 615,
+    "endMs": 848,
+    "timestampMs": 615,
+    "confidence": null
+  },
+  {
+    "text": " la",
+    "startMs": 848,
+    "endMs": 1022,
+    "timestampMs": 848,
+    "confidence": null
+  },
+  {
+    "text": " Coca",
+    "startMs": 1022,
+    "endMs": 1428,
+    "timestampMs": 1022,
+    "confidence": null
+  },
+  {
+    "text": " de",
+    "startMs": 1428,
+    "endMs": 1567,
+    "timestampMs": 1428,
+    "confidence": null
+  },
+  {
+    "text": " seiscientos",
+    "startMs": 1567,
+    "endMs": 2171,
+    "timestampMs": 1567,
+    "confidence": null
+  },
+  {
+    "text": " en",
+    "startMs": 2171,
+    "endMs": 2276,
+    "timestampMs": 2171,
+    "confidence": null
+  },
+  {
+    "text": " tu",
+    "startMs": 2276,
+    "endMs": 2415,
+    "timestampMs": 2276,
+    "confidence": null
+  },
+  {
+    "text": " tienda?",
+    "startMs": 2415,
+    "endMs": 3228,
+    "timestampMs": 2415,
+    "confidence": null
+  },
+  {
+    "text": " ¿Dieciocho?",
+    "startMs": 3228,
+    "endMs": 4493,
+    "timestampMs": 3228,
+    "confidence": null
+  },
+  {
+    "text": " ¿Veinte?",
+    "startMs": 4493,
+    "endMs": 5503,
+    "timestampMs": 4493,
+    "confidence": null
+  },
+  {
+    "text": " ¿Veintidós?",
+    "startMs": 5503,
+    "endMs": 6954,
+    "timestampMs": 5503,
+    "confidence": null
+  },
+  {
+    "text": " Cuando",
+    "startMs": 6954,
+    "endMs": 7291,
+    "timestampMs": 6954,
+    "confidence": null
+  },
+  {
+    "text": " lo",
+    "startMs": 7291,
+    "endMs": 7430,
+    "timestampMs": 7291,
+    "confidence": null
+  },
+  {
+    "text": " subas,",
+    "startMs": 7430,
+    "endMs": 7906,
+    "timestampMs": 7430,
+    "confidence": null
+  },
+  {
+    "text": " en",
+    "startMs": 7906,
+    "endMs": 8092,
+    "timestampMs": 7906,
+    "confidence": null
+  },
+  {
+    "text": " Punto",
+    "startMs": 8092,
+    "endMs": 8464,
+    "timestampMs": 8092,
+    "confidence": null
+  },
+  {
+    "text": " Listo",
+    "startMs": 8464,
+    "endMs": 8800,
+    "timestampMs": 8464,
+    "confidence": null
+  },
+  {
+    "text": " lo",
+    "startMs": 8800,
+    "endMs": 8940,
+    "timestampMs": 8800,
+    "confidence": null
+  },
+  {
+    "text": " cambias",
+    "startMs": 8940,
+    "endMs": 9439,
+    "timestampMs": 8940,
+    "confidence": null
+  },
+  {
+    "text": " una",
+    "startMs": 9439,
+    "endMs": 9683,
+    "timestampMs": 9439,
+    "confidence": null
+  },
+  {
+    "text": " vez",
+    "startMs": 9683,
+    "endMs": 10298,
+    "timestampMs": 9683,
+    "confidence": null
+  },
+  {
+    "text": " y",
+    "startMs": 10298,
+    "endMs": 10461,
+    "timestampMs": 10298,
+    "confidence": null
+  },
+  {
+    "text": " así",
+    "startMs": 10461,
+    "endMs": 10693,
+    "timestampMs": 10461,
+    "confidence": null
+  },
+  {
+    "text": " se",
+    "startMs": 10693,
+    "endMs": 10844,
+    "timestampMs": 10693,
+    "confidence": null
+  },
+  {
+    "text": " cobra",
+    "startMs": 10844,
+    "endMs": 11099,
+    "timestampMs": 10844,
+    "confidence": null
+  },
+  {
+    "text": " en",
+    "startMs": 11099,
+    "endMs": 11192,
+    "timestampMs": 11099,
+    "confidence": null
+  },
+  {
+    "text": " caja.",
+    "startMs": 11192,
+    "endMs": 11633,
+    "timestampMs": 11192,
+    "confidence": null
+  }
+]

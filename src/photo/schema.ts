@@ -59,6 +59,10 @@ export const handSchema = timedSchema.extend({
   rotate: z.number().default(-2),
   /** Seconds the pen takes; 0 is already written. */
   write: z.number().default(0.6),
+  /** Crossed out at `at` (absolute seconds), as a correction. */
+  strike: z
+    .object({ at: z.number(), color: z.string().default("#D7261E") })
+    .optional(),
 });
 
 /** A hand-drawn loop around something on the paper. */
@@ -103,17 +107,54 @@ const titleSchema = timedSchema.extend({
   animate: z.boolean().default(true),
 });
 
+/**
+ * A reto's silent countdown: 3 · 2 · 1, one beat per third of `for` seconds,
+ * under a tomato prompt chip. Gone after `for` seconds.
+ */
+const countdownSchema = timedSchema.extend({
+  type: z.literal("countdown"),
+  prompt: z.string(),
+  y: z.number(), // top of the chip, frame pixels
+  for: z.number().default(3),
+});
+
 export const overlaySchema = z.discriminatedUnion("type", [
   handSchema,
   circleSchema,
   bubbleSchema,
   pillSchema,
   titleSchema,
+  countdownSchema,
 ]);
 
 export const photoStorySchema = z.object({
   /** "audio/x.mp3" — its captions are read from "captions/x.json". */
   audioFile: z.string(),
+  /**
+   * false renders a draft without the voice and its captions, until the take
+   * at `audioFile` exists. Flip it back before the review render.
+   */
+  hasVoice: z.boolean().default(true),
+  /**
+   * A silence cut into the voice at `at` seconds of the take's own clock (a
+   * reto's countdown). Everything else in these props is on the final
+   * timeline, where the rest of the take plays `for` seconds later.
+   */
+  pause: z
+    .object({
+      at: z.number(),
+      for: z.number().default(3),
+      /**
+       * The take's captions split at `at` ("captions/x-pregunta.json" and
+       * "captions/x-respuesta.json", both on the take's clock). One file can
+       * page the question's last words with the answer's first ("¿Lo ves?
+       * Aquí:"), showing a word before the countdown it is said after.
+       */
+      captions: z
+        .object({ question: z.string(), answer: z.string() })
+        .optional(),
+    })
+    .optional(),
   music: posDemoSchema.shape.music,
   scenes: z.array(sceneSchema).min(1),
   overlays: z.array(overlaySchema).default([]),

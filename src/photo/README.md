@@ -16,6 +16,24 @@ then PosDemo's end card — or a `pill` and no end card at all, for a loop.
   a format's title card, a list entry ("Los de siempre"), a verse ("La
   Calaverita"). Where bands carry the words, limit `captions` to the rest.
 
+## A reto on paper
+
+`reto-suma-libreta.props.ts` (Reto #10) plays RetoTicket's find-the-error
+mechanic on a notebook page:
+
+- `pause` cuts a silence into the take at `pause.at` (the take's own clock),
+  as RetoTicket does; the voice and its captions resume `pause.for` seconds
+  later. Every other time in the props is on the final timeline.
+- `pause.captions` takes the take's captions split at `pause.at` (question
+  and answer files, both on the take's clock). Without it a caption page can
+  join "¿Lo ves?" to "Aquí:" and show the answer's first word before the
+  countdown.
+- A `countdown` overlay counts 3 · 2 · 1 under a tomato prompt chip for its
+  `for` seconds; put a `tick` from `TICKET_SFX` on each beat.
+- A `hand` line takes `strike: { at }` to be crossed out in red at `at`.
+- `hasVoice: false` renders a silent draft without captions while the take
+  does not exist yet. Set it back before the review render.
+
 ## New episode
 
 1. Copy `src/videos/libreta-kilo.props.ts` (or `coca-loop.props.ts`, or
