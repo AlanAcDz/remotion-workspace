@@ -69,11 +69,17 @@ import { carreraStorySchema, type CarreraStoryProps } from "./carrera/schema";
 import { cambioLoopProps } from "./videos/cambio-loop.props";
 import { carreraKiloProps } from "./videos/carrera-kilo.props";
 import { chatBuenFinProps } from "./videos/chat-buen-fin.props";
+import { chatJitomateProps } from "./videos/chat-jitomate.props";
 import { libretaCorteProps } from "./videos/libreta-corte.props";
+import { retoSumaLibretaProps } from "./videos/reto-suma-libreta.props";
+import { fotosSinCodigoProps } from "./videos/fotos-sin-codigo.props";
 import { retoPromoProps } from "./videos/reto-promo.props";
 import { ticketCocasProps } from "./videos/ticket-cocas.props";
 import { libretaLoopProps } from "./videos/libreta-loop.props";
+import { conteoLoopProps } from "./videos/conteo-loop.props";
 import { cartelCajeroProps } from "./videos/cartel-cajero.props";
+import { cartelDevolucionesProps } from "./videos/cartel-devoluciones.props";
+import { aCuantoCocaProps } from "./videos/a-cuanto-coca.props";
 import { ticketNoVendisteProps } from "./videos/ticket-no-vendiste.props";
 import { aryaWhyIBuiltAryaProps } from "./videos/av-20261019-why-i-built-arya.props";
 import { aryaDidIGiveItProps } from "./videos/av-20261021-did-i-give-it.props";
@@ -487,6 +493,11 @@ export const RemotionRoot: React.FC = () => {
             id="ChatBuenFin"
             defaultProps={chatBuenFinProps}
           />
+          <Composition
+            {...chat}
+            id="ChatJitomate"
+            defaultProps={chatJitomateProps}
+          />
         </Folder>
         <Folder name="carrera">
           <Composition
@@ -540,8 +551,23 @@ export const RemotionRoot: React.FC = () => {
           />
           <Composition
             {...photo}
+            id="ConteoLoop"
+            defaultProps={conteoLoopProps}
+          />
+          <Composition
+            {...photo}
             id="CartelCajero"
             defaultProps={cartelCajeroProps}
+          />
+          <Composition
+            {...photo}
+            id="CartelDevoluciones"
+            defaultProps={cartelDevolucionesProps}
+          />
+          <Composition
+            {...photo}
+            id="ACuantoCoca"
+            defaultProps={aCuantoCocaProps}
           />
           <Composition
             {...photo}
@@ -552,6 +578,16 @@ export const RemotionRoot: React.FC = () => {
             {...photo}
             id="LibretaCorte"
             defaultProps={libretaCorteProps}
+          />
+          <Composition
+            {...photo}
+            id="RetoSumaLibreta"
+            defaultProps={retoSumaLibretaProps}
+          />
+          <Composition
+            {...photo}
+            id="FotosSinCodigo"
+            defaultProps={fotosSinCodigoProps}
           />
         </Folder>
         <Folder name="carrusel">

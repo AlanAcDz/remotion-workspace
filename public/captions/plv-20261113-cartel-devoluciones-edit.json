@@ -1,0 +1,149 @@
+[
+  {
+    "text": "¿No",
+    "startMs": 34,
+    "endMs": 235,
+    "timestampMs": 34,
+    "confidence": null
+  },
+  {
+    "text": " se",
+    "startMs": 235,
+    "endMs": 301,
+    "timestampMs": 235,
+    "confidence": null
+  },
+  {
+    "text": " aceptan",
+    "startMs": 301,
+    "endMs": 714,
+    "timestampMs": 301,
+    "confidence": null
+  },
+  {
+    "text": " devoluciones?",
+    "startMs": 714,
+    "endMs": 1744,
+    "timestampMs": 714,
+    "confidence": null
+  },
+  {
+    "text": " Mejor",
+    "startMs": 1744,
+    "endMs": 2068,
+    "timestampMs": 1744,
+    "confidence": null
+  },
+  {
+    "text": " así:",
+    "startMs": 2068,
+    "endMs": 2604,
+    "timestampMs": 2068,
+    "confidence": null
+  },
+  {
+    "text": " en",
+    "startMs": 2604,
+    "endMs": 2783,
+    "timestampMs": 2604,
+    "confidence": null
+  },
+  {
+    "text": " Punto",
+    "startMs": 2783,
+    "endMs": 3129,
+    "timestampMs": 2783,
+    "confidence": null
+  },
+  {
+    "text": " Listo,",
+    "startMs": 3129,
+    "endMs": 3776,
+    "timestampMs": 3129,
+    "confidence": null
+  },
+  {
+    "text": " cada",
+    "startMs": 3776,
+    "endMs": 4100,
+    "timestampMs": 3776,
+    "confidence": null
+  },
+  {
+    "text": " devolución",
+    "startMs": 4100,
+    "endMs": 4736,
+    "timestampMs": 4100,
+    "confidence": null
+  },
+  {
+    "text": " pide",
+    "startMs": 4736,
+    "endMs": 5083,
+    "timestampMs": 4736,
+    "confidence": null
+  },
+  {
+    "text": " la",
+    "startMs": 5083,
+    "endMs": 5160,
+    "timestampMs": 5083,
+    "confidence": null
+  },
+  {
+    "text": " autorización",
+    "startMs": 5160,
+    "endMs": 5808,
+    "timestampMs": 5160,
+    "confidence": null
+  },
+  {
+    "text": " del",
+    "startMs": 5808,
+    "endMs": 5953,
+    "timestampMs": 5808,
+    "confidence": null
+  },
+  {
+    "text": " dueño",
+    "startMs": 5953,
+    "endMs": 6533,
+    "timestampMs": 5953,
+    "confidence": null
+  },
+  {
+    "text": " y",
+    "startMs": 6533,
+    "endMs": 6757,
+    "timestampMs": 6533,
+    "confidence": null
+  },
+  {
+    "text": " queda",
+    "startMs": 6757,
+    "endMs": 7047,
+    "timestampMs": 6757,
+    "confidence": null
+  },
+  {
+    "text": " con",
+    "startMs": 7047,
+    "endMs": 7204,
+    "timestampMs": 7047,
+    "confidence": null
+  },
+  {
+    "text": " su",
+    "startMs": 7204,
+    "endMs": 7349,
+    "timestampMs": 7204,
+    "confidence": null
+  },
+  {
+    "text": " folio.",
+    "startMs": 7349,
+    "endMs": 7807,
+    "timestampMs": 7349,
+    "confidence": null
+  }
+]

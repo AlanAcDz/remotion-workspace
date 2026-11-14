@@ -58,12 +58,15 @@ export function PhotoStory(props: PhotoStoryProps) {
     (overlay) =>
       overlay.type === "bubble" ||
       overlay.type === "pill" ||
-      overlay.type === "title",
+      overlay.type === "title" ||
+      overlay.type === "countdown",
   );
 
   return (
     <AbsoluteFill name="PhotoStory" style={{ backgroundColor: COLORS.ink }}>
-      <Audio name="Locución" src={staticFile(props.audioFile)} />
+      {props.hasVoice ? (
+        <VoiceAudio audioFile={props.audioFile} pause={props.pause} />
+      ) : null}
       {props.music ? (
         <MusicBed music={props.music} ctaFrom={ctaFrom} />
       ) : null}
@@ -103,12 +106,13 @@ export function PhotoStory(props: PhotoStoryProps) {
         ) : null,
       )}
 
-      <CaptionTrack
-        captionsFile={captionsFileFor(props.audioFile)}
-        visibleFrom={sec(props.captions.from)}
-        visibleUntil={sec(props.captions.until)}
-        style="video"
-      />
+      {props.hasVoice ? (
+        <VoiceCaptions
+          audioFile={props.audioFile}
+          pause={props.pause}
+          captions={props.captions}
+        />
+      ) : null}
 
       {props.cta ? (
         <Sequence name="CTA" from={ctaFrom}>
@@ -126,6 +130,73 @@ export function PhotoStory(props: PhotoStoryProps) {
         </Sequence>
       ) : null}
     </AbsoluteFill>
+  );
+}
+
+type VoiceProps = Pick<PhotoStoryProps, "audioFile" | "pause">;
+
+/** The take, with a reto's countdown silence cut in at `pause.at`. */
+function VoiceAudio({ audioFile, pause }: VoiceProps) {
+  const { fps } = useVideoConfig();
+  if (!pause) {
+    return <Audio name="Locución" src={staticFile(audioFile)} />;
+  }
+
+  const pauseAt = Math.round(pause.at * fps);
+  return (
+    <>
+      <Sequence name="Locución · pregunta" durationInFrames={pauseAt}>
+        <Audio src={staticFile(audioFile)} />
+      </Sequence>
+      <Sequence
+        name="Locución · respuesta"
+        from={pauseAt + Math.round(pause.for * fps)}
+      >
+        <Audio src={staticFile(audioFile)} trimBefore={pauseAt} />
+      </Sequence>
+    </>
+  );
+}
+
+/** Word captions; after a pause they run on the take's clock, shifted. */
+function VoiceCaptions({
+  audioFile,
+  pause,
+  captions,
+}: VoiceProps & Pick<PhotoStoryProps, "captions">) {
+  const { fps } = useVideoConfig();
+  const sec = (seconds: number) => Math.round(seconds * fps);
+  const captionsFile = captionsFileFor(audioFile);
+  if (!pause) {
+    return (
+      <CaptionTrack
+        captionsFile={captionsFile}
+        visibleFrom={sec(captions.from)}
+        visibleUntil={sec(captions.until)}
+        style="video"
+      />
+    );
+  }
+
+  const pauseAt = sec(pause.at);
+  const gap = sec(pause.for);
+  return (
+    <>
+      <CaptionTrack
+        captionsFile={pause.captions?.question ?? captionsFile}
+        visibleFrom={sec(captions.from)}
+        visibleUntil={Math.min(pauseAt, sec(captions.until))}
+        style="video"
+      />
+      <Sequence name="Subtítulos · respuesta" from={gap}>
+        <CaptionTrack
+          captionsFile={pause.captions?.answer ?? captionsFile}
+          visibleFrom={pauseAt}
+          visibleUntil={sec(captions.until) - gap}
+          style="video"
+        />
+      </Sequence>
+    </>
   );
 }
 
@@ -270,6 +341,8 @@ function OverlayView({ overlay, since, fps }: OverlayViewProps) {
       return <CtaPill overlay={overlay} since={since} />;
     case "title":
       return <TitleBand overlay={overlay} since={since} />;
+    case "countdown":
+      return <Countdown overlay={overlay} since={since} fps={fps} />;
     default:
       return null;
   }
@@ -318,7 +391,42 @@ export function Handwriting({
       }}
     >
       {overlay.text}
+      {overlay.strike ? (
+        <Strike
+          color={overlay.strike.color}
+          since={since - Math.round((overlay.strike.at - overlay.from) * fps)}
+        />
+      ) : null}
     </div>
+  );
+}
+
+/** A quick pen stroke through a line, left to right. */
+function Strike({ color, since }: { color: string; since: number }) {
+  if (since < 0) {
+    return null;
+  }
+
+  const progress = interpolate(since, [0, 6], [0, 1], {
+    extrapolateLeft: "clamp",
+    extrapolateRight: "clamp",
+    easing: Easing.out(Easing.quad),
+  });
+
+  return (
+    <div
+      style={{
+        position: "absolute",
+        left: "0.05em",
+        top: "0.55em",
+        width: `calc((100% - 0.3em) * ${progress})`,
+        height: "0.09em",
+        borderRadius: "0.05em",
+        backgroundColor: color,
+        rotate: "-1.5deg",
+        transformOrigin: "0% 50%",
+      }}
+    />
   );
 }
 
@@ -489,6 +597,85 @@ function CtaPill({ overlay, since }: { overlay: Of<"pill">; since: number }) {
         }}
       >
         {overlay.text}
+      </div>
+    </div>
+  );
+}
+
+/** 3 · 2 · 1 under the prompt chip, a pop on every beat. */
+function Countdown({
+  overlay,
+  since,
+  fps,
+}: {
+  overlay: Of<"countdown">;
+  since: number;
+  fps: number;
+}) {
+  const frames = Math.round(overlay.for * fps);
+  if (since >= frames) {
+    return null;
+  }
+
+  const beat = frames / 3;
+  const index = Math.min(2, Math.floor(since / beat));
+  const chip = popIn(since, false);
+  const digit = interpolate(since - Math.round(index * beat), [0, 6], [0, 1], {
+    extrapolateLeft: "clamp",
+    extrapolateRight: "clamp",
+    easing: Easing.out(Easing.back(1.8)),
+  });
+
+  return (
+    <div
+      style={{
+        position: "absolute",
+        left: 0,
+        width: 1080,
+        top: overlay.y,
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        gap: 36,
+      }}
+    >
+      <div
+        style={{
+          padding: "20px 40px",
+          borderRadius: 999,
+          backgroundColor: COLORS.tomato,
+          color: "#FFFFFF",
+          fontFamily: "Archivo",
+          fontSize: 50,
+          fontWeight: 700,
+          letterSpacing: "-0.01em",
+          boxShadow: "0 18px 40px rgba(228, 77, 46, 0.45)",
+          opacity: chip,
+          scale: String(interpolate(chip, [0, 1], [0.7, 1])),
+        }}
+      >
+        {overlay.prompt}
+      </div>
+      <div
+        style={{
+          width: 230,
+          height: 230,
+          borderRadius: 999,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          backgroundColor: "#FFFFFF",
+          boxShadow: "0 24px 60px rgba(0, 0, 0, 0.4)",
+          fontFamily: "Archivo",
+          fontSize: 170,
+          fontWeight: 700,
+          lineHeight: 1,
+          color: COLORS.tomato,
+          fontVariantNumeric: "tabular-nums",
+          scale: String(interpolate(digit, [0, 1], [0.6, 1])),
+        }}
+      >
+        {3 - index}
       </div>
     </div>
   );
