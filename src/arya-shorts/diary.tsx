@@ -40,6 +40,8 @@ export type DiaryProps = {
   music: PosDemoProps["music"];
   sfx: Sfx[];
   end: number;
+  /** Series sticker taped on from frame 0, e.g. "PARTE 2". */
+  badge?: { text: string; until?: number };
 };
 
 const textWidth = (text: string) =>
@@ -81,6 +83,7 @@ export function Diary(props: DiaryProps) {
           <Page {...props} page={current} />
         </AbsoluteFill>
       </AbsoluteFill>
+      {props.badge ? <Badge badge={props.badge} /> : null}
       <Banner banner={props.banner} />
     </ShortFrame>
   );
@@ -283,6 +286,51 @@ function Pencil({ x, y, wiggle }: { x: number; y: number; wiggle: number }) {
       <rect x="38" y="30" width="44" height="30" fill="#B9BCC0" />
       <rect x="38" y="0" width="44" height="32" rx="10" fill={ARYA.colors.callout} />
     </svg>
+  );
+}
+
+function Badge({ badge }: { badge: NonNullable<DiaryProps["badge"]> }) {
+  const frame = useCurrentFrame();
+  const sec = useSeconds();
+  const leave = badge.until === undefined ? 0 : ramp(frame, sec(badge.until) - 6, sec(badge.until));
+
+  if (leave === 1) {
+    return null;
+  }
+
+  return (
+    <div
+      style={{
+        position: "absolute",
+        left: 470,
+        top: 800,
+        padding: "18px 40px 22px",
+        backgroundColor: ARYA.colors.accent,
+        color: ARYA.colors.background,
+        fontFamily: POPPINS,
+        fontSize: 92,
+        fontWeight: 700,
+        lineHeight: 1,
+        letterSpacing: "0.02em",
+        borderRadius: 18,
+        boxShadow: "0 12px 26px rgba(40, 28, 16, 0.34)",
+        rotate: `${6 + Math.sin(frame / 7) * 1.2}deg`,
+        scale: String(1 - leave),
+      }}
+    >
+      {badge.text}
+      <div
+        style={{
+          position: "absolute",
+          left: -34,
+          top: -14,
+          width: 120,
+          height: 44,
+          backgroundColor: "rgba(245, 190, 163, 0.8)",
+          rotate: "-32deg",
+        }}
+      />
+    </div>
   );
 }
 
