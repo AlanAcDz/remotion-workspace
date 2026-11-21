@@ -111,11 +111,24 @@ import { AryaChat } from "./arya-shorts/chat";
 import { aryaElGrupoDeLaFamiliaProps } from "./videos/av-20261118-el-grupo-de-la-familia.props";
 import { aryaDondeQuedoLaPastillitaProps } from "./videos/av-20261115-donde-quedo-la-pastillita.props";
 import { aryaDiarioProps } from "./videos/av-20261114-diario-de-una-perrita.props";
+import { aryaDiarioParte2Props } from "./videos/av-20261121-diario-parte-2.props";
 import { aryaSixtyDaysProps } from "./videos/av-20261119-sixty-days.props";
 import { Loteria } from "./arya-shorts/loteria";
 import { aryaLoteriaProps } from "./videos/av-20261116-loteria-de-la-pastilla.props";
 import { SeBusca } from "./arya-shorts/se-busca";
 import { aryaSeBuscaProps } from "./videos/av-20261120-se-busca.props";
+import { Expediente } from "./arya-shorts/expediente";
+import { aryaExpedienteProps } from "./videos/av-20261123-expediente-arya.props";
+import { Lucha } from "./arya-shorts/lucha";
+import { aryaLuchaProps } from "./videos/av-20261127-lucha-escupe-pastillas.props";
+import { VerdadOMito } from "./arya-shorts/verdad-o-mito";
+import { aryaVerdadOMitoProps } from "./videos/av-20261125-verdad-o-mito.props";
+import { CualFalta } from "./arya-shorts/cual-falta";
+import { aryaCualFaltaProps } from "./videos/av-20261124-cual-falta.props";
+import { Diferencias } from "./arya-shorts/diferencias";
+import { aryaEncuentraLasDiferenciasProps } from "./videos/av-20261122-encuentra-las-diferencias.props";
+import { TrileRevancha } from "./arya-shorts/trile-revancha";
+import { aryaTrileLaRevanchaProps } from "./videos/av-20261126-trile-la-revancha.props";
 import { StoreVideo } from "./store-video/store-video";
 import {
   BON_FPS,
@@ -753,6 +766,55 @@ export const RemotionRoot: React.FC = () => {
             component={SeBusca}
             durationInFrames={Math.round(aryaSeBuscaProps.end * FPS)}
             defaultProps={aryaSeBuscaProps}
+          />
+          <Composition
+            {...aryaShort}
+            id="AryaLucha"
+            component={Lucha}
+            durationInFrames={Math.round(aryaLuchaProps.end * FPS)}
+            defaultProps={aryaLuchaProps}
+          />
+          <Composition
+            {...aryaShort}
+            id="AryaTrileLaRevancha"
+            component={TrileRevancha}
+            durationInFrames={Math.round(aryaTrileLaRevanchaProps.end * FPS)}
+            defaultProps={aryaTrileLaRevanchaProps}
+          />
+          <Composition
+            {...aryaShort}
+            id="AryaDiarioParte2"
+            component={Diary}
+            durationInFrames={Math.round(aryaDiarioParte2Props.end * FPS)}
+            defaultProps={aryaDiarioParte2Props}
+          />
+          <Composition
+            {...aryaShort}
+            id="AryaEncuentraLasDiferencias"
+            component={Diferencias}
+            durationInFrames={Math.round(aryaEncuentraLasDiferenciasProps.end * FPS)}
+            defaultProps={aryaEncuentraLasDiferenciasProps}
+          />
+          <Composition
+            {...aryaShort}
+            id="AryaCualFalta"
+            component={CualFalta}
+            durationInFrames={Math.round(aryaCualFaltaProps.end * FPS)}
+            defaultProps={aryaCualFaltaProps}
+          />
+          <Composition
+            {...aryaShort}
+            id="AryaVerdadOMito"
+            component={VerdadOMito}
+            durationInFrames={Math.round(aryaVerdadOMitoProps.end * FPS)}
+            defaultProps={aryaVerdadOMitoProps}
+          />
+          <Composition
+            {...aryaShort}
+            id="AryaExpediente"
+            component={Expediente}
+            durationInFrames={Math.round(aryaExpedienteProps.end * FPS)}
+            defaultProps={aryaExpedienteProps}
           />
         </Folder>
         <Folder name="arya-store">
