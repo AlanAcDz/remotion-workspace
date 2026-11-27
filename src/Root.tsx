@@ -91,6 +91,8 @@ import { aryaVetAsksEveryDoseProps } from "./videos/av-20261102-vet-asks-every-d
 import { aryaVomitedAfterPillProps } from "./videos/av-20261104-vomited-after-pill.props";
 import { aryaRefillBeforeItRunsOutProps } from "./videos/av-20261106-refill-before-it-runs-out.props";
 import { Diary } from "./arya-shorts/diary";
+import { CartaSanta } from "./arya-shorts/carta-santa";
+import { aryaCartaASantaProps } from "./videos/av-20261201-carta-a-santa.props";
 import { DoseBeat } from "./arya-shorts/dose-beat";
 import { FiveSecond } from "./arya-shorts/five-second";
 import { Flipbook } from "./arya-shorts/flipbook";
@@ -121,12 +123,22 @@ import { Expediente } from "./arya-shorts/expediente";
 import { aryaExpedienteProps } from "./videos/av-20261123-expediente-arya.props";
 import { Lucha } from "./arya-shorts/lucha";
 import { aryaLuchaProps } from "./videos/av-20261127-lucha-escupe-pastillas.props";
+import { Juicio } from "./arya-shorts/juicio";
+import { aryaElJuicioProps } from "./videos/av-20261204-el-juicio.props";
 import { VerdadOMito } from "./arya-shorts/verdad-o-mito";
 import { aryaVerdadOMitoProps } from "./videos/av-20261125-verdad-o-mito.props";
+import { QueAcabaDePasar } from "./arya-shorts/que-acaba-de-pasar";
+import { aryaQueAcabaDePasarProps } from "./videos/av-20261129-que-acaba-de-pasar.props";
+import { aryaVerdadOMitoGarrapatasProps } from "./videos/av-20261203-verdad-o-mito-garrapatas.props";
 import { CualFalta } from "./arya-shorts/cual-falta";
 import { aryaCualFaltaProps } from "./videos/av-20261124-cual-falta.props";
+import { QueDosis } from "./arya-shorts/que-dosis";
+import { aryaQueDosisProps, QUE_DOSIS_END } from "./videos/av-20261130-que-dosis-se-salto.props";
 import { Diferencias } from "./arya-shorts/diferencias";
 import { aryaEncuentraLasDiferenciasProps } from "./videos/av-20261122-encuentra-las-diferencias.props";
+import { aryaEncuentraLasDiferencias2Props } from "./videos/av-20261128-encuentra-las-diferencias-2.props";
+import { QueCamino } from "./arya-shorts/que-camino";
+import { aryaQueCaminoProps } from "./videos/av-20261202-que-camino.props";
 import { TrileRevancha } from "./arya-shorts/trile-revancha";
 import { aryaTrileLaRevanchaProps } from "./videos/av-20261126-trile-la-revancha.props";
 import { StoreVideo } from "./store-video/store-video";
@@ -776,6 +788,13 @@ export const RemotionRoot: React.FC = () => {
           />
           <Composition
             {...aryaShort}
+            id="AryaElJuicio"
+            component={Juicio}
+            durationInFrames={Math.round(aryaElJuicioProps.end * FPS)}
+            defaultProps={aryaElJuicioProps}
+          />
+          <Composition
+            {...aryaShort}
             id="AryaTrileLaRevancha"
             component={TrileRevancha}
             durationInFrames={Math.round(aryaTrileLaRevanchaProps.end * FPS)}
@@ -790,10 +809,24 @@ export const RemotionRoot: React.FC = () => {
           />
           <Composition
             {...aryaShort}
+            id="AryaCartaASanta"
+            component={CartaSanta}
+            durationInFrames={Math.round(aryaCartaASantaProps.end * FPS)}
+            defaultProps={aryaCartaASantaProps}
+          />
+          <Composition
+            {...aryaShort}
             id="AryaEncuentraLasDiferencias"
             component={Diferencias}
             durationInFrames={Math.round(aryaEncuentraLasDiferenciasProps.end * FPS)}
             defaultProps={aryaEncuentraLasDiferenciasProps}
+          />
+          <Composition
+            {...aryaShort}
+            id="AryaEncuentraLasDiferencias2"
+            component={Diferencias}
+            durationInFrames={Math.round(aryaEncuentraLasDiferencias2Props.end * FPS)}
+            defaultProps={aryaEncuentraLasDiferencias2Props}
           />
           <Composition
             {...aryaShort}
@@ -804,6 +837,13 @@ export const RemotionRoot: React.FC = () => {
           />
           <Composition
             {...aryaShort}
+            id="AryaQueDosisSeSalto"
+            component={QueDosis}
+            durationInFrames={Math.round(QUE_DOSIS_END * FPS)}
+            defaultProps={aryaQueDosisProps}
+          />
+          <Composition
+            {...aryaShort}
             id="AryaVerdadOMito"
             component={VerdadOMito}
             durationInFrames={Math.round(aryaVerdadOMitoProps.end * FPS)}
@@ -811,10 +851,31 @@ export const RemotionRoot: React.FC = () => {
           />
           <Composition
             {...aryaShort}
+            id="AryaVerdadOMitoGarrapatas"
+            component={VerdadOMito}
+            durationInFrames={Math.round(aryaVerdadOMitoGarrapatasProps.end * FPS)}
+            defaultProps={aryaVerdadOMitoGarrapatasProps}
+          />
+          <Composition
+            {...aryaShort}
             id="AryaExpediente"
             component={Expediente}
             durationInFrames={Math.round(aryaExpedienteProps.end * FPS)}
             defaultProps={aryaExpedienteProps}
+          />
+          <Composition
+            {...aryaShort}
+            id="AryaQueAcabaDePasar"
+            component={QueAcabaDePasar}
+            durationInFrames={Math.round(aryaQueAcabaDePasarProps.end * FPS)}
+            defaultProps={aryaQueAcabaDePasarProps}
+          />
+          <Composition
+            {...aryaShort}
+            id="AryaQueCamino"
+            component={QueCamino}
+            durationInFrames={Math.round(aryaQueCaminoProps.end * FPS)}
+            defaultProps={aryaQueCaminoProps}
           />
         </Folder>
         <Folder name="arya-store">
