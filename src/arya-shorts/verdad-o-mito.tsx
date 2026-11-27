@@ -384,7 +384,7 @@ function Explanation({ card, at }: { card: QuizCard; at: number }) {
 }
 
 /** The closing line over a cream card, then the shared CTA a little lower than usual. */
-function ClosingCard({
+export function ClosingCard({
   closing,
   cta,
 }: {

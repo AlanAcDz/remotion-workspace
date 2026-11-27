@@ -891,7 +891,7 @@ function Ring({
  * `trile-vacio.tsx`: the template slot fits one line, and the Spanish note
  * wraps into the "Enlace en la bio" pill.
  */
-function TwoLineNoteEndCard({ cta }: { cta: PosDemoProps["cta"] }) {
+export function TwoLineNoteEndCard({ cta }: { cta: PosDemoProps["cta"] }) {
   const frame = useCurrentFrame();
   const sec = useSeconds();
   const noteAt = sec(cta.revealAt.note - cta.from);

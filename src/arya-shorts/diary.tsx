@@ -263,7 +263,7 @@ function Signature({ signAt, stampAt, logo, stamp }: DiaryProps) {
   );
 }
 
-function Pencil({ x, y, wiggle }: { x: number; y: number; wiggle: number }) {
+export function Pencil({ x, y, wiggle }: { x: number; y: number; wiggle: number }) {
   return (
     <svg
       width={120}

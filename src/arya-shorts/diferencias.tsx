@@ -74,6 +74,10 @@ export type DiferenciasProps = {
   duckAt: number;
   sfx: Sfx[];
   end: number;
+  /** Optional series badge on the top photo from frame 0, e.g. "PARTE 2". */
+  tag?: string;
+  /** Optional question under the end card's pill, shown from `at` seconds. */
+  question?: { text: string; at: number };
 };
 
 export function Diferencias(props: DiferenciasProps) {
@@ -92,6 +96,8 @@ export function Diferencias(props: DiferenciasProps) {
 
       <TimerBar end={props.timerEnd} />
 
+      {props.tag ? <SeriesTag text={props.tag} /> : null}
+
       {props.lines.map((line) => (
         <Sequence
           key={line.text}
@@ -104,7 +110,7 @@ export function Diferencias(props: DiferenciasProps) {
       ))}
 
       <Sequence name="CTA" from={sec(props.cta.from)}>
-        <TwoLineNoteEndCard cta={props.cta} />
+        <TwoLineNoteEndCard cta={props.cta} question={props.question} />
       </Sequence>
     </ShortFrame>
   );
@@ -465,10 +471,17 @@ function TopLine({ text, pop = false }: { text: string; pop?: boolean }) {
  * `trile-vacio.tsx`: the template slot fits one line, and the Spanish note
  * wraps into the "Enlace en la bio" pill.
  */
-function TwoLineNoteEndCard({ cta }: { cta: PosDemoProps["cta"] }) {
+function TwoLineNoteEndCard({
+  cta,
+  question,
+}: {
+  cta: PosDemoProps["cta"];
+  question?: DiferenciasProps["question"];
+}) {
   const frame = useCurrentFrame();
   const sec = useSeconds();
   const noteAt = sec(cta.revealAt.note - cta.from);
+  const questionAt = question ? sec(question.at - cta.from) : 0;
 
   return (
     <AbsoluteFill
@@ -493,6 +506,55 @@ function TwoLineNoteEndCard({ cta }: { cta: PosDemoProps["cta"] }) {
       >
         {cta.note}
       </div>
+      {question ? (
+        <div
+          style={{
+            position: "absolute",
+            top: 1300,
+            ...centered(880),
+            textAlign: "center",
+            fontFamily: POPPINS,
+            fontSize: 64,
+            fontWeight: 700,
+            lineHeight: 1.1,
+            letterSpacing: "-0.02em",
+            color: ARYA.colors.ink,
+            opacity: ramp(frame, questionAt, questionAt + 10),
+            translate: `0px ${interpolate(ramp(frame, questionAt, questionAt + 14), [0, 1], [20, 0])}px`,
+          }}
+        >
+          {question.text}
+        </div>
+      ) : null}
     </AbsoluteFill>
+  );
+}
+
+/** A small tilted badge on the top photo's bottom-left corner that names the episode. */
+function SeriesTag({ text }: { text: string }) {
+  const frame = useCurrentFrame();
+  const sec = useSeconds();
+  const wobble = Math.sin((frame / sec(1.2)) * Math.PI * 2) * 1.5;
+
+  return (
+    <div
+      style={{
+        position: "absolute",
+        top: PANE_TOPS[0] + PANE.height - 96,
+        left: PANE.left + 22,
+        padding: "10px 26px 12px",
+        borderRadius: 999,
+        backgroundColor: RING_COLOR,
+        color: "#FFFFFF",
+        fontFamily: POPPINS,
+        fontSize: 44,
+        fontWeight: 800,
+        letterSpacing: "0.02em",
+        boxShadow: "0 8px 20px rgba(25, 38, 38, 0.3)",
+        rotate: `${-4 + wobble}deg`,
+      }}
+    >
+      {text}
+    </div>
   );
 }
